@@ -52,14 +52,13 @@ a {
 
 .flexRow {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  margin:-1rem 0 0 -1rem;
-  width: calc(100% + 1rem);
+  flex-direction: row;
+  //margin:-1rem 0 0 -1rem;
+  //width: calc(100% + 1rem);
   > div {
-    flex-grow:1;
-    align-self: center;
+    flex: 1 0 1;
+    align-content: center;
     margin:1rem 0 0 1rem;
   }
 }
@@ -67,13 +66,12 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin:-$gap 0 0 -$gap;
-  width: calc(100% - 1rem);
+  //margin:-$gap 0 0 -$gap;
+  //width: calc(100% - 1rem);
   > div {
-    flex-grow:1;
-    flex-basis: 200px;
+    flex:1 1 auto;
     align-self: center;
-    margin:$gap 0 0 $gap;
+    //margin:$gap 0 0 $gap;
   }
 }
 // .map {

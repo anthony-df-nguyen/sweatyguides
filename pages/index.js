@@ -11,8 +11,8 @@ export default function Home() {
   const buildGameList = () => {
     return GameList.map((row, i) => {
       const cardStyle = {
-        width: "auto",
-        // paddingTop:'56.25%',
+        width: "100%",
+        //paddingTop:'56.25%',
         height:'100vh',
         maxHeight:'300px',
         position: "relative",
@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <div>
       <Page title="Game List">
-        <div className="flexRow topMargin">{buildGameList()}</div>
+        <div className="grid2 topMargin">{buildGameList()}</div>
       </Page>
     </div>
   );
