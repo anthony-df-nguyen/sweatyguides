@@ -1,0 +1,130 @@
+@import 'styles/variables';
+
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: $black;
+  color:$white;
+  h1,h2,h3,p {
+    text-align: center;
+  }
+  h1,h2,h3 {
+    color: $lightblue;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.center {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+@mixin blockCenter($margin) {
+    display: block;
+    margin: $margin auto;
+}
+
+.wrapper {
+  max-width: calc(100% - 2rem);
+  @include blockCenter(0);
+  @media (min-width: $large) {
+    max-width: 900px;
+  }
+
+}
+.topMargin {
+  margin-top:$gap !important;
+}
+.topMargin4 {
+  margin-top:$gap*4 !important;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin:-1rem 0 0 -1rem;
+  width: calc(100% + 1rem);
+  > div {
+    flex-grow:1;
+    align-self: center;
+    margin:1rem 0 0 1rem;
+  }
+}
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin:-$gap 0 0 -$gap;
+  width: calc(100% - 1rem);
+  > div {
+    flex-grow:1;
+    flex-basis: 200px;
+    align-self: center;
+    margin:$gap 0 0 $gap;
+  }
+}
+// .map {
+//   max-height: 500px;
+// }
+.modalPreview {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.pageTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color:$yellow;
+  text-align: center;
+  margin:$gap*4 auto $gap*2 auto;
+}
+
+#fullModal {
+  position:fixed;
+  z-index: 3;
+  top:0;
+  left:0;
+  width: 100vw;
+  height:100vh;
+  background-color: rgba(0, 0, 0, 1);
+
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: auto;
+  grid-gap:$gap;
+  @media (max-width:500px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+ul,ol {
+  margin-left:$gap;
+  li {
+    list-style-position: outside;
+    // & + li {
+    //   margin-top:$gap;
+    // }
+  }
+}
+
+.active {
+  background-color: $blue !important;
+}

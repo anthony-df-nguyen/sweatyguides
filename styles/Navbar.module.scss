@@ -1,0 +1,13 @@
+@import 'styles/variables';
+
+
+.navbar {
+    height:80px;
+    background-color: $blue;
+    display: flex;
+    justify-content: center;
+    > h1 {
+        align-self: center;
+        color: $white;
+    }
+}

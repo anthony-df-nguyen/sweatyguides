@@ -1,0 +1,60 @@
+@import "styles/variables";
+
+.objective {
+  padding: $gap;
+  background-color: $gray;
+  border-radius: $rad;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.objectiveForm {
+  margin-top: $gap;
+  input[type="text"] {
+    font-size: 1.25rem;
+    width: 100%;
+    padding: 12px;
+    border-radius: $rad;
+    background-color: $gray;
+    border:none;
+    color:$white;
+  }
+}
+.active {
+  background-color: $blue;
+}
+
+.ghostCard {
+  background-color: $gray;
+  padding: $gap;
+  border-radius: $rad;
+  .name {
+      font-size: 1.5rem;
+      font-weight: 600;
+  }
+  .clue {
+    display: inline;
+    margin-right: 2px;
+    color: $yellow;
+    & + .clue {
+      &::before {
+        padding-right: 2px;
+        content: " | ";
+      }
+    }
+  }
+  .hints {
+      margin-top: $gap;
+  }
+}
+.remainingClue {
+    display: inline;
+    color: $yellow;
+    & + .remainingClue {
+        &::before {
+            content: ", ";
+        }
+       
+    }
+}
