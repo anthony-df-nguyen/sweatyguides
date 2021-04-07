@@ -27,7 +27,7 @@ export default function Expander(props) {
 
     console.log(props.img)
     return (
-      <div className={style.expander} style={bgImg}>
+      <div className={style.expander}>
         <div className={style.title} onClick={handleClick}>
           <div className={style.icon}>{icon}</div>
           {props.title}
