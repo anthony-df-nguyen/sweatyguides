@@ -11,6 +11,11 @@ const GameList = [
       "https://roadtovrlive-5ea0.kxcdn.com/wp-content/uploads/2020/10/plasmophobia-5-1021x580.jpg",
     href: "/phasmophobia",
   },
+  {
+    game: "",
+    img: "https://wp.stanforddaily.com/wp-content/uploads/2020/08/image-2.png",
+    href: "/valorant",
+  },
 ];
 
 export default GameList;

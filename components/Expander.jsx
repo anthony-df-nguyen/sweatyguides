@@ -10,6 +10,7 @@ export default function Expander(props) {
     const container = {
       maxHeight: height,
     };
+
  
     const handleClick = (e) => {
         if (openOrClose === 'closed') {
@@ -23,8 +24,10 @@ export default function Expander(props) {
                updateIcon(<MdChevronRight />);
         }
     }
+
+    console.log(props.img)
     return (
-      <div className={style.expander}>
+      <div className={style.expander} style={bgImg}>
         <div className={style.title} onClick={handleClick}>
           <div className={style.icon}>{icon}</div>
           {props.title}

@@ -1,0 +1,43 @@
+@import 'styles/variables';
+
+.icon {
+    display: inline;
+    position: relative;
+    top:4px;
+
+}
+.expander {
+    background-color: $gray;
+    margin:$gap 0;
+    //padding:$gap;
+    border-radius: $rad;
+}
+.title {
+    border-radius: $rad;
+    padding:$gap;
+    font-size:1.5rem;
+    font-weight: 600;
+    color:$white;
+    height:200px;
+    background-position: center;
+    background-size:cover;
+    //background-repeat: no-repeat;
+    &:hover {
+        cursor: pointer;
+    }
+    .textblock {
+        position: relative;
+        top:50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+}
+
+.container {
+    transition: max-Height .15s ease-in-out;
+    overflow:hidden;
+}
+.content {
+    padding: $gap;
+    color:$white;
+}
