@@ -1,18 +1,23 @@
-@import 'styles/variables';
+@import "styles/variables";
 
 * {
   box-sizing: border-box;
-  margin:0;
+  margin: 0;
   padding: 0;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: $black;
-  color:$white;
-  h1,h2,h3,p {
+  color: $white;
+  h1,
+  h2,
+  h3,
+  p {
     text-align: center;
   }
-  h1,h2,h3 {
+  h1,
+  h2,
+  h3 {
     color: $lightblue;
   }
 }
@@ -26,13 +31,13 @@ a {
 }
 .center {
   position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 @mixin blockCenter($margin) {
-    display: block;
-    margin: $margin auto;
+  display: block;
+  margin: $margin auto;
 }
 
 .wrapper {
@@ -41,25 +46,25 @@ a {
   @media (min-width: $large) {
     max-width: 900px;
   }
-
 }
 .topMargin {
-  margin-top:$gap !important;
+  margin-top: $gap !important;
 }
 .topMargin4 {
-  margin-top:$gap*4 !important;
+  margin-top: $gap * 4 !important;
 }
 
 .flexRow {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  //margin:-1rem 0 0 -1rem;
-  //width: calc(100% + 1rem);
+  margin: -1rem 0 0 -1rem;
+  width: calc(100% + 1rem);
   > div {
-    flex: 1 0 1;
+    flex-grow: 1;
+    flex-shrink: 1;
     align-content: center;
-    margin:1rem 0 0 1rem;
+    margin: 1rem 0 0 1rem;
   }
 }
 .flexColumn {
@@ -69,7 +74,7 @@ a {
   //margin:-$gap 0 0 -$gap;
   //width: calc(100% - 1rem);
   > div {
-    flex:1 1 auto;
+    flex: 1 1 auto;
     align-self: center;
     //margin:$gap 0 0 $gap;
   }
@@ -86,35 +91,40 @@ a {
 .pageTitle {
   font-size: 2rem;
   font-weight: 600;
-  color:$yellow;
+  color: $yellow;
   text-align: center;
-  margin:$gap*4 auto $gap*2 auto;
+  margin: $gap * 4 auto $gap * 2 auto;
 }
 
 #fullModal {
-  position:fixed;
+  position: fixed;
   z-index: 3;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100vw;
-  height:100vh;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 1);
-
 }
 
 .grid2 {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  grid-gap:$gap;
-  @media (max-width:500px) {
+  grid-gap: $gap;
+  @media (max-width: 500px) {
     grid-template-columns: 1fr;
   }
 }
+.grid2lock {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-gap: $gap;
+}
 
-
-ul,ol {
-  margin-left:$gap;
+ul,
+ol {
+  margin-left: $gap;
   li {
     list-style-position: outside;
     // & + li {

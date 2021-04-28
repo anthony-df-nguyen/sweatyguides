@@ -89,7 +89,10 @@ export default function Ghostfinder() {
         <div className={style.objective} onClick={handleClick} id="Orb">
           Ghost Orb
         </div>
-        <div className={style.objective} onClick={handleClick} id="Ghost Writing">
+        <div
+          className={style.objective}
+          onClick={handleClick}
+          id="Ghost Writing">
           Ghost Writing
         </div>
         <div className={style.objective} onClick={handleClick} id="Prints">
@@ -103,7 +106,9 @@ export default function Ghostfinder() {
         <p>
           Continue to look for{" "}
           {cluesLeft.map((row, i) => (
-            <span className={style.remainingClue} key={i}>{row}</span>
+            <span className={style.remainingClue} key={i}>
+              {row}
+            </span>
           ))}
         </p>
       </div>

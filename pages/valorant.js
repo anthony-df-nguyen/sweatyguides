@@ -29,6 +29,16 @@ export default function valorant() {
             />
           </FullScreen>
         </ImageExpander>
+        <ImageExpander title="Breeze" img="/images/valorant/breeze.jpg">
+          <FullScreen>
+            <Image
+              src="/images/valorant/maps/breeze.svg"
+              layout="responsive"
+              width="5"
+              height="3"
+            />
+          </FullScreen>
+        </ImageExpander>
         <ImageExpander title="Haven" img="/images/valorant/haven.jpeg">
           <FullScreen>
             <Image
