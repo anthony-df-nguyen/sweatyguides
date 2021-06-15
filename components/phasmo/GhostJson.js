@@ -16,6 +16,11 @@ const ghostJson = [
     ],
   },
   {
+    name: "Hantu",
+    clues: ["Prints", "Ghost Writing", "Orb"],
+    hints: ["Moves slower in warmer areas", "Moves faster in colder areas"],
+  },
+  {
     name: "Jinn",
     clues: ["EMF", "Spirit Box", "Orb"],
     hints: [
@@ -83,6 +88,14 @@ const ghostJson = [
     name: "Wraith",
     clues: ["Sprit Box", "Prints", "Temps"],
     hints: ["Can't be tracked by footsteps", "Toxic reaction to salt"],
+  },
+  {
+    name: "Yokai",
+    clues: ["Spirit Box", "Orb", "Ghost Writing"],
+    hints: [
+      "Talking near a Yokai will anger it and cause it to attack more often.",
+      "While hunting, it can only hear voices close to it",
+    ],
   },
   {
     name: "Yurei",

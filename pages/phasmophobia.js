@@ -18,10 +18,14 @@ export default function phasmophobia() {
             <Objective name="Ghost Event" />
             <Objective name="Ghost Photo" />
             <Objective name="EMF Evidence" />
-            <Objective name="Temps Below 10C" />
+            {/* <Objective name="Temps Below 10C" /> */}
             <Objective name="Motion Sensor" />
-            <Objective name="Smudge Sticks" />
+            <Objective name="Cleanse area with Smudge Sticks" />
             <Objective name="Ghost Walk in Salt" />
+            <Objective name="Ghost presence with candle" />
+            <Objective name="No deaths" />
+            <Objective name="Use smudge sticks while hunted" />
+            <Objective name="Average sanity below 25%" />
           </div>
         </div>
         <form className={style.objectiveForm}>
@@ -118,6 +122,16 @@ export default function phasmophobia() {
                 layout="responsive"
                 width="4"
                 height="4"
+              />
+            </FullScreen>
+          </Expander>
+          <Expander title="Willow Street House">
+            <FullScreen>
+              <Image
+                src="/images/phasmophobia/willow.jpg"
+                layout="responsive"
+                width="3"
+                height="2"
               />
             </FullScreen>
           </Expander>
