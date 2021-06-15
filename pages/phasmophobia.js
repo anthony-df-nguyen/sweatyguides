@@ -17,12 +17,13 @@ export default function phasmophobia() {
           <div className="flexRow topMargin">
             <Objective name="Ghost Event" />
             <Objective name="Ghost Photo" />
+         <Objective name="Prevent hunt with crucifix" />
             <Objective name="EMF Evidence" />
             {/* <Objective name="Temps Below 10C" /> */}
             <Objective name="Motion Sensor" />
             <Objective name="Cleanse area with Smudge Sticks" />
             <Objective name="Ghost Walk in Salt" />
-            <Objective name="Ghost presence with candle" />
+            <Objective name="Ghost blow out candle" />
             <Objective name="No deaths" />
             <Objective name="Use smudge sticks while hunted" />
             <Objective name="Average sanity below 25%" />
