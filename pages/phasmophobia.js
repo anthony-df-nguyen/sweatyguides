@@ -19,6 +19,7 @@ export default function phasmophobia() {
             <Objective name="Ghost Photo" />
          <Objective name="Prevent hunt with crucifix" />
             <Objective name="EMF Evidence" />
+    <Objective name="Escape ghost while being hunted" />
             {/* <Objective name="Temps Below 10C" /> */}
             <Objective name="Motion Sensor" />
             <Objective name="Cleanse area with Smudge Sticks" />
