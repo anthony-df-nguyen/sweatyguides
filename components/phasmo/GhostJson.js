@@ -86,7 +86,7 @@ const ghostJson = [
   },
   {
     name: "Wraith",
-    clues: ["Sprit Box", "Prints", "Temps"],
+    clues: ["Spirit Box", "Prints", "Temps"],
     hints: ["Can't be tracked by footsteps", "Toxic reaction to salt"],
   },
   {
