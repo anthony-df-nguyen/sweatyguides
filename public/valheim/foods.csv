@@ -1,0 +1,22 @@
+﻿Name,Health,Healing,Stamina,Duration,Stack Size
+Raspberries,10,1,20,600,50
+Mushroom,15,1,20,600,50
+Blueberries,15,1,20,600,50
+Carrot,15,1,15,600,50
+Cloudberries,15,1,25,800,50
+Honey,20,5,20,300,50
+Yellow mushroom,20,1,20,600,50
+Carrot soup,20,2,60,1500,10
+Queens jam,30,2,40,1200,10
+Grilled neck tail,35,2,20,1000,20
+Cooked meat,40,2,30,1200,20
+Bread,40,2,70,1800,20
+Cooked fish,45,2,25,1200,20
+Turnip stew,50,2,50,1600,10
+Sausages,60,3,40,1600,20
+Fish wraps,60,4,90,2400,10
+Cooked serpent meat,70,3,,2000,50
+Cooked lox meat,70,,40,2000,20
+Serpent stew,80,4,80,2400,10
+Lox meat pie,80,4,80,2400,10
+Blood pudding,90,4,50,2400,10

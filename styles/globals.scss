@@ -127,12 +127,25 @@ ol {
   margin-left: $gap;
   li {
     list-style-position: outside;
-    // & + li {
-    //   margin-top:$gap;
-    // }
+    & + li {
+      margin-top:$gap;
+    }
   }
 }
 
 .active {
   background-color: $blue !important;
+}
+
+.card {
+  background-color: $gray;
+  padding:$gap;
+}
+
+th {
+  background-color: $blue;
+  padding:$gap/2 $gap;
+}
+td {
+  padding:$gap/2 $gap;
 }
