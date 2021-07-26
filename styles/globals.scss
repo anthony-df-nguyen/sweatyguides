@@ -29,6 +29,11 @@ a {
     cursor: pointer;
   }
 }
+
+.blue {
+  color:$lightblue;
+}
+
 .center {
   position: absolute;
   top: 50%;
@@ -142,10 +147,20 @@ ol {
   padding:$gap;
 }
 
-th {
+.Sticky-React-Table-inner {
+  background-color: $black;
+}
+.tableHead {
   background-color: $blue;
   padding:$gap/2 $gap;
 }
-td {
+.tableCell {
   padding:$gap/2 $gap;
+  background-color: $black;
+}
+
+.listSeparator {
+  margin:1rem 0;
+  font-weight:700;
+  color:$yellow;
 }

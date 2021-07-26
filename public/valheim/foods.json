@@ -1,0 +1,170 @@
+[
+    {
+      "Name": "Raspberries",
+      "Health": 10,
+      "Healing": 1,
+      "Stamina": 20,
+      "Duration": 600,
+      "Stack Size": 50
+    },
+    {
+      "Name": "Mushroom",
+      "Health": 15,
+      "Healing": 1,
+      "Stamina": 20,
+      "Duration": 600,
+      "Stack Size": 50
+    },
+    {
+      "Name": "Blueberries",
+      "Health": 15,
+      "Healing": 1,
+      "Stamina": 20,
+      "Duration": 600,
+      "Stack Size": 50
+    },
+    {
+      "Name": "Carrot",
+      "Health": 15,
+      "Healing": 1,
+      "Stamina": 15,
+      "Duration": 600,
+      "Stack Size": 50
+    },
+    {
+      "Name": "Cloudberries",
+      "Health": 15,
+      "Healing": 1,
+      "Stamina": 25,
+      "Duration": 800,
+      "Stack Size": 50
+    },
+    {
+      "Name": "Honey",
+      "Health": 20,
+      "Healing": 5,
+      "Stamina": 20,
+      "Duration": 300,
+      "Stack Size": 50
+    },
+    {
+      "Name": "Yellow mushroom",
+      "Health": 20,
+      "Healing": 1,
+      "Stamina": 20,
+      "Duration": 600,
+      "Stack Size": 50
+    },
+    {
+      "Name": "Carrot soup",
+      "Health": 20,
+      "Healing": 2,
+      "Stamina": 60,
+      "Duration": 1500,
+      "Stack Size": 10
+    },
+    {
+      "Name": "Queens jam",
+      "Health": 30,
+      "Healing": 2,
+      "Stamina": 40,
+      "Duration": 1200,
+      "Stack Size": 10
+    },
+    {
+      "Name": "Grilled neck tail",
+      "Health": 35,
+      "Healing": 2,
+      "Stamina": 20,
+      "Duration": 1000,
+      "Stack Size": 20
+    },
+    {
+      "Name": "Cooked meat",
+      "Health": 40,
+      "Healing": 2,
+      "Stamina": 30,
+      "Duration": 1200,
+      "Stack Size": 20
+    },
+    {
+      "Name": "Bread",
+      "Health": 40,
+      "Healing": 2,
+      "Stamina": 70,
+      "Duration": 1800,
+      "Stack Size": 20
+    },
+    {
+      "Name": "Cooked fish",
+      "Health": 45,
+      "Healing": 2,
+      "Stamina": 25,
+      "Duration": 1200,
+      "Stack Size": 20
+    },
+    {
+      "Name": "Turnip stew",
+      "Health": 50,
+      "Healing": 2,
+      "Stamina": 50,
+      "Duration": 1600,
+      "Stack Size": 10
+    },
+    {
+      "Name": "Sausages",
+      "Health": 60,
+      "Healing": 3,
+      "Stamina": 40,
+      "Duration": 1600,
+      "Stack Size": 20
+    },
+    {
+      "Name": "Fish wraps",
+      "Health": 60,
+      "Healing": 4,
+      "Stamina": 90,
+      "Duration": 2400,
+      "Stack Size": 10
+    },
+    {
+      "Name": "Cooked serpent meat",
+      "Health": 70,
+      "Healing": 3,
+      "Stamina": 40,
+      "Duration": 2000,
+      "Stack Size": 50
+    },
+    {
+      "Name": "Cooked lox meat",
+      "Health": 70,
+      "Healing": 3,
+      "Stamina": 40,
+      "Duration": 2000,
+      "Stack Size": 20
+    },
+    {
+      "Name": "Serpent stew",
+      "Health": 80,
+      "Healing": 4,
+      "Stamina": 80,
+      "Duration": 2400,
+      "Stack Size": 10
+    },
+    {
+      "Name": "Lox meat pie",
+      "Health": 80,
+      "Healing": 4,
+      "Stamina": 80,
+      "Duration": 2400,
+      "Stack Size": 10
+    },
+    {
+      "Name": "Blood pudding",
+      "Health": 90,
+      "Healing": 4,
+      "Stamina": 50,
+      "Duration": 2400,
+      "Stack Size": 10
+    }
+  ]
