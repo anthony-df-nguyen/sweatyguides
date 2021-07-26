@@ -6,7 +6,8 @@ export default function ReactTable(props) {
         await fetch(props.data)
         .then(data => data.json())
         .then(lines => {
-            console.log(lines);
+            //Sort by ABC by Default
+            lines.sort((a, b) => (a.Name > b.Name ? 1 : -1));
             updateData(lines)
         })
     }
@@ -20,9 +21,30 @@ export default function ReactTable(props) {
         })
     },[])
     return (
-    <Table data={data} fixed="1" rowSelection={false} headerClassName="tableHead" >
+    <Table data={data} fixed={1} rowSelection={false} headerClassName="tableHead" >
         {props.head.map((row,i)=> {
-            return <Column id={i} title={row.name} width={row.width + "px"} dataKey={row.name} className="tableCell" />
+            return (
+              <Column
+                key={i}
+                title={row.name}
+                width={row.width + "px"}
+                dataKey={row.name}
+                className="tableCell"
+                cellRenderer={(props) => {
+                    return Array.isArray(props.cellData) ? (
+                      <>
+                        <ul>
+                          {props.cellData.map((line, num) => (
+                            <li className="noMargin" key={num}>{line}</li>
+                          ))}
+                        </ul>
+                      </>
+                    ) : (
+                      props.cellData
+                    );
+                }}
+              />
+            );
         })}
     
       </Table>

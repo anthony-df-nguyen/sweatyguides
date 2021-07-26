@@ -1,0 +1,299 @@
+[
+  {
+    "Name": "Club",
+    "Type": "Clubs",
+    "Dmg": 12,
+    "Max Upgraded Dmg": 30,
+    "Dmg Type": "Blunt",
+    "Backstab": "3x",
+    "Knockback": 25
+  },
+  {
+    "Name": "Stone axe",
+    "Type": "Axes",
+    "Dmg": 15,
+    "Max Upgraded Dmg": 30,
+    "Dmg Type": "Slash",
+    "Backstab": "3x",
+    "Knockback": 50
+  },
+  {
+    "Name": "Torch",
+    "Type": "Clubs",
+    "Dmg": 19,
+    "Max Upgraded Dmg": "",
+    "Dmg Type": ["Blunt: 4", "Fire:15"],
+    "Backstab": "3x",
+    "Knockback": 30
+  },
+  {
+    "Name": "Flint axe",
+    "Type": "Axes",
+    "Dmg": 20,
+    "Max Upgraded Dmg": 35,
+    "Dmg Type": "Slash",
+    "Backstab": "3x",
+    "Knockback": 50
+  },
+  {
+    "Name": "Flint knife",
+    "Type": "Knives",
+    "Dmg": 12,
+    "Max Upgraded Dmg": 18,
+    "Dmg Type": ["Slash: 6 - 9", "Pierce: 6 - 9"],
+    "Backstab": "10x",
+    "Knockback": 10
+  },
+  {
+    "Name": "Flint spear",
+    "Type": "Spears",
+    "Dmg": 20,
+    "Max Upgraded Dmg": 38,
+    "Dmg Type": "Pierce",
+    "Backstab": "3x",
+    "Knockback": 20
+  },
+  {
+    "Name": "Antler Pickaxe",
+    "Type": "Pickaxes",
+    "Dmg": 18,
+    "Max Upgraded Dmg": "",
+    "Dmg Type": "Pierce",
+    "Backstab": "3x",
+    "Knockback": 50
+  },
+  {
+    "Name": "Stagbreaker",
+    "Type": "Two-handed Clubs",
+    "Dmg": 25,
+    "Max Upgraded Dmg": 43,
+    "Dmg Type": ["Blunt: 20 - 38","Pierce: 5 - 5"],
+    "Backstab": "2x",
+    "Knockback": 150
+  },
+  {
+    "Name": "Copper knife",
+    "Type": "Knives",
+    "Dmg": 18,
+    "Max Upgraded Dmg": 24,
+    "Dmg Type": ["Slash: 9 - 12", "Pierce: 9 - 12"],
+    "Backstab": "10x",
+    "Knockback": 10
+  },
+  {
+    "Name": "Bronze atgeir",
+    "Type": "Polearms",
+    "Dmg": 45,
+    "Max Upgraded Dmg": 63,
+    "Dmg Type": "Pierce",
+    "Backstab": "3x",
+    "Knockback": 30
+  },
+  {
+    "Name": "Bronze Axe",
+    "Type": "Axes",
+    "Dmg": 35,
+    "Max Upgraded Dmg": 50,
+    "Dmg Type": "Slash",
+    "Backstab": "3x",
+    "Knockback": 50
+  },
+  {
+    "Name": "Bronze Mace",
+    "Type": "Clubs",
+    "Dmg": 35,
+    "Max Upgraded Dmg": 53,
+    "Dmg Type": "Blunt",
+    "Backstab": "3x",
+    "Knockback": 80
+  },
+  {
+    "Name": "Bronze Spear",
+    "Type": "Spears",
+    "Dmg": 35,
+    "Max Upgraded Dmg": 53,
+    "Dmg Type": "Pierce",
+    "Backstab": "3x",
+    "Knockback": 20
+  },
+  {
+    "Name": "Bronze sword",
+    "Type": "Swords",
+    "Dmg": 35,
+    "Max Upgraded Dmg": 53,
+    "Dmg Type": "Slash",
+    "Backstab": "3x",
+    "Knockback": 40
+  },
+  {
+    "Name": "Bronze Pickaxe",
+    "Type": "Pickaxes",
+    "Dmg": 25,
+    "Max Upgraded Dmg": 40,
+    "Dmg Type": "Pierce",
+    "Backstab": "3x",
+    "Knockback": 50
+  },
+  {
+    "Name": "Ancient bark spear",
+    "Type": "Spears",
+    "Dmg": 55,
+    "Max Upgraded Dmg": 73,
+    "Dmg Type": "Pierce",
+    "Backstab": "3x",
+    "Knockback": 20
+  },
+  {
+    "Name": "Battleaxe",
+    "Type": "Two-handed Axes",
+    "Dmg": 75,
+    "Max Upgraded Dmg": 93,
+    "Dmg Type": "Slash",
+    "Backstab": "3x",
+    "Knockback": 70
+  },
+  {
+    "Name": "Iron sword",
+    "Type": "Swords",
+    "Dmg": 55,
+    "Max Upgraded Dmg": 73,
+    "Dmg Type": "Slash",
+    "Backstab": "3x",
+    "Knockback": 50
+  },
+  {
+    "Name": "Iron axe",
+    "Type": "Axes",
+    "Dmg": 55,
+    "Max Upgraded Dmg": 70,
+    "Dmg Type": "Slash",
+    "Backstab": "3x",
+    "Knockback": 50
+  },
+  {
+    "Name": "Iron sledge",
+    "Type": "Two-handed Clubs",
+    "Dmg": 55,
+    "Max Upgraded Dmg": 73,
+    "Dmg Type": "Blunt",
+    "Backstab": "2x",
+    "Knockback": 200
+  },
+  {
+    "Name": "Iron mace",
+    "Type": "Clubs",
+    "Dmg": 55,
+    "Max Upgraded Dmg": 73,
+    "Dmg Type": "Blunt",
+    "Backstab": "3x",
+    "Knockback": 90
+  },
+  {
+    "Name": "Iron pickaxe",
+    "Type": "Pickaxes",
+    "Dmg": 33,
+    "Max Upgraded Dmg": 48,
+    "Dmg Type": "Pierce",
+    "Backstab": "3x",
+    "Knockback": 50
+  },
+  {
+    "Name": "Iron atgeir",
+    "Type": "Polearms",
+    "Dmg": 65,
+    "Max Upgraded Dmg": 83,
+    "Dmg Type": "Pierce",
+    "Backstab": "3x",
+    "Knockback": 30
+  },
+  {
+    "Name": "Silver sword",
+    "Type": "Swords",
+    "Dmg": 75,
+    "Max Upgraded Dmg": 93,
+    "Dmg Type": ["Slash: 75 - 93", "Spirit: 30 - 45"],
+    "Backstab": "3x",
+    "Knockback": 40
+  },
+  {
+    "Name": "Fang spear",
+    "Type": "Spears",
+    "Dmg": 70,
+    "Max Upgraded Dmg": 88,
+    "Dmg Type": "Pierce",
+    "Backstab": "3x",
+    "Knockback": 20
+  },
+  {
+    "Name": "Frostner",
+    "Type": "Clubs",
+    "Dmg": 75,
+    "Max Upgraded Dmg": 93,
+    "Dmg Type": ["Frost: 40 - 58", "Blunt: 35 - 35","Spirit: 20 - 20"],
+    "Backstab": "3x",
+    "Knockback": 120
+  },
+  {
+    "Name": "Abyssal Harpoon",
+    "Type": "Spears",
+    "Dmg": 10,
+    "Max Upgraded Dmg": "",
+    "Dmg Type": "Pierce",
+    "Backstab": "1x",
+    "Knockback": 20
+  },
+  {
+    "Name": "Abyssal Razor",
+    "Type": "Knives",
+    "Dmg": 24,
+    "Max Upgraded Dmg": 30,
+    "Dmg Type": ["Slash: 12 - 15","Pierce: 12 - 15"],
+    "Backstab": "10x",
+    "Knockback": 10
+  },
+  {
+    "Name": "Blackmetal atgeir",
+    "Type": "Polearms",
+    "Dmg": 105,
+    "Max Upgraded Dmg": 123,
+    "Dmg Type": "Pierce",
+    "Backstab": "3x",
+    "Knockback": 30
+  },
+  {
+    "Name": "Blackmetal axe",
+    "Type": "Axes",
+    "Dmg": 95,
+    "Max Upgraded Dmg": 110,
+    "Dmg Type": "Slash",
+    "Backstab": "3x",
+    "Knockback": 60
+  },
+  {
+    "Name": "Blackmetal knife",
+    "Type": "Knives",
+    "Dmg": 36,
+    "Max Upgraded Dmg": 42,
+    "Dmg Type": ["Slash: 18 - 21", "Pierce: 18 - 21"],
+    "Backstab": "10x",
+    "Knockback": 10
+  },
+  {
+    "Name": "Blackmetal sword",
+    "Type": "Swords",
+    "Dmg": 95,
+    "Max Upgraded Dmg": 113,
+    "Dmg Type": "Slash",
+    "Backstab": "3x",
+    "Knockback": 40
+  },
+  {
+    "Name": "Porcupine",
+    "Type": "Clubs",
+    "Dmg": 95,
+    "Max Upgraded Dmg": 113,
+    "Dmg Type": ["Blunt: 50 - 50", "Pierce: 45 - 63"],
+    "Backstab": "3x",
+    "Knockback": 90
+  }
+]

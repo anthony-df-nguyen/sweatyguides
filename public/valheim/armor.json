@@ -1,0 +1,274 @@
+[
+  {
+    "Name": "Rag tunic",
+    "Type": "Chest",
+    "Quality Level 1 | 2 | 3 | 4": "1 | 2",
+    "Crafting Materials Level 1 | 2 | 3 | 4": "Leather Scrap: 5 | 5",
+    "Movement": "-",
+    "Weight": 2
+  },
+  {
+    "Name": "Rag pants",
+    "Type": "Pants",
+    "Quality Level 1 | 2 | 3 | 4": "1 | 2",
+    "Crafting Materials Level 1 | 2 | 3 | 4": "Leather Scrap: 5 | 5",
+    "Movement": "-",
+    "Weight": 2
+  },
+  {
+    "Name": "Leather helmet",
+    "Type": "Helmet",
+    "Quality Level 1 | 2 | 3 | 4": "2 | 4 | 6 | 8",
+    "Crafting Materials Level 1 | 2 | 3 | 4": [
+      "Deer hide: 6 | 6 | 12 | 18",
+      "Bone Fragments: - | 5 | 10 | 15"
+    ],
+    "Movement": "-",
+    "Weight": 1
+  },
+  {
+    "Name": "Leather tunic",
+    "Type": "Chest",
+    "Quality Level 1 | 2 | 3 | 4": "2 | 4 | 6 | 8",
+    "Crafting Materials Level 1 | 2 | 3 | 4": [
+      "Deer hide: 6 | 6 | 12 | 18",
+      "Bone Fragments: - | 5 | 10 | 15"
+    ],
+    "Movement": "-",
+    "Weight": 5
+  },
+  {
+    "Name": "Leather pants",
+    "Type": "Pants",
+    "Quality Level 1 | 2 | 3 | 4": "2 | 4 | 6 | 8",
+    "Crafting Materials Level 1 | 2 | 3 | 4": [
+      "Deer hide: 6 | 6 | 12 | 18",
+      "Bone Fragments: - | 5 | 10 | 15"
+    ],
+    "Movement": "-",
+    "Weight": 5
+  },
+  {
+    "Name": "Troll leather helmet",
+    "Type": "Helmet",
+    "Quality Level 1 | 2 | 3 | 4": "6 | 8 | 10 | 12",
+    "Crafting Materials Level 1 | 2 | 3 | 4": [
+      "Troll Hide: 5 | 2 | 4 | 6",
+      "Bone Fragments: 3 | 1 | 2 | 3"
+    ],
+    "Movement": "-",
+    "Weight": 1
+  },
+  {
+    "Name": "Troll leather tunic",
+    "Type": "Chest",
+    "Quality Level 1 | 2 | 3 | 4": "6 | 8 | 10 | 12",
+    "Crafting Materials Level 1 | 2 | 3 | 4": "Troll Hide: 5 | 2 | 4 | 6",
+    "Movement": "-",
+    "Weight": 5
+  },
+  {
+    "Name": "Troll leather pants",
+    "Type": "Pants",
+    "Quality Level 1 | 2 | 3 | 4": "6 | 8 | 10 | 12",
+    "Crafting Materials Level 1 | 2 | 3 | 4": "Troll Hide: 5 | 2 | 4 | 6",
+    "Movement": "-",
+    "Weight": 5
+  },
+  {
+    "Name": "Bronze helmet",
+    "Type": "Helmet",
+    "Quality Level 1 | 2 | 3 | 4": "8 | 10 | 12 | 14",
+    "Crafting Materials Level 1 | 2 | 3 | 4": [
+      "Bronze: 5 | 3 | 6 | 9",
+      " Deer Hide: 2 | - | - | -"
+    ],
+    "Movement": "-",
+    "Weight": 3
+  },
+  {
+    "Name": "Bronze plate cuirass",
+    "Type": "Chest",
+    "Quality Level 1 | 2 | 3 | 4": "8 | 10 | 12 | 14",
+    "Crafting Materials Level 1 | 2 | 3 | 4": [
+      "Bronze: 5 | 3 | 6 | 9",
+      " Deer Hide: 2 | - | - | -"
+    ],
+    "Movement": "-5%",
+    "Weight": 10
+  },
+  {
+    "Name": "Bronze plate leggings",
+    "Type": "Pants",
+    "Quality Level 1 | 2 | 3 | 4": "8 | 10 | 12 | 14",
+    "Crafting Materials Level 1 | 2 | 3 | 4": [
+      "Bronze: 5 | 3 | 6 | 9",
+      " Deer Hide: 2 | - | - | -"
+    ],
+    "Movement": "-5%",
+    "Weight": 10
+  },
+  {
+    "Name": "Iron helmet",
+    "Type": "Helmet",
+    "Quality Level 1 | 2 | 3 | 4": "14 | 16 | 18 | 20",
+    "Crafting Materials Level 1 | 2 | 3 | 4": [
+      "Iron: 20 | 5 | 10 | 15",
+      " Deer Hide: 2 | - | - | -"
+    ],
+    "Movement": "-",
+    "Weight": 3
+  },
+  {
+    "Name": "Iron scale mail",
+    "Type": "Chest",
+    "Quality Level 1 | 2 | 3 | 4": "14 | 16 | 18 | 20",
+    "Crafting Materials Level 1 | 2 | 3 | 4": [
+      "Iron: 20 | 5 | 10 | 15",
+      " Deer Hide: 2 | - | - | -"
+    ],
+    "Movement": "-5%",
+    "Weight": 15
+  },
+  {
+    "Name": "Iron greaves",
+    "Type": "Pants",
+    "Quality Level 1 | 2 | 3 | 4": "14 | 16 | 18 | 20",
+    "Crafting Materials Level 1 | 2 | 3 | 4": [
+      "Iron: 20 | 5 | 10 | 15",
+      " Deer Hide: 2 | - | - | -"
+    ],
+    "Movement": "-5%",
+    "Weight": 15
+  },
+  {
+    "Name": "Drake helmet",
+    "Type": "Helmet",
+    "Quality Level 1 | 2 | 3 | 4": "20 | 22 | 24 | 26",
+    "Crafting Materials Level 1 | 2 | 3 | 4": [
+      "Silver: 20 | 5 | 10 | 15",
+      " Wolf Pelt: 2 | - | - | -",
+      " Drake Trophy: 2 | - | - | -"
+    ],
+    "Movement": "-",
+    "Weight": 3
+  },
+  {
+    "Name": "Wolf Name chest",
+    "Type": "Chest",
+    "Quality Level 1 | 2 | 3 | 4": "20 | 22 | 24 | 26",
+    "Crafting Materials Level 1 | 2 | 3 | 4": [
+      "Silver: 20 | 5 | 10 | 15",
+      " Wolf Pelt: 5 | 2 | 4 | 6",
+      " Chain: 1 | - | - | -"
+    ],
+    "Movement": "-5%",
+    "Weight": 15
+  },
+  {
+    "Name": "Wolf Name legs",
+    "Type": "Pants",
+    "Quality Level 1 | 2 | 3 | 4": "20 | 22 | 24 | 26",
+    "Crafting Materials Level 1 | 2 | 3 | 4": [
+      "Silver: 20 | 5 | 10 | 15",
+      " Wolf  Pelt: 5 | 2 | 4 | 6",
+      " Wolf Fang: 4 | 1 | 2 | 3"
+    ],
+    "Movement": "-5%",
+    "Weight": 15
+  },
+  {
+    "Name": "Padded helmet",
+    "Type": "Helmet",
+    "Quality Level 1 | 2 | 3 | 4": "26 | 28 | 30 | 32",
+    "Crafting Materials Level 1 | 2 | 3 | 4": [
+      "Iron: 10 | 5 | 10 | 15",
+      " Linen: 15 | - | - | -"
+    ],
+    "Movement": "-",
+    "Weight": 3
+  },
+  {
+    "Name": "Padded cuirass",
+    "Type": "Chest",
+    "Quality Level 1 | 2 | 3 | 4": "26 | 28 | 30 | 32",
+    "Crafting Materials Level 1 | 2 | 3 | 4": [
+      "Iron: 10 | 3 | 6 | 9",
+      " Linen: 20 | - | - | -"
+    ],
+    "Movement": "-5%",
+    "Weight": 10
+  },
+  {
+    "Name": "Padded greaves",
+    "Type": "Pants",
+    "Quality Level 1 | 2 | 3 | 4": "26 | 28 | 30 | 32",
+    "Crafting Materials Level 1 | 2 | 3 | 4": [
+      "Iron: 10 | 3 | 6 | 9",
+      " Linen: 20 | - | - | -"
+    ],
+    "Movement": "-5%",
+    "Weight": 10
+  },
+  {
+    "Name": "Deer hide cape",
+    "Type": "Cape",
+    "Quality Level 1 | 2 | 3 | 4": "1 | 2 | 3 | 4",
+    "Crafting Materials Level 1 | 2 | 3 | 4": [
+      "Deer hide: 4 | 4 | 8 | 12",
+      "Bone Fragments: 5 | 5 | 10 | 15"
+    ],
+    "Movement": "",
+    "Weight": 4,
+    "Additional Effects": ""
+  },
+  {
+    "Name": "Troll hide cape",
+    "Type": "Cape",
+    "Quality Level 1 | 2 | 3 | 4": "1 | 2 | 3 | 4",
+    "Crafting Materials Level 1 | 2 | 3 | 4": [
+      "Troll Hide: 10 | 5 | 10 | 15",
+      "Bone Fragments: 10 | 5 | 10 | 15"
+    ],
+    "Movement": "",
+    "Weight": 4,
+    "Additional Effects": "Set bonus: -25% Sneak visibility"
+  },
+  {
+    "Name": "Wolf fur cape",
+    "Type": "Cape",
+    "Quality Level 1 | 2 | 3 | 4": "1 | 2 | 3 | 4",
+    "Crafting Materials Level 1 | 2 | 3 | 4": [
+      "Silver: 4 | 2 | 4 | 6",
+      "Wolf Pelt: 6 | 4 | 8 | 12",
+      "Wolf Trophy: 1 | - | - | -"
+    ],
+    "Movement": "",
+    "Weight": 4,
+    "Additional Effects": "Frost resistance"
+  },
+  {
+    "Name": "Lox cape",
+    "Type": "Cape",
+    "Quality Level 1 | 2 | 3 | 4": "1 | 2 | 3 | 4",
+    "Crafting Materials Level 1 | 2 | 3 | 4": [
+      "Lox Pelt: 6 | 2 | 4 | 6",
+      "Silver: 2 | - | - | -"
+    ],
+    "Movement": "",
+    "Weight": 4,
+    "Additional Effects": "Frost resistance"
+  },
+  {
+    "Name": "Linen cape",
+    "Type": "Cape",
+    "Quality Level 1 | 2 | 3 | 4": "1 | 2 | 3 | 4",
+    "Crafting Materials Level 1 | 2 | 3 | 4": [
+      "Linen: 20 | 4 | 8 | 12",
+      "Silver: 1 | - | - | -"
+    ],
+    "Movement": "",
+    "Weight": 4,
+    "Additional Effects": ""
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "Name": "Resting Effect",
+    "Source": "Sheltered, sitting while warm.",
+    "Effects": ["Health regen +200%", " Stamina regen +300%"],
+    "Notes": "Leads to Rested Effect within 20 s."
+  },
+
+  {
+    "Name": "Rested Effect",
+    "Source": "Resting effect for 20s, sleeping in a bed.",
+    "Effects": ["Health regen +50%", "Stamina regen +100%", "XP gain +50%"],
+    "Notes": ""
+  },
+  {
+    "Name": "Corpse Run",
+    "Source": "Collecting any amount of items from their grave.",
+    "Effects": ["Jump stamina usage: -75%","Run stamina usage: -75%","Very resistant vs. Blunt","Slash","Pierce","+10 Health per second"],
+    "Notes": "50 second duration"
+  },
+  {
+    "Name": "No skill drain",
+    "Source": "Dying.",
+    "Effects": "No XP loss",
+    "Notes": "10 minute duration"
+  },
+  {
+    "Name": "Fire Effect",
+    "Source": "Campfire, working Smelter, working Charcoal Kiln",
+    "Effects": "The timer of the Wet Effect expires 10x faster    removes Cold and Freezing Effect.",
+    "Notes": ""
+  },
+  {
+    "Name": "Shelter Effect",
+    "Source": "Under roof / cover (80%)",
+    "Effects": "Character does not become wet from rain and any wet timer begins to count down.",
+    "Notes": ""
+  },
+  {
+    "Name": "Sneaky Effect",
+    "Source": "All four pieces of the Troll armor set are equipped.",
+    "Effects": "Sneak +25%",
+    "Notes": ""
+  },
+  {
+    "Name": "Wet Effect",
+    "Source": "Caught in the rain. Immersed in water.",
+    "Effects": [
+      "Health regen -25%",
+      "Stamina regen -15%",
+      "Resistant vs. Fire",
+      " Weak vs. Frost",
+      "Weak vs. Lightning"
+    ],
+    "Notes": ""
+  },
+  {
+    "Name": "Smoked",
+    "Source": "Standing inside a cloud of smoke.",
+    "Effects": "Damage over time (2 damage per tick).",
+    "Notes": "Damages without sound cue."
+  },
+  {
+    "Name": "Freezing Effect",
+    "Source": "Applied when in the Mountain biome.",
+    "Effects":[
+      "Health regen -100%",
+      "Stamina regen -60%",
+      "1 dps (damage per second)",
+      "Resistant vs. Fire"
+    ],
+    "Notes": ""
+  },
+  {
+    "Name": "Frost Effect",
+    "Source": "Drake, Moder",
+    "Effects": "Slows movement speed.",
+    "Notes": "Speed penalty decays exponentially over the duration of the status effect. Resistance to Frost significantly reduces the duration."
+  },
+  {
+    "Name": "Poison",
+    "Source": "Greydwarf shaman, Blob, Leech, Oozer, Bonemass, Poison Arrows",
+    "Effects": "Applies damage over time.",
+    "Notes": "Poisoned characters are surrounded by a green smoky effect, slightly luminous. Resistance to Poison halves both the damage done by poison and its duration"
+  },
+  {
+    "Name": "Burning",
+    "Source": "Walking into a fire. Being hit by a fireball.",
+    "Effects": ["Applies damage over time (2 DPS from campfires, otherwise dependent on what hits you)", "The timer of the Wet Effect expires 60x faster"],
+    "Notes": "The flames covering the character makes them a nice source of light for a few seconds."
+  },
+  {
+    "Name": "Resistance",
+    "Source": "Armor, Meads, positive status effects",
+    "Effects": "Possible resistances: Blunt, Slashing, Piercing, Fire, Poison, Frost, etc.",
+    "Notes": ""
+  }
+]

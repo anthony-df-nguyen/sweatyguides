@@ -136,6 +136,9 @@ ol {
       margin-top:$gap;
     }
   }
+  li.noMargin {
+    margin:0 !important;
+  }
 }
 
 .active {
@@ -153,10 +156,14 @@ ol {
 .tableHead {
   background-color: $blue;
   padding:$gap/2 $gap;
+  border-bottom:1px solid $gray;
+    z-index: 2;
 }
 .tableCell {
   padding:$gap/2 $gap;
   background-color: $black;
+  border-left:1px solid $gray;
+  border-bottom:1px solid $gray;
 }
 
 .listSeparator {

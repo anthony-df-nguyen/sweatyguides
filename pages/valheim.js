@@ -3,33 +3,66 @@ import Page from "components/Page.jsx";
 import Expander from "components/Expander.jsx";
 import ReactTable from "components/ReactTable";
 
-
 export default function Valheim() {
-
-
   return (
     <div>
       <Page title="Valheim">
         <div className="card">
           <h1>Server Info</h1>
-          <h3 style={{ color: 'white' }}>IP: 194.156.90.227:27082</h3>
+          <h3 style={{ color: "white" }}>IP: 194.156.90.227:27082</h3>
         </div>
 
         <Expander title="How to Install Valheim+">
-          <div><b>Full guide is available <a href="https://valheim.plus/installation" className='blue'>here</a></b></div>
-          <br></br>         
+          <div>
+            <b>
+              Full guide is available{" "}
+              <a href="https://valheim.plus/installation" className="blue">
+                here
+              </a>
+            </b>
+          </div>
+          <br></br>
           <ol>
-            <li>Down the latest Valheim+ file <a href="https://valheim.plus/cdn/0.9.8.2/WindowsClient.tar.gz" className="blue">here</a></li>
-            <li>If you don't have an unzipping program that can handle .tar/.gz files, download 7-zip <a href="https://www.7-zip.org/download.html" className="blue">here</a></li>
-            <li>Unzip the downloaded file (if using 7-Zip, right click the zip file &gt; 7-Zip &gt;  Extract Files). After that, if you see a 'WindowsClient.tar' file, you need to also un-zip that. The final result of the unzipping should be multiple files/folders, which include: 'BepInEx, doorstop_libs, unstripped_corlib, doorstop_config,winhttp.dll'</li>
-            <li>Locate your Valheim game folder. Shortcut, in Steam, right click Valheim on the game list and click 'Manage &gt; Browse Local Files</li>
-            <li>Copy and paste the downloaded unzipped files from step 3 into the game folder and say 'Yes' to replacing any files. *Note: If you install valheim plus for the first time, you will have to start your game once to have the config file placed in your BepInEx\config directory.</li>
+            <li>
+              Down the latest Valheim+ file{" "}
+              <a
+                href="https://valheim.plus/cdn/0.9.8.2/WindowsClient.tar.gz"
+                className="blue">
+                here
+              </a>
+            </li>
+            <li>
+              If you don't have an unzipping program that can handle .tar/.gz
+              files, download 7-zip{" "}
+              <a href="https://www.7-zip.org/download.html" className="blue">
+                here
+              </a>
+            </li>
+            <li>
+              Unzip the downloaded file (if using 7-Zip, right click the zip
+              file &gt; 7-Zip &gt; Extract Files). After that, if you see a
+              'WindowsClient.tar' file, you need to also un-zip that. The final
+              result of the unzipping should be multiple files/folders, which
+              include: 'BepInEx, doorstop_libs, unstripped_corlib,
+              doorstop_config,winhttp.dll'
+            </li>
+            <li>
+              Locate your Valheim game folder. Shortcut, in Steam, right click
+              Valheim on the game list and click 'Manage &gt; Browse Local Files
+            </li>
+            <li>
+              Copy and paste the downloaded unzipped files from step 3 into the
+              game folder and say 'Yes' to replacing any files. *Note: If you
+              install valheim plus for the first time, you will have to start
+              your game once to have the config file placed in your
+              BepInEx\config directory.
+            </li>
           </ol>
         </Expander>
         <Expander title="Current Server Valheim+ Settings">
           <div className="listSeparator">Building</div>
           <ul>
-          <li>Wokbench radius increased to 30m from 20m</li>
+            <li>Wokbench radius increased to 30m from 20m</li>
             <li>
               CraftFromChest: When crafting something, it can pull from chests
               near you instead of requiring you to go get them (be careful not
@@ -51,7 +84,6 @@ export default function Valheim() {
               Increase object placement range from 8 to 12 (place items in build
               mode further without needing to walk)
             </li>
-
           </ul>
           <div className="listSeparator">Inventory/Weight</div>
           <ul>
@@ -59,7 +91,6 @@ export default function Valheim() {
             <li>Upgraded carry weight (from belt): 600 from (450)</li>
             <li>Increased player inventory by 2 more rows</li>
             <li>The Karve boat has increased inventory of 6 instead of 4</li>
-
           </ul>
           <div className="listSeparator">Effects/Buffs</div>
           <ul>
@@ -94,40 +125,198 @@ export default function Valheim() {
             <li>Increased map discovery radius to 250 from 100</li>
             <li>Added current in-game time</li>
           </ul>
-
         </Expander>
 
-        <Expander title="Food Table">
+        <Expander title="Food Stats">
           <h4>Click table headers to sort</h4>
           <br></br>
-          <ReactTable data="/valheim/foods.json" head={[
-            {
-              name: 'Name',
-              width: '200',
-            },
-            {
-              name: 'Health',
-              width: '100',
-            },
-            {
-              name: 'Healing',
-              width: '100',
-            },
-            {
-              name: 'Stamina',
-              width: '100',
-            },
-            {
-              name: 'Duration',
-              width: '100',
-            },
-            {
-              name: 'Stack Size',
-              width: '100',
-            },
-          ]} />
+          <ReactTable
+            data="/valheim/foods.json"
+            head={[
+              {
+                name: "Name",
+                width: "300",
+              },
+              {
+                name: "Health",
+                width: "100",
+              },
+              {
+                name: "Healing",
+                width: "100",
+              },
+              {
+                name: "Stamina",
+                width: "100",
+              },
+              {
+                name: "Duration",
+                width: "100",
+              },
+              {
+                name: "Stack Size",
+                width: "100",
+              },
+            ]}
+          />
         </Expander>
-
+        <Expander title="Effects | Buffs">
+          <h4>Click table headers to sort</h4>
+          <br></br>
+          <ReactTable
+            data="/valheim/effects.json"
+            head={[
+              {
+                name: "Name",
+                width: "150",
+              },
+              {
+                name: "Source",
+                width: "150",
+              },
+              {
+                name: "Effects",
+                width: "300",
+              },
+              {
+                name: "Notes",
+                width: "300",
+              },
+            ]}
+          />
+        </Expander>
+        <Expander title="Weapon Stats">
+          <h4>Click table headers to sort</h4>
+          <br></br>
+          <ReactTable
+            data="/valheim/weapons.json"
+            head={[
+              {
+                name: "Name",
+                width: "175",
+              },
+              {
+                name: "Type",
+                width: "100",
+              },
+              {
+                name: "Dmg",
+                width: "70",
+              },
+              {
+                name: "Max Upgraded Dmg",
+                width: "120",
+              },
+              {
+                name: "Dmg Type",
+                width: "170",
+              },
+              {
+                name: "Backstab",
+                width: "70",
+              },
+              {
+                name: "Knockback",
+                width: "70",
+              },
+            ]}
+          />
+        </Expander>
+        <Expander title="Armor Stats">
+          <h4>Click table headers to sort</h4>
+          <br></br>
+          <ReactTable
+            data="/valheim/armor.json"
+            head={[
+              {
+                name: "Name",
+                width: "175",
+              },
+              {
+                name: "Type",
+                width: "75",
+              },
+              {
+                name: "Quality Level 1 | 2 | 3 | 4",
+                width: "200",
+              },
+              {
+                name: "Crafting Materials Level 1 | 2 | 3 | 4",
+                width: "275",
+              },
+              {
+                name: "Movement",
+                width: "100",
+              },
+              {
+                name: "Weight",
+                width: "50",
+              },
+            ]}
+          />
+        </Expander>
+        <Expander title="Creatures/Mobs">
+          <h4>Click table headers to sort</h4>
+          <br></br>
+          <ReactTable
+            data="/valheim/creatures.json"
+            head={[
+              {
+                name: "Name",
+                width: "150",
+              },
+              {
+                name: "Spawn",
+                width: "100",
+              },
+              {
+                name: "HP",
+                width: "70",
+              },
+              {
+                name: "Max Dmg",
+                width: "100",
+              },
+              {
+                name: "Notes",
+                width: "200",
+              },
+              {
+                name: "Weakness",
+                width: "100",
+              },
+              {
+                name: "Resistance",
+                width: "100",
+              },
+              {
+                name: "Immune",
+                width: "100",
+              },
+            ]}
+          />
+        </Expander>
+        <Expander title="Materials | Metals | Food | Misc">
+          <h4>Click table headers to sort</h4>
+          <br></br>
+          <ReactTable
+            data="/valheim/materials.json"
+            head={[
+              {
+                name: "Name",
+                width: "175",
+              },
+              {
+                name: "Type",
+                width: "100",
+              },
+              {
+                name: "Source",
+                width: "600",
+              },
+            ]}
+          />
+        </Expander>
       </Page>
     </div>
   );

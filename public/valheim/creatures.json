@@ -1,0 +1,316 @@
+[
+  {
+    "Name": "Boar",
+    "Spawn": "Meadows",
+    "HP": 10,
+    "Max Dmg": 10,
+    "Notes": "Afraid of fire",
+    "Weakness": "",
+    "Resistance": "",
+    "Immune": "Spirit",
+    "Image": ""
+  },
+  {
+    "Name": "Neck",
+    "Spawn": "Meadows",
+    "HP": 5,
+    "Max Dmg": 5,
+    "Notes": "",
+    "Weakness": "Fire",
+    "Resistance": "Poison",
+    "Immune": "Spirit",
+    "Image": "https://static.wikia.nocookie.net/valheim/images/6/67/NeckCreature.png/revision/latest?cb=20210208120101"
+  },
+  {
+    "Name": "Greyling",
+    "Spawn": "Meadows",
+    "HP": 20,
+    "Max Dmg": 5,
+    "Notes": "",
+    "Weakness": "Fire",
+    "Resistance": "Poison",
+    "Immune": "Spirit",
+    "Image": ""
+  },
+  {
+    "Name": "Greydwarf",
+    "Spawn": "Black Forest",
+    "HP": 40,
+    "Max Dmg": 13.5,
+    "Notes": "",
+    "Weakness": "Fire",
+    "Resistance": "Poison",
+    "Immune": "Spirit",
+    "Image": ""
+  },
+  {
+    "Name": "Greydwarf brute",
+    "Spawn": "Black Forest",
+    "HP": 150,
+    "Max Dmg": 30,
+    "Notes": "",
+    "Weakness": "Fire",
+    "Resistance": "Poison",
+    "Immune": "Spirit",
+    "Image": ""
+  },
+  {
+    "Name": "Greydwarf shaman",
+    "Spawn": "Black Forest",
+    "HP": 60,
+    "Max Dmg": 14,
+    "Notes": [
+      "Heals allies for 2.5hp/tick over time",
+      "Cone of poison that poisons for ??hp/tick"
+    ],
+    "Weakness": "Fire",
+    "Resistance": "Poison",
+    "Immune": "Spirit",
+    "Image": ""
+  },
+  {
+    "Name": "Troll",
+    "Spawn": "Black Forest",
+    "HP": 600,
+    "Max Dmg": 70,
+    "Notes": "Can destroy all trees, stone, and ores",
+    "Weakness": "Pierce",
+    "Resistance": "Blunt",
+    "Immune": "Spirit",
+    "Image": ""
+  },
+  {
+    "Name": "Ghost",
+    "Spawn": "Burial Chambers",
+    "HP": 60,
+    "Max Dmg": 20,
+    "Notes": "",
+    "Weakness": "Spirit",
+    "Resistance": ["Blunt", "Slash", "Pierce"],
+    "Immune": "Poison",
+    "Image": ""
+  },
+  {
+    "Name": "Skeleton",
+    "Spawn": "Black Forest",
+    "HP": 40,
+    "Max Dmg": 20,
+    "Notes": "Spawns with either a bow, sword, sword and shield, or a mace",
+    "Weakness": ["Blunt", "Fire"],
+    "Resistance": ["Pierce", "Poison"],
+    "Immune": "Poison",
+    "Image": "https://static.wikia.nocookie.net/valheim/images/2/23/Skeleton.png/revision/latest?cb=20210311185908"
+  },
+  {
+    "Name": "Rancid remains",
+    "Spawn": "Burial Chambers",
+    "HP": 100,
+    "Max Dmg": 20,
+    "Notes": "Does poison damage for 1.7hp/tick over time",
+    "Weakness": ["Blunt", "Fire"],
+    "Resistance": ["Pierce", "Poison"],
+    "Immune": "Poison",
+    "Image": "https://static.wikia.nocookie.net/valheim/images/a/a0/RancidRemains.png/revision/latest?cb=20210311190245"
+  },
+  {
+    "Name": "Root",
+    "Spawn": "The Elder",
+    "HP": 20,
+    "Max Dmg": 55,
+    "Notes": "",
+    "Weakness": "Fire",
+    "Resistance": "Frost",
+    "Immune": "Poison",
+    "Image": ""
+  },
+  {
+    "Name": "Blob",
+    "Spawn": "Swamp",
+    "HP": 50,
+    "Max Dmg": "-",
+    "Notes": "Poisons for 3-5hp/tick",
+    "Weakness": ["Blunt", "Frost", "Lightning"],
+    "Resistance": "Pierce",
+    "Immune": "Poison",
+    "Image": "https://static.wikia.nocookie.net/valheim/images/9/9d/Blob.png/revision/latest?cb=20210311223626"
+  },
+  {
+    "Name": "Oozer",
+    "Spawn": "Swamp",
+    "HP": 150,
+    "Max Dmg": "-",
+    "Notes": "Poisons for 3-5hp/tick. Splits into 2 Blobs when killed",
+    "Weakness": ["Blunt", "Frost", "Lightning"],
+    "Resistance": ["Slash", " Pierce", "Fire"],
+    "Immune": "Poison",
+    "Image": "https://static.wikia.nocookie.net/valheim/images/d/dc/Oozer02.png/revision/latest?cb=20210311223312"
+  },
+  {
+    "Name": "Draugr",
+    "Spawn": ["Swamp", "Meadows"],
+    "HP": 100,
+    "Max Dmg": 50,
+    "Notes": "Spawns with a bow / axe / axe + wood shield / axe + banded shield",
+    "Weakness": "",
+    "Resistance": "Fire",
+    "Immune": "",
+    "Image": "https://static.wikia.nocookie.net/valheim/images/1/11/Draugr.png/revision/latest?cb=20210311190053"
+  },
+  {
+    "Name": "Draugr elite",
+    "Spawn": "Swamp",
+    "HP": 200,
+    "Max Dmg": 55,
+    "Notes": "",
+    "Weakness": "",
+    "Resistance": "Fire",
+    "Immune": "",
+    "Image": "https://static.wikia.nocookie.net/valheim/images/2/26/DraugrElite.png/revision/latest?cb=20210320233345"
+  },
+  {
+    "Name": "Leech",
+    "Spawn": "Swamp",
+    "HP": 60,
+    "Max Dmg": 15,
+    "Notes": "Poisons for 2.5-4hp/tick",
+    "Weakness": "",
+    "Resistance": "Poison",
+    "Immune": ["Fire", "Spirit"],
+    "Image": "https://static.wikia.nocookie.net/valheim/images/c/c6/Leech03.png/revision/latest?cb=20210311222431"
+  },
+  {
+    "Name": "Surtling",
+    "Spawn": ["Swamp", "Ashlands"],
+    "HP": 20,
+    "Max Dmg": 10,
+    "Notes": "Fireball burns for 6.5-10hp/tick",
+    "Weakness": "Frost",
+    "Resistance": "",
+    "Immune": ["Fire", "Spirit"],
+    "Image": "https://static.wikia.nocookie.net/valheim/images/f/f1/Surtling02.png/revision/latest?cb=20210311223833"
+  },
+  {
+    "Name": "Wraith",
+    "Spawn": "Swamp",
+    "HP": 100,
+    "Max Dmg": 60,
+    "Notes": "Only spawns at night or inside abandoned houses",
+    "Weakness": ["Fire", "Spirit"],
+    "Resistance": ["Blunt", "Slash", " Pierce"],
+    "Immune": ["Frost", " Poison"],
+    "Image": "https://static.wikia.nocookie.net/valheim/images/2/20/Wraith02.png/revision/latest?cb=20210311190629"
+  },
+  {
+    "Name": "Wolf",
+    "Spawn": "Mountains",
+    "HP": 80,
+    "Max Dmg": 70,
+    "Notes": "",
+    "Weakness": "",
+    "Resistance": "",
+    "Immune": "Spirit",
+    "Image": "https://static.wikia.nocookie.net/valheim/images/c/c8/Wolf.png/revision/latest?cb=20210311183333"
+  },
+  {
+    "Name": "Drake",
+    "Spawn": "Mountains",
+    "HP": 100,
+    "Max Dmg": 90,
+    "Notes": "Shoots 3 ice spears with Frost effect",
+    "Weakness": "Fire",
+    "Resistance": "",
+    "Immune": ["Spirit", " Frost"],
+    "Image": "https://static.wikia.nocookie.net/valheim/images/d/da/Drake.png/revision/latest?cb=20210207140314"
+  },
+  {
+    "Name": "Stone Golem",
+    "Spawn": "Mountains",
+    "HP": 800,
+    "Max Dmg": 110,
+    "Notes": "",
+    "Weakness": "Pickaxe",
+    "Resistance": ["Pierce", " Slash"],
+    "Immune": ["Spirit", " Fire", " Frost", " Poison"],
+    "Image": "https://static.wikia.nocookie.net/valheim/images/2/27/Stone_Golem_0star.png/revision/latest?cb=20210209114816"
+  },
+  {
+    "Name": "Fenring",
+    "Spawn": "Mountains",
+    "HP": 300,
+    "Max Dmg": 80,
+    "Notes": "Only spawns at night",
+    "Weakness": "Fire",
+    "Resistance": "",
+    "Immune": "",
+    "Image": "https://static.wikia.nocookie.net/valheim/images/b/b7/Fenring02.png/revision/latest?cb=20210311183158"
+  },
+  {
+    "Name": "Deathsquito",
+    "Spawn": "Plains",
+    "HP": 20,
+    "Max Dmg": 90,
+    "Notes": "",
+    "Weakness": "",
+    "Resistance": "",
+    "Immune": "Spirit",
+    "Image": "https://static.wikia.nocookie.net/valheim/images/a/aa/Deathsquito02.png/revision/latest?cb=20210311182728"
+  },
+  {
+    "Name": "Lox",
+    "Spawn": "Plains",
+    "HP": 1000,
+    "Max Dmg": 130,
+    "Notes": "Can destroy all trees, stone, and ores",
+    "Weakness": "Fire",
+    "Resistance": ["Blunt", " Slash", " Frost"],
+    "Immune": "Spirit",
+    "Image": "https://static.wikia.nocookie.net/valheim/images/7/7c/Lox.png/revision/latest?cb=20210311182842"
+  },
+  {
+    "Name": "Fuling",
+    "Spawn": "Plains",
+    "HP": 200,
+    "Max Dmg": 110,
+    "Notes": "Can spawn with either a club, sword, torch or spear",
+    "Weakness": "",
+    "Resistance": "",
+    "Immune": "Spirit",
+    "Image": "https://static.wikia.nocookie.net/valheim/images/d/d0/Fuling.png/revision/latest?cb=20210311182534"
+  },
+  {
+    "Name": "Fuling Berserker",
+    "Spawn": "Plains",
+    "HP": 700,
+    "Max Dmg": 130,
+    "Notes": "Has a 3-combo attack",
+    "Weakness": "",
+    "Resistance": "",
+    "Immune": "Spirit",
+    "Image": "https://static.wikia.nocookie.net/valheim/images/c/c5/FulingBerserker03.png/revision/latest?cb=20210311184129"
+  },
+  {
+    "Name": "Fuling shaman",
+    "Spawn": "Plains",
+    "HP": 150,
+    "Max Dmg": 100,
+    "Notes": [
+      "Fireball burns for 15-19hp/tick over time",
+      "Can cast a protective shield over allies in an area"
+    ],
+    "Weakness": "",
+    "Resistance": "",
+    "Immune": "Spirit",
+    "Image": "https://static.wikia.nocookie.net/valheim/images/b/b1/FulingShaman02.png/revision/latest?cb=20210311183603"
+  },
+  {
+    "Name": "Serpent",
+    "Spawn": "Ocean",
+    "HP": 400,
+    "Max Dmg": 70,
+    "Notes": "",
+    "Weakness": "Frost",
+    "Resistance": "Poison",
+    "Immune": "",
+    "Image": "https://static.wikia.nocookie.net/valheim/images/5/54/Serpent02.png/revision/latest?cb=20210311183433"
+  }
+]

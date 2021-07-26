@@ -1,0 +1,314 @@
+[
+  {
+    "Name": "Black metal",
+    "Source": "Refined in a Blast furnace from Black metal scrap",
+    "Type": "Metals"
+  },
+  {
+    "Name": "Black metal scrap",
+    "Source": "Dropped by Fulings, Fuling Berserkers, and Fuling shamans",
+    "Type": "Metals"
+  },
+  {
+    "Name": "Bronze",
+    "Source": "Crafted at a Forge by combining two Copper with one Tin",
+    "Type": "Metals"
+  },
+  {
+    "Name": "Copper",
+    "Source": "Refined in a Smelter from Copper ore",
+    "Type": "Metals"
+  },
+  {
+    "Name": "Copper ore",
+    "Source": "Mined from copper veins in the Black Forest",
+    "Type": "Metals"
+  },
+  {
+    "Name": "Iron",
+    "Source": ["Refined in a Smelter from Scrap iron", "Looted from chests"],
+    "Type": "Metals"
+  },
+  {
+    "Name": "Scrap iron",
+    "Source": [
+      "Mined from Muddy scrap piles in the Swamp",
+      "Looted from chests in Sunken Crypts"
+    ],
+    "Type": "Metals"
+  },
+  {
+    "Name": "Silver",
+    "Source": "Refined in a Smelter from Silver ore",
+    "Type": "Metals"
+  },
+  {
+    "Name": "Silver ore",
+    "Source": "Mined from veins in the Mountains located with the Wishbone",
+    "Type": "Metals"
+  },
+  {
+    "Name": "Tin",
+    "Source": "Refined in a Smelter from Tin ore",
+    "Type": "Metals"
+  },
+  {
+    "Name": "Tin ore",
+    "Source": "Mined from Tin deposits found near bodies of water in the Black Forest",
+    "Type": "Metals"
+  },
+  {
+    "Name": "Ancient bark",
+    "Source": "Ancient Trees in the Swamp",
+    "Type": "Wood"
+  },
+  {
+    "Name": "Core wood",
+    "Source": "Pine in the Black Forest",
+    "Type": "Wood"
+  },
+  {
+    "Name": "Fine wood",
+    "Source": "Birch and Oak trees",
+    "Type": "Wood"
+  },
+  {
+    "Name": "Wood",
+    "Source": ["All Trees", "Branches on ground", "Greydwarfs"],
+    "Type": "Wood"
+  },
+  {
+    "Name": "Blueberries",
+    "Source": "Bushes in the Black Forest",
+    "Type": "Food"
+  },
+  {
+    "Name": "Blood pudding",
+    "Source": "Crafted from Thistle, Barley flour, and Bloodbag at a Cauldron",
+    "Type": "Food"
+  },
+  {
+    "Name": "Bread",
+    "Source": "Crafted from Barley flour at a Cauldron",
+    "Type": "Food"
+  },
+  {
+    "Name": "Carrot",
+    "Source": "Grown from planting Carrot seeds using the Cultivator tool",
+    "Type": "Food"
+  },
+  {
+    "Name": "Carrot soup",
+    "Source": "Crafted from Carrot and Mushroom at a Cauldron",
+    "Type": "Food"
+  },
+  {
+    "Name": "Cloudberries",
+    "Source": "Bushes in the Plains",
+    "Type": "Food"
+  },
+  {
+    "Name": "Cooked fish",
+    "Source": "Use Raw fish on a Cooking station",
+    "Type": "Food"
+  },
+  {
+    "Name": "Cooked lox meat",
+    "Source": "Use Lox meat on a Cooking station",
+    "Type": "Food"
+  },
+  {
+    "Name": "Cooked meat",
+    "Source": "Use Raw meat on a Cooking station",
+    "Type": "Food"
+  },
+  {
+    "Name": "Cooked serpent meat",
+    "Source": "Use Serpent meat on a Cooking station",
+    "Type": "Food"
+  },
+  {
+    "Name": "Fish wraps",
+    "Source": "Crafted from Barley flour and Cooked fish at a Cauldron",
+    "Type": "Food"
+  },
+  {
+    "Name": "Grilled neck tail",
+    "Source": "Use Neck tail on a Cooking station",
+    "Type": "Food"
+  },
+  {
+    "Name": "Honey",
+    "Source": [
+      "Produced by player-built Beehives",
+      "Dropped from wild beehives found in Abandoned houses"
+    ],
+    "Type": "Food"
+  },
+  {
+    "Name": "Lox meat pie",
+    "Source": "Crafted from Cooked lox meat, Cloudberries and Barley flour at a Cauldron",
+    "Type": "Food"
+  },
+  {
+    "Name": "Mushroom",
+    "Source": "On the ground in the Meadows and Black Forest",
+    "Type": "Food"
+  },
+  {
+    "Name": "Neck tail",
+    "Source": "Dropped by Necks",
+    "Type": "Food"
+  },
+  {
+    "Name": "Raspberries",
+    "Source": "On bushes in the Meadows",
+    "Type": "Food"
+  },
+  {
+    "Name": "Raw fish",
+    "Source": "From Fish in most bodies of water, either caught barehanded or with the Fishing rod",
+    "Type": "Food"
+  },
+  {
+    "Name": "Raw meat",
+    "Source": "Dropped by Deer and Boars",
+    "Type": "Food"
+  },
+  {
+    "Name": "Sausages",
+    "Source": "Crafted from Thistle, Entrails, and Raw meat at a Cauldron",
+    "Type": "Food"
+  },
+  {
+    "Name": "Serpent stew",
+    "Source": "Crafted from Cooked serpent meat, Mushroom and Honey at a Cauldron",
+    "Type": "Food"
+  },
+  {
+    "Name": "Turnip",
+    "Source": "Grown from planting Turnip seeds using the Cultivator tool",
+    "Type": "Food"
+  },
+  {
+    "Name": "Turnip stew",
+    "Source": "Crafted from Turnips and Raw meat at a Cauldron",
+    "Type": "Food"
+  },
+  {
+    "Name": "Queens jam",
+    "Source": "Crafted from Raspberries and Blueberries at a Cauldron",
+    "Type": "Food"
+  },
+  {
+    "Name": "Yellow mushroom",
+    "Source": "On the floor inside Burial Chambers and Sunken Crypts",
+    "Type": "Food"
+  },
+  {
+    "Name": "Ancient seed",
+    "Source": "Dropped by Greydwarf nests, Greydwarf brutes and Greydwarf shamans",
+    "Type": "Misc"
+  },
+  {
+    "Name": "Beech seeds",
+    "Source": "Chopping down Beech trees",
+    "Type": "Misc"
+  },
+  {
+    "Name": "Carrot seeds",
+    "Source": "On the ground in the Black Forest",
+    "Type": "Misc"
+  },
+  {
+    "Name": "Chitin",
+    "Source": "Mined from Abyssal barnacles on Leviathans in the Ocean",
+    "Type": "Misc"
+  },
+  {
+    "Name": "Coal",
+    "Source": [
+      "Use Wood, Fine wood or Core wood in a Charcoal kiln",
+      "Let any meat burn on the Cooking station"
+    ],
+    "Type": "Misc"
+  },
+  {
+    "Name": "Dandelion",
+    "Source": ["On the ground in the Meadows", "Dropped by Greydwarf brutes"],
+    "Type": "Misc"
+  },
+  {
+    "Name": "Deer hide",
+    "Source": "Dropped by Deer",
+    "Type": "Misc"
+  },
+  {
+    "Name": "Feather",
+    "Source": "Dropped by Gulls and Crows",
+    "Type": "Misc"
+  },
+  {
+    "Name": "Fir cone",
+    "Source": "Chopping down Fir trees",
+    "Type": "Misc"
+  },
+  {
+    "Name": "Flax",
+    "Source": [
+      "On the ground in the Plains",
+      "Grown using the Cultivator tool"
+    ],
+    "Type": "Misc"
+  },
+  {
+    "Name": "Flint",
+    "Source": "In the Meadows near bodies of water",
+    "Type": "Misc"
+  },
+  {
+    "Name": "Greydwarf eye",
+    "Source": "Dropped by all varieties of Greydwarfs",
+    "Type": "Misc"
+  },
+  {
+    "Name": "Guck",
+    "Source": "From trees in the Swamp (harvested with an axe or pickaxe)",
+    "Type": "Misc"
+  },
+  {
+    "Name": "Leather scraps",
+    "Source": ["Dropped by Boars", "Mined from Muddy scrap piles"],
+    "Type": "Misc"
+  },
+  {
+    "Name": "Pine cone",
+    "Source": "Chopping down Pine trees",
+    "Type": "Misc"
+  },
+  {
+    "Name": "Resin",
+    "Source": ["Chopping down trees", "Dropped by Greydwarfs"],
+    "Type": "Misc"
+  },
+  {
+    "Name": "Stone",
+    "Source": ["On the ground in most biomes","Mined from rocks", "ore deposits, and the ground", "Dropped by Greydwarfs"],
+    "Type": "Misc"
+  },
+  {
+    "Name": "Surtling core",
+    "Source": ["Inside Burial Chambers", "Dropped by Surtlings"],
+    "Type": "Misc"
+  },
+  {
+    "Name": "Troll hide",
+    "Source": ["Dropped by Trolls","Looted from Chests"],
+    "Type": "Misc"
+  },
+  {
+    "Name": "Turnip seeds",
+    "Source": "On the ground in the Swamp",
+    "Type": "Misc"
+  }
+]
