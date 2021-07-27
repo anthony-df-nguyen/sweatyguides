@@ -73,10 +73,15 @@ export default function Valheim() {
             <div className="listSeparator">Effects/Buffs</div>
             <ul>
               <li>Jumping takes 50% less stamina</li>
+              <li>Swimming takes 50% less stsamina</li>
               <li>
                 Increased comfort radius from 10 to 15 (get the comfort buff
                 from items in your base without needing items as physically
                 close)
+              </li>
+              <li>
+                Each comfort level of your base adds 90 seconds to 'Well-rested'
+                increased from 60 seconds
               </li>
               <li>
                 Food degradation removed (you retain benefits from food all the
@@ -86,10 +91,7 @@ export default function Valheim() {
                 Food will last 25% longer - Share map progression (our map
                 exploration progress syncs){" "}
               </li>
-              <li>
-                Each comfort level of your base adds 90 seconds to 'Well-rested'
-                increased from 60 seconds
-              </li>
+
               <li>
                 {" "}
                 Disabled the animation when activating a guardian/boss ability
