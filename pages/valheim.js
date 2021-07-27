@@ -16,7 +16,7 @@ export default function Valheim() {
 
         <div>
           <Expander title="Current Server Valheim+ Settings">
-            <div className="listSeparator">Building</div>
+            <div className="listSeparator">Building/Workbench</div>
             <ul>
               <li>Wokbench radius increased to 30m from 20m</li>
               <li>Workbenches require no roof</li>
@@ -55,7 +55,7 @@ export default function Valheim() {
 
             <div className="listSeparator">Gathering/Farming</div>
             <ul>
-              <li>Wood, Fine Wood, Core wood drop rates doubled</li>
+              <li>Wood, Fine Wood, Core wood drop rates increased by 50%</li>
               <li>
                 Beehive honey production quickened to 800 from 1200 seconds
               </li>
