@@ -126,6 +126,18 @@ a {
   grid-template-rows: auto;
   grid-gap: $gap;
 }
+.grid4lock2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: $gap;
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 ul,
 ol {

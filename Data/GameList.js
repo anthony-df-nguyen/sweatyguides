@@ -19,6 +19,11 @@ const GameList = [
     img: "https://wp.stanforddaily.com/wp-content/uploads/2020/08/image-2.png",
     href: "/valorant",
   },
+  {
+    game: "",
+    img: "https://wallpaper.dog/large/10767988.jpg",
+    href: "/pokedex",
+  },
 ];
 
 export default GameList;
