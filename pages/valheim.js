@@ -14,11 +14,12 @@ export default function Valheim() {
           <h3 style={{ color: "white" }}>IP: 194.156.90.227:27082</h3>
         </div>
 
-        <div className="grid2">
+        <div>
           <Expander title="Current Server Valheim+ Settings">
             <div className="listSeparator">Building</div>
             <ul>
               <li>Wokbench radius increased to 30m from 20m</li>
+              <li>Workbenches require no roof</li>
               <li>
                 CraftFromChest: When crafting something, it can pull from chests
                 near you instead of requiring you to go get them (be careful not
@@ -37,10 +38,31 @@ export default function Valheim() {
                 building freedom/flexibility{" "}
               </li>
               <li>
-                Increase object placement range from 8 to 12 (place items in
+                Increase object placement range from 8 to 16 (place items in
                 build mode further without needing to walk)
               </li>
             </ul>
+            <div className="listSeparator">Smelting</div>
+            <ul>
+              <li>Smelter can take 25 ore and 50 coal</li>
+              <li>Smelter produces ingots in 10 seconds instead of 15</li>
+              <li>Furnace can take 20 ore and 40 coal</li>
+              <li>Furnace produces ingots in 20 seconds instead of 30</li>
+              <li>Kiln can take 50 wood</li>
+              <li>Kiln can produce coal in 10s instead of 15</li>
+              <li>Iron obtained from mining doubled (1 to 2)</li>
+            </ul>
+
+            <div className="listSeparator">Gathering/Farming</div>
+            <ul>
+              <li>Wood, Fine Wood, Core wood drop rates doubled</li>
+              <li>
+                Beehive honey production quickened to 800 from 1200 seconds
+              </li>
+              <li>Using the cultivator no longer uses stamina</li>
+              <li>Using the hoe no longer uses stamina</li>
+            </ul>
+
             <div className="listSeparator">Inventory/Weight</div>
             <ul>
               <li>Base carry weight: 400 (from 300)</li>
@@ -50,10 +72,15 @@ export default function Valheim() {
             </ul>
             <div className="listSeparator">Effects/Buffs</div>
             <ul>
+              <li>Jumping takes 50% less stamina</li>
               <li>
                 Increased comfort radius from 10 to 15 (get the comfort buff
                 from items in your base without needing items as physically
                 close)
+              </li>
+              <li>
+                Food degradation removed (you retain benefits from food all the
+                way until it expires rather than decreasing over time)
               </li>
               <li>
                 Food will last 25% longer - Share map progression (our map
@@ -81,6 +108,11 @@ export default function Valheim() {
               <li>Player position always shown</li>
               <li>Increased map discovery radius to 250 from 100</li>
               <li>Added current in-game time</li>
+            </ul>
+            <div className="listSeparator">Camera</div>
+            <ul>
+              <li>Enabled 1st Person PoV (activate with F10). Use PageUp or PageDown to change the FOV</li>
+
             </ul>
           </Expander>
           <Expander title="How to Install Valheim+">
