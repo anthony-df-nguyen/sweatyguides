@@ -6,7 +6,7 @@ export default function PokeModal(props) {
 
   return (
     <div className="fullPageBG center">
-      <div>
+      <div className="modalContent center">  
         <button className="closeButton redBG" onClick={() => props.function("none")}>
           Close
         </button>

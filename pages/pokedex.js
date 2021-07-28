@@ -42,9 +42,9 @@ export default function Pokedex() {
 
         <div className="grid4lock2 topMargin4">
           {filteredList.map((row, i) => (
-            <div key={i} onClick={(e) => getPokemon(row.url)}>
+            <a key={i} onClick={(e) => getPokemon(row.url)}>
               {row.name.toUpperCase()}
-            </div>
+            </a>
           ))}
         </div>
       </Page>
