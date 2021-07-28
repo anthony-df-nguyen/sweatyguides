@@ -1,20 +1,23 @@
 import React, { useEffect, useState } from "react";
 import Page from "components/Page.jsx";
 import Expander from "components/Expander.jsx";
-import Image from "next/image";
+
 import FullScreen from "components/FullScreen.jsx";
 import ReactTable from "components/ReactTable";
 import GetAllPokemon from "components/pokemon/GetAllPokemon"
 import TextSearch from "components/TextSearch";
+import PokeModal from "components/pokemon/PokeModal";
 
 export default function Pokedex() {
  
   const [allList,updateAllList] = useState([])
   const [filteredList,updateFilteredList] = useState(allList)
   const [selected,updateSelected] = useState([])
+  const [modalDisplay,updateModalDisplay] = useState('none')
   const getPokemon = async (endpoint) => {
      await fetch(endpoint).then(res => res.json()).then(data => {
          updateSelected(data);
+         updateModalDisplay("block");
      });
   }
 
@@ -33,31 +36,8 @@ export default function Pokedex() {
           function={updateFilteredList}
         />
 
-        <div className="flexRow topMargin">
-          <div className="card">
-            <div>
-              <h3> {selected.name && selected.name.toUpperCase()}</h3>
-              <div style={{display:'block',margin:"0 auto",height:"8rem",width:"8rem"}}>
-                {selected.sprites && (
-                  <Image
-                    src={selected.sprites.front_default}
-                    height="2"
-                    width="2"
-                    layout="responsive"
-                  />
-                )}
-              </div>
-            </div>
-          </div>
-          <div className="card">
-            <div>
-              <h3>Type: </h3>
-              {selected.types &&
-                selected.types.map((row, i) => {
-                  return <p key={i}>{row.type.name.toUpperCase()}</p>;
-                })}
-            </div>
-          </div>
+        <div style={{display:modalDisplay}}>
+          <PokeModal array={selected} function={updateModalDisplay} />
         </div>
 
         <div className="grid4lock2 topMargin4">
