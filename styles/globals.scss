@@ -224,7 +224,8 @@ input[type="text"] {
 
 .fullPageBG {
   background-color: #121212e7;
-  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   position:fixed !important;
   height: 100vh;
   padding:2rem;
@@ -250,7 +251,8 @@ input[type="text"] {
 }
 
 button, .typeButton {
-  //background-color: #ff5c5c;
+  background-color: $gray;
+  color:$white;
   padding:$gap/2 $gap;
   border: none;
   border-radius: $rad;
