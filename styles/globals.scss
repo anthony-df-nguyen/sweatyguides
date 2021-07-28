@@ -41,6 +41,9 @@ a {
     background-color: #ff5c5c;
   color:$white;
 }
+.blackBG {
+  background-color: $black;
+}
 
 .center {
   position: absolute;
@@ -106,7 +109,7 @@ a {
   font-weight: 600;
   color: $yellow;
   text-align: center;
-  margin: $gap * 4 auto $gap * 2 auto;
+  margin: $gap * 2 auto $gap * 2 auto;
 }
 
 #fullModal {
@@ -164,6 +167,9 @@ ol {
 .active {
   background-color: $blue !important;
 }
+.activeLight {
+  background-color: $lightblue !important;
+}
 
 .card {
   background-color: $gray;
@@ -174,11 +180,28 @@ ol {
 .Sticky-React-Table-inner {
   background-color: $black;
 }
+table {
+  border:none;
+  width: 100%;
+  th {
+    font-weight: inherit;
+    padding:$gap/2 $gap;
+  }
+  th, tr, td {
+    border: none;
+  }
+  td {
+    padding:$gap/2 $gap;
+    text-align: center;
+  }
+}
+
 .tableHead {
   background-color: $blue;
   padding:$gap/2 $gap;
   border-bottom:1px solid $gray;
-    z-index: 2;
+  z-index: 2;
+  font-weight: 700;
 }
 .tableCell {
   padding:$gap/2 $gap;
@@ -226,16 +249,21 @@ input[type="text"] {
   
 }
 
-button {
+button, .typeButton {
   //background-color: #ff5c5c;
   padding:$gap/2 $gap;
   border: none;
   border-radius: $rad;
   margin-bottom: $gap;
+  &:hover {
+    cursor: pointer;
+  }
 }
-button:hover {
-  cursor: pointer;
+.typeButton {
+  width: 6rem;
+  margin: 0 !important;
 }
+
 .rightAlign {
   float: right;
 }

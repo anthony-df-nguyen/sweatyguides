@@ -26,7 +26,7 @@ export default function TextSearch(props) {
 
     return (
         <div>
-            <input id="textField" lassName="topMargin" type="text" placeholder={props.label} style={{width:"80%",}} onChange={(e)=> filterArray(e)}></input>
+            <input id="textField" className="topMargin" type="text" placeholder={props.label} style={{width:"80%",}} onChange={(e)=> filterArray(e)}></input>
             <button onClick={()=> clearSearch()} className="yellowBG" style={{marginLeft:"10px",width:"calc(20% - 10px)",}}  >Clear</button>
         </div>
     )
