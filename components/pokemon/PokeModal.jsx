@@ -1,13 +1,22 @@
-import React, { useState, useEffect } from 'react'
-import Image from 'next/image'
-import GetTypeIcon from './GetTypeIcon'
-import { Table, Column } from 'sticky-react-table'
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import GetTypeIcon from "./GetTypeIcon";
+import { Table, Column } from "sticky-react-table";
+import MatchupTable from "components/pokemon/MatchupTable";
 
-export default function PokeModal (props) {
+export default function PokeModal(props) {
+  const [types, updateTypes] = useState([]);
+  useEffect(() => {
+    if (props.array.types) {
+      const foundTypes = props.array.types.map((row) => row.type.name);     
+      updateTypes(foundTypes);
+    }
+  }, [props.array.types]);
+
   return (
     <div className="fullPageBG center">
       <div className="modalContent center">
-        <div style={{textAlign:'right'}}> 
+        <div style={{ textAlign: "right" }}>
           <button
             className="closeButton redBG"
             onClick={() => {
@@ -49,23 +58,25 @@ export default function PokeModal (props) {
               <h3>Type</h3>
               <br></br>
               <div className="flexRow">
-                {props.array.types &&
-                  props.array.types.map((row, i) => {
-                    return (
-                      <div>
-                        <div style={{ display: "block", marginTop: "1rem" }}>
-                          <p key={i}>{row.type.name.toUpperCase()}</p>
-                        </div>
-                        <GetTypeIcon type={row.type.name} />
+                {types.map((row, i) => {
+                  return (
+                    <div>
+                      <div style={{ display: "block", marginTop: "1rem" }}>
+                        <p key={i}>{row.toUpperCase()}</p>
                       </div>
-                    );
-                  })}
+                      <GetTypeIcon type={row} />
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
         </div>
         <br></br>
         <div className="card">
+          <MatchupTable types={types} />
+        </div>
+        <div className="card topMargin">
           <h3>Stats</h3>
           <br></br>
           <table>
