@@ -17,8 +17,7 @@ export default function Valheim() {
           <h3 style={{ color: "white" }}>IP: 194.156.90.227:27082</h3>
         </div>
 
-        <div>
-          <Expander title="Current Server Valheim+ Settings">
+    <Expander title="Current Server Valheim+ Settings">
             <div className="listSeparator">Building/Workbench</div>
             <ul>
               <li>Wokbench radius increased to 30m from 20m</li>
@@ -59,7 +58,7 @@ export default function Valheim() {
             <div className="listSeparator">Gathering/Farming</div>
             <ul>
               <li>
-                Wood drop rates increased by 100%
+                Wood and core wood drop rate increased by 100%. Fine wood by 150%
               </li>
               
               <li>
@@ -174,7 +173,6 @@ export default function Valheim() {
               </li>
             </ol>
           </Expander>
-        </div>
         <h1 className="topMargin4">Map</h1>
         <p>
           {" "}
