@@ -130,6 +130,7 @@ export default function Pokedex () {
         <h2 style={{ paddingTop: "2rem" }} id="results">
           {filteredList.length} Pokemon
         </h2>
+        <p>Click a Pokémon to view details</p>
         <div className="grid4lock2 topMargin">
           {filteredList.map((row, i) => (
             <a
