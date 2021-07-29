@@ -59,8 +59,9 @@ export default function Valheim() {
             <div className="listSeparator">Gathering/Farming</div>
             <ul>
               <li>
-                Wood and Core wood drop rates increased by 50%. Finewood by 100%
+                Wood drop rates increased by 100%
               </li>
+              
               <li>
                 Beehive honey production quickened to 800 from 1200 seconds
               </li>
@@ -74,6 +75,7 @@ export default function Valheim() {
               <li>Upgraded carry weight (from belt): 600 from (450)</li>
               <li>Increased player inventory by 2 more rows</li>
               <li>The Karve boat has increased inventory of 6 instead of 4</li>
+              <li>The cart/wagon has 0 extra weight from items</li>
             </ul>
             <div className="listSeparator">Effects/Buffs</div>
             <ul>
