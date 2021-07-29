@@ -90,5 +90,16 @@
     ],
     "Duration": "2s",
     "Base Ingredients": ["10 Honey", "10 Raspberry", "10 Yellow mushroom"]
+  },
+  {
+    "Name": "Tasty mead",
+    "Type": "Stamina",
+    "Detail": [
+      "Fermented with Mead base: Minor stamina",
+      "Health regen -50% for 10s",
+      "Stamina regen +300% for 10s"
+    ],
+    "Duration": "10s",
+    "Base Ingredients": ["10 Honey", "10 Raspberry", "5 Blueberry"]
   }
 ]
