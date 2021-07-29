@@ -1,0 +1,94 @@
+[
+  {
+    "Name": "Fire resistance barley",
+    "Type": "Resist",
+    "Detail": [
+      "Fermented with Barley Wine Base",
+      "Reduces fire damage by 50%. This directly affects the tick damage of new Fire effects. The duration is not affected",
+      "Reduces fire damage by 50%. This directly affects the tick damage of new Fire effects. The duration is not affected",
+      "Armor also reduces fire damage which allows reaching ~90% damage reduction."
+    ],
+    "Duration": "600s",
+    "Base Ingredients": ["10 Barley", "10 Cloudberries"]
+  },
+  {
+    "Name": "Frost resistance mead",
+    "Type": "Resist",
+    "Detail": [
+      "Fermented with Mead base: Frost resistance",
+      "Consuming it grants Resistant vs. Frost for 600s (10 minutes), which prevents the Cold Effect and the Freezing Effect when not wet",
+      "Reduces frost damage taken"
+    ],
+    "Duration": "600s",
+    "Base Ingredients": [
+      "10 Honey",
+      "10 Thistle",
+      "2 Bloodbag",
+      "1 Greydwarf Eye"
+    ]
+  },
+  {
+    "Name": "Poison resistance mead",
+    "Type": "Resist",
+    "Detail": [
+      "Fermented with Mead base: Poison resistance",
+      "Reduces poison damage by 75%. This roughly halves the duration and tick damage of new Poison effects"
+    ],
+    "Duration": "600s",
+    "Base Ingredients": ["10 Honey", "5 Thistle", "1 Neck tail", "10 Coal"]
+  },
+  {
+    "Name": "Medium healing mead",
+    "Type": "Heal",
+    "Detail": [
+      "Fermented with Mead base: Medium healing",
+      "Restores 75 health over 10 seconds",
+      "Upon consumption a 2-min cooldown is applied preventing consumption of another healing mead"
+    ],
+    "Duration": "10s",
+    "Base Ingredients": [
+      "10 Honey",
+      "10 Raspberry",
+      "4 Bloodbag",
+      "1 Dandelion"
+    ]
+  },
+  {
+    "Name": "Medium stamina mead",
+    "Type": "Stamina",
+    "Detail": [
+      "Fermented with Mead base: Medium stamina",
+      "Restores 160 stamina over 2 seconds.",
+      "Upon consumption a 2 minute buff is applied preventing consumption of any Stamina Mead"
+    ],
+    "Duration": "2s",
+    "Base Ingredients": ["10 Honey", "10 Cloudberries", "10 Yellow mushroom"]
+  },
+  {
+    "Name": "Minor headling mead",
+    "Type": "Heal",
+    "Detail": [
+      "Fermented with Mead base: Minor Healing",
+      "Restores 50 health over 10 seconds",
+      "Upon consumption a 2 minute buff is applied preventing consumption of any Healing Mead"
+    ],
+    "Duration": "10s",
+    "Base Ingredients": [
+      "10 Honey",
+      "5 Blueberry",
+      "10 Raspberry",
+      "1 Dandelion"
+    ]
+  },
+  {
+    "Name": "Minor stamina mead",
+    "Type": "Stamina",
+    "Detail": [
+      "Fermented with Mead base: Minor stamina",
+      "Restores 80 stamina over 2 seconds.",
+      "Upon consumption a 2 minute buff is applied preventing consumption of any Stamina Mead"
+    ],
+    "Duration": "2s",
+    "Base Ingredients": ["10 Honey", "10 Raspberry", "10 Yellow mushroom"]
+  }
+]

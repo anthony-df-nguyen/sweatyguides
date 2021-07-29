@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import Page from 'components/Page.jsx'
-import Expander from 'components/Expander.jsx'
-import Image from 'next/image'
-import FullScreen from 'components/FullScreen.jsx'
-import ReactTable from 'components/ReactTable'
+import React, { useEffect, useState } from "react";
+import Page from "components/Page.jsx";
+import Expander from "components/Expander.jsx";
+import Image from "next/image";
+import FullScreen from "components/FullScreen.jsx";
+import ReactTable from "components/ReactTable";
 
-export default function Valheim () {
+export default function Valheim() {
   return (
     <div>
       <Page title="Valheim">
@@ -224,25 +224,70 @@ export default function Valheim () {
             ]}
           />
         </Expander>
-        <Expander title="Effects | Buffs">
+
+        <Expander title="Meads">
+          {" "}
           <ReactTable
-            data="/valheim/effects.json"
+            data="/valheim/mead.json"
+            head={[
+              {
+                name: "Name",
+                width: "200",
+              },
+              {
+                name: "Type",
+                width: "100",
+              },
+              {
+                name: "Detail",
+                width: "400",
+              },
+              {
+                name: "Base Ingredients",
+                width: "200",
+              },
+              {
+                name: "Duration",
+                width: "75",
+              },
+            ]}
+          />
+        </Expander>
+        <Expander title="Creatures/Mobs">
+          <ReactTable
+            data="/valheim/creatures.json"
             head={[
               {
                 name: "Name",
                 width: "150",
               },
               {
-                name: "Source",
-                width: "150",
+                name: "Spawn",
+                width: "100",
               },
               {
-                name: "Effects",
-                width: "300",
+                name: "HP",
+                width: "70",
+              },
+              {
+                name: "Max Dmg",
+                width: "100",
               },
               {
                 name: "Notes",
-                width: "300",
+                width: "200",
+              },
+              {
+                name: "Weakness",
+                width: "100",
+              },
+              {
+                name: "Resistance",
+                width: "100",
+              },
+              {
+                name: "Immune",
+                width: "100",
               },
             ]}
           />
@@ -313,45 +358,7 @@ export default function Valheim () {
             ]}
           />
         </Expander>
-        <Expander title="Creatures/Mobs">
-          <ReactTable
-            data="/valheim/creatures.json"
-            head={[
-              {
-                name: "Name",
-                width: "150",
-              },
-              {
-                name: "Spawn",
-                width: "100",
-              },
-              {
-                name: "HP",
-                width: "70",
-              },
-              {
-                name: "Max Dmg",
-                width: "100",
-              },
-              {
-                name: "Notes",
-                width: "200",
-              },
-              {
-                name: "Weakness",
-                width: "100",
-              },
-              {
-                name: "Resistance",
-                width: "100",
-              },
-              {
-                name: "Immune",
-                width: "100",
-              },
-            ]}
-          />
-        </Expander>
+
         <Expander title="Materials | Metals | Food | Misc">
           <ReactTable
             data="/valheim/materials.json"
@@ -371,7 +378,29 @@ export default function Valheim () {
             ]}
           />
         </Expander>
-
+        <Expander title="Effects | Buffs">
+          <ReactTable
+            data="/valheim/effects.json"
+            head={[
+              {
+                name: "Name",
+                width: "150",
+              },
+              {
+                name: "Source",
+                width: "150",
+              },
+              {
+                name: "Effects",
+                width: "300",
+              },
+              {
+                name: "Notes",
+                width: "300",
+              },
+            ]}
+          />
+        </Expander>
         <h1 className="topMargin4">Other</h1>
         <Expander title="Twitter">
           <a
