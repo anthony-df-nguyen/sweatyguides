@@ -1,0 +1,128 @@
+[
+  {
+    "Name": "Bug",
+    "Strong against": "Grass, Psychic, Dark",
+    "Weak against": "Fighting, Flying, Poison, Ghost, Steel, Fire, Fairy",
+    "Resistant to": "Fighting, Ground, Grass",
+    "Weak to": "Flying, Rock, Fire"
+  },
+  {
+    "Name": "Dark",
+    "Strong against": "Ghost, Psychic",
+    "Weak against": "Fighting, Dark, Fairy",
+    "Resistant to": "Ghost, Dark, Psychic (no effect)",
+    "Weak to": "Fighting, Bug, Fairy"
+  },
+  {
+    "Name": "Dragon",
+    "Strong against": "Dragon",
+    "Weak against": "Steel, Fairy (no effect)",
+    "Resistant to": "Fire, Water, Grass, Electric",
+    "Weak to": "Ice, Dragon, Fairy"
+  },
+  {
+    "Name": "Electric",
+    "Strong against": "Flying, Water",
+    "Weak against": "Grass, Electric, Dragon, Ground (no effect)",
+    "Resistant to": "Flying, Steel, Electric",
+    "Weak to": "Ground"
+  },
+  {
+    "Name": "Fairy",
+    "Strong against": "Fighting, Dragon, Dark",
+    "Weak against": "Poison, Steel, Fire",
+    "Resistant to": "Fighting, Bug, Dark, Dragon (no effect)",
+    "Weak to": "Poison, Steel"
+  },
+  {
+    "Name": "Fighting",
+    "Strong against": "Normal, Rock, Steel, Ice, Dark",
+    "Weak against": "Flying, Poison, Bug, Psychic, Fairy, Ghost (no effect)",
+    "Resistant to": "Rock, Bug, Dark",
+    "Weak to": "Flying, Psychic, Fairy"
+  },
+  {
+    "Name": "Fire",
+    "Strong against": "Bug, Steel, Grass, Ice",
+    "Weak against": "Rock, Fire, Water, Dragon",
+    "Resistant to": "Bug, Steel, Fire, Grass, Ice",
+    "Weak to": "Ground, Rock, Water"
+  },
+  {
+    "Name": "Flying",
+    "Strong against": "Fighting, Bug, Grass",
+    "Weak against": "Rock, Steel, Electric",
+    "Resistant to": "Fighting, Bug, Grass, Ground (no effect)",
+    "Weak to": "Rock, Electric, Ice"
+  },
+  {
+    "Name": "Ghost",
+    "Strong against": "Ghost, Psychic",
+    "Weak against": "Normal (no effect), Dark",
+    "Resistant to": "Poison, Bug, Normal (no effect), Fighting (no effect)",
+    "Weak to": "Ghost, Dark"
+  },
+  {
+    "Name": "Grass",
+    "Strong against": "Ground, Rock, Water",
+    "Weak against": "Flying, Poison, Bug, Steel, Fire, Grass, Dragon",
+    "Resistant to": "Ground, Water, Grass, Electric",
+    "Weak to": "Flying, Poison, Bug, Fire, Ice"
+  },
+  {
+    "Name": "Ground",
+    "Strong against": "Poison, Rock, Steel, Fire, Electric",
+    "Weak against": "Bug, Grass, Flying (no effect)",
+    "Resistant to": "Poison, Rock, Electric (no effect)",
+    "Weak to": "Water, Grass, Ice"
+  },
+  {
+    "Name": "Ice",
+    "Strong against": "Flying, Ground, Grass, Dragon",
+    "Weak against": "Steel, Fire, Water, Ice",
+    "Resistant to": "Ice",
+    "Weak to": "Fighting, Rock, Steel, Fire"
+  },
+  {
+    "Name": "Normal",
+    "Strong against": "–",
+    "Weak against": "Rock, Steel, Ghost (no effect)",
+    "Resistant to": "Ghost (no effect)",
+    "Weak to": "Fighting"
+  },
+  {
+    "Name": "Poison",
+    "Strong against": "Grass, Fairy",
+    "Weak against": "Poison, Ground, Rock, Ghost, Steel (no effect)",
+    "Resistant to": "Fighting, Poison, Grass, Fairy",
+    "Weak to": "Ground, Psychic"
+  },
+  {
+    "Name": "Psychic",
+    "Strong against": "Fighting, Poison",
+    "Weak against": "Steel, Psychic, Dark (no effect)",
+    "Resistant to": "Fighting, Psychic",
+    "Weak to": "Bug, Ghost, Dark"
+  },
+  {
+    "Name": "Rock",
+    "Strong against": "Flying, Bug, Fire, Ice",
+    "Weak against": "Fighting, Ground, Steel",
+    "Resistant to": "Normal, Flying, Poison, Fire",
+    "Weak to": "Fighting, Ground, Steel, Water, Grass"
+  },
+  {
+    "Name": "Steel",
+    "Strong against": "Rock, Ice, Fairy",
+    "Weak against": "Steel, Fire, Water, Electric",
+    "Resistant to": "Normal, Flying, Rock, Bug, Steel, Grass, Psychic, Ice, Dragon,                 Fairy,   Poison (no effect)",
+    "Weak to": "Fighting, Ground, Fire"
+  },
+  {
+    "Name": "Water",
+    "Strong against": "Ground, Rock, Fire",
+    "Weak against": "Water, Grass, Dragon",
+    "Resistant to": "Steel, Fire, Water, Ice",
+    "Weak to": "Grass, Electric"
+  }
+]

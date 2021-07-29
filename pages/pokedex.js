@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Page from 'components/Page.jsx'
 import Expander from 'components/Expander.jsx'
-import FullScreen from 'components/FullScreen.jsx'
-import ReactTable from 'components/ReactTable'
 import GetAllPokemon from 'components/pokemon/GetAllPokemon'
 import TypeFilters from 'components/pokemon/TypeFilters'
 import TextSearch from 'components/TextSearch'
 import PokeModal from 'components/pokemon/PokeModal'
+import ReactTable from "components/ReactTable";
 
 export default function Pokedex () {
   const [allList, updateAllList] = useState([])
@@ -60,6 +59,34 @@ export default function Pokedex () {
         title="PokéDex"
         background="https://images6.alphacoders.com/328/thumb-1920-328013.jpg">
         <GetAllPokemon function={updateAllList} />
+
+        <Expander title="Type Matchup Table">
+          <ReactTable
+            data="/pokedex/types.json"
+            head={[
+              {
+                name: "Name",
+                width: "100",
+              },
+              {
+                name: "Strong against",
+                width: "200",
+              },
+              {
+                name: "Weak against",
+                width: "200",
+              },
+              {
+                name: "Resistant to",
+                width: "200",
+              },
+              {
+                name: "Weak to",
+                width: "200",
+              },
+            ]}
+          />
+        </Expander>
 
         <div
           style={{
