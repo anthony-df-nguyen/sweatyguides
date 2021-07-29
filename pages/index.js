@@ -23,20 +23,25 @@ export default function Home() {
 
       return (
         <div key={i}>
-          <Link href={row.href}>
-            <div style={cardStyle}>
-              <div className="center" style={title}>
-                {row.game}
+          <a>
+            <Link href={row.href}>
+              <div style={cardStyle}>
+                <div className="center" style={title}>
+                  {row.game}
+                </div>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </a>
         </div>
       );
     });
   };
   return (
     <div>
-      <Page title="Game List">
+      <Page
+        headTitle="Sweaty Guides | Home"
+        title="Game List"
+        background="https://wallpapercave.com/wp/wp4354331.jpg">
         <div className="grid2 topMargin">{buildGameList()}</div>
       </Page>
     </div>

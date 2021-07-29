@@ -17,14 +17,26 @@ export default function Pokedex () {
   const [textSearchDisplay, updateTextDisplay] = useState({display:'block',buttonClass: 'activeLight'})
   const [typeSearchDisplay, updateTypeSearchDisplay] = useState({display:'none',buttonClass: ''})
 
+  const [background,updateBackground] = useState(true)
+
   const getPokemon = async endpoint => {
     await fetch(endpoint)
       .then(res => res.json())
       .then(data => {
         updateSelected(data)
         updateModalDisplay('block')
+        updateBackground(false)
       })
   }
+
+  useEffect(() => {
+    const bg = document.querySelector(".pageContent");
+    if (!background) {
+      bg.classList.add("noScrollBG");
+    } else {
+      bg.classList.remove("noScrollBG");
+    }
+  }, [background])
 
 
   const toggleNameSearch = () => {
@@ -43,39 +55,65 @@ export default function Pokedex () {
 
   return (
     <div>
-      <Page title='Pokedex'>
+      <Page
+        headTitle="Sweaty Guides | Pokedex"
+        title="PokéDex"
+        background="https://images6.alphacoders.com/328/thumb-1920-328013.jpg">
         <GetAllPokemon function={updateAllList} />
 
-       <div style={{display:'block',margin:'0 auto',textAlign:'center'}}>
-        <button style={{marginRight:'10px'}} className={textSearchDisplay.buttonClass} onClick={() => toggleNameSearch()}>Search by Name</button>
-        <button onClick={()=>toggleTypeSearch()} className={typeSearchDisplay.buttonClass}>Search by Type</button>
-       </div>
+        <div
+          style={{
+            display: "block",
+            margin: "2rem auto 0 auto",
+            textAlign: "center",
+          }}>
+          <button
+            style={{ marginRight: "10px" }}
+            className={textSearchDisplay.buttonClass}
+            onClick={() => toggleNameSearch()}>
+            Search by Name
+          </button>
+          <button
+            onClick={() => toggleTypeSearch()}
+            className={typeSearchDisplay.buttonClass}>
+            Search by Type
+          </button>
+        </div>
 
-        <div style={{display:textSearchDisplay.display}}>
-          {' '}
+        <div style={{ display: textSearchDisplay.display }}>
+          {" "}
           <TextSearch
-            label='Search Pokemon by Name'
+            label="Search Pokemon by Name"
             array={allList}
             function={updateFilteredList}
           />
         </div>
 
-        <div style={{display:typeSearchDisplay.display}}>
-         <TypeFilters array={filteredList} function={updateFilteredList} />
+        <div style={{ display: typeSearchDisplay.display }}>
+          <TypeFilters array={filteredList} function={updateFilteredList} />
         </div>
 
         <div style={{ display: modalDisplay }}>
-          <PokeModal array={selected} function={updateModalDisplay} />
+          <PokeModal
+            array={selected}
+            function={updateModalDisplay}
+            backgroundState={updateBackground}
+          />
         </div>
-        <h2 style={{paddingTop:'2rem'}} id="results">{filteredList.length} Pokemon</h2>
-        <div className='grid4lock2 topMargin'>
+        <h2 style={{ paddingTop: "2rem" }} id="results">
+          {filteredList.length} Pokemon
+        </h2>
+        <div className="grid4lock2 topMargin">
           {filteredList.map((row, i) => (
-            <a key={i} onClick={e => getPokemon(row.url)}>
+            <a
+              className="card hoverBlue"
+              key={i}
+              onClick={(e) => getPokemon(row.url)}>
               {row.name.toUpperCase()}
             </a>
           ))}
         </div>
       </Page>
     </div>
-  )
+  );
 }

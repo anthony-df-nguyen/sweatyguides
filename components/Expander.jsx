@@ -5,7 +5,7 @@ import { MdExpandMore, MdChevronRight } from "react-icons/md";
 export default function Expander(props) {
     const [height,updateHeight] = useState('0px')
     const [openOrClose,updateOpenOrClose] = useState('closed')
-    const [icon, updateIcon] = useState(<MdChevronRight />);
+    const [icon, updateIcon] = useState(<MdChevronRight fill="#009ddb" />);
  
     const container = {
       maxHeight: height,
@@ -17,11 +17,11 @@ export default function Expander(props) {
             const maxH = e.target.nextSibling.scrollHeight;
             updateHeight(maxH + "px");
             updateOpenOrClose('opened');
-            updateIcon(<MdExpandMore />);
+            updateIcon(<MdExpandMore fill="#f2a365" />);
         } else {
              updateHeight('0px');
              updateOpenOrClose('closed')
-               updateIcon(<MdChevronRight />);
+               updateIcon(<MdChevronRight fill="#009ddb" />);
         }
     }
 

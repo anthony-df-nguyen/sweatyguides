@@ -8,7 +8,10 @@ import ReactTable from "components/ReactTable";
 export default function Valheim() {
   return (
     <div>
-      <Page title="Valheim">
+      <Page
+        headTitle="Sweaty Guides | Valheim"
+        title="Valheim"
+        background="https://images3.alphacoders.com/113/thumb-1920-1131606.png">
         <div className="card">
           <h1>Server Info</h1>
           <h3 style={{ color: "white" }}>IP: 194.156.90.227:27082</h3>

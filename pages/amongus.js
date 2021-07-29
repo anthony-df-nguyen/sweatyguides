@@ -7,7 +7,10 @@ import FullScreen from "components/FullScreen.jsx";
 export default function amongus() {
   return (
     <div>
-      <Page title="Among Us">
+      <Page
+        headTitle="Sweaty Guides | Among Us"
+        title="Among Us"
+        background="https://image-cdn.essentiallysports.com/wp-content/uploads/20200913150337/93GAa4wm3z4HbenzLbxWeQ-1600x900.jpg">
         <Expander title="Skeld">
           <FullScreen>
             <Image

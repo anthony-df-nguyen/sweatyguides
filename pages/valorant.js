@@ -7,7 +7,10 @@ import FullScreen from "components/FullScreen.jsx";
 export default function valorant() {
   return (
     <div>
-      <Page title="Valorant">
+      <Page
+        headTitle="Sweaty Guides | Valorant"
+        title="Valorant"
+        background="https://i.redd.it/iyaacpwpwfr41.png">
         <p>Click each map for full-screen view</p>
         <ImageExpander title="Ascent" img="/images/valorant/ascent.jpeg">
           <FullScreen>

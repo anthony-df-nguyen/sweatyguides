@@ -5,7 +5,7 @@ export default function Page(props) {
   return (
     <div style={{ paddingBottom: "4rem" }}>
       <Head>
-        <title>{props.title}</title>
+        <title>{props.headTitle}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
         <meta
@@ -20,11 +20,17 @@ export default function Page(props) {
           href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
           rel="stylesheet"></link>
       </Head>
+
+      <div
+        className="pageBackground"
+        style={{ backgroundImage: `url("${props.background}")` }}></div>
       <Navbar />
-      <div className="wrapper">
-        <div className="pageTitle">{props.title}</div>
+      <div className="pageContent">
+        <div className="wrapper">
+          <div className="pageTitle">{props.title}</div>
+        </div>
+        <div className="wrapper">{props.children}</div>
       </div>
-      <div className="wrapper">{props.children}</div>
     </div>
   );
 }

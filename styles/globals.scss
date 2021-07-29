@@ -6,7 +6,7 @@
   padding: 0;
 }
 body {
-font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-color: $black;
   color: $white;
   h1,
@@ -19,7 +19,34 @@ font-family: 'Open Sans', sans-serif;
   h2,
   h3 {
     color: $lightblue;
+    font-weight: 400;
   }
+}
+.pageTitle {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  margin: 2rem 0;
+  //padding: $gap * 2 auto $gap * 2 auto;
+}
+.pageBackground {
+  background-size: cover;
+  background-position: center center;
+  filter: brightness(35%);
+  height: 100vh;
+  width: 100vw;
+  overflow: scroll;
+  position: fixed;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.pageContent {
+  margin-top: 2rem;
+  position: relative;
 }
 
 a {
@@ -31,15 +58,15 @@ a {
 }
 
 .blue {
-  color:$lightblue;
+  color: $lightblue;
 }
 .yellowBG {
   background-color: $yellow;
-  color:$black;
+  color: $black;
 }
 .redBG {
-    background-color: #ff5c5c;
-  color:$white;
+  background-color: #ff5c5c;
+  color: $white;
 }
 .blackBG {
   background-color: $black;
@@ -104,14 +131,6 @@ a {
   }
 }
 
-.pageTitle {
-  font-size: 2rem;
-  font-weight: 600;
-  color: $yellow;
-  text-align: center;
-  margin: $gap * 2 auto $gap * 2 auto;
-}
-
 #fullModal {
   position: fixed;
   z-index: 3;
@@ -150,17 +169,30 @@ a {
   }
 }
 
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: $gap;
+    @media (max-width: 800px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
+}
+
 ul,
 ol {
   margin-left: $gap;
   li {
     list-style-position: outside;
     & + li {
-      margin-top:$gap;
+      margin-top: $gap;
     }
   }
   li.noMargin {
-    margin:0 !important;
+    margin: 0 !important;
   }
 }
 
@@ -170,65 +202,74 @@ ol {
 .activeLight {
   background-color: $lightblue !important;
 }
+.hoverBlue:hover {
+  background-color: $blue;
+  cursor: pointer;
+}
 
 .card {
   background-color: $gray;
-  padding:$gap;
+  padding: $gap;
   border-radius: $rad;
 }
 
 .Sticky-React-Table-inner {
   background-color: $black;
 }
+.Sticky-React-Table--Header-Column-Switcher-Icon {
+  display: none !important;
+}
 table {
-  border:none;
+  border: none;
   width: 100%;
   th {
     font-weight: inherit;
-    padding:$gap/2 $gap;
+    padding: $gap/2 $gap;
   }
-  th, tr, td {
+  th,
+  tr,
+  td {
     border: none;
   }
   td {
-    padding:$gap/2 $gap;
+    padding: $gap/2 $gap;
     text-align: center;
   }
 }
 
 .tableHead {
   background-color: $blue;
-  padding:$gap/2 $gap;
-  border-bottom:1px solid $gray;
+  padding: $gap/2 $gap;
+  border-bottom: 1px solid $gray;
   z-index: 2;
   font-weight: 700;
 }
 .tableCell {
-  padding:$gap/2 $gap;
+  padding: $gap/2 $gap;
   background-color: $black;
-  border-left:1px solid $gray;
-  border-bottom:1px solid $gray;
+  border-left: 1px solid $gray;
+  border-bottom: 1px solid $gray;
 }
 
 .listSeparator {
-  margin:1rem 0;
-  font-weight:700;
-  color:$yellow;
+  margin: 1rem 0;
+  font-weight: 700;
+  color: $yellow;
 }
 input[type="text"] {
-  padding:$gap/2 $gap;
+  padding: $gap/2 $gap;
   text-align: center;
-    border: none;
+  border: none;
   border-radius: $rad;
 }
 
 .fullPageBG {
-  background-color: #121212e7;
+  background-color: #12121252;
   -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  position:fixed !important;
+  backdrop-filter: blur(5px);
+  position: fixed !important;
   height: 100vh;
-  padding:2rem;
+  padding: 2rem;
   width: 100%;
 
   .modalContent {
@@ -237,23 +278,26 @@ input[type="text"] {
     max-height: 80vh;
     overflow-y: scroll;
     display: block;
-    margin:0 auto;
+    margin: 0 auto;
     @media (max-width: 768px) {
       max-width: calc(100% - 2rem);
     }
     &::-webkit-scrollbar {
       display: none;
     }
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
-  
+}
+.noScrollBG {
+  max-height: 0;
+  overflow: hidden !important;
 }
 
-button, .typeButton {
+button {
   background-color: $gray;
-  color:$white;
-  padding:$gap/2 $gap;
+  color: $white;
+  padding: $gap/2 $gap;
   border: none;
   border-radius: $rad;
   margin-bottom: $gap;
@@ -263,7 +307,7 @@ button, .typeButton {
 }
 .typeButton {
   width: 6rem;
-  margin: 0 !important;
+  margin: $gap;
 }
 
 .rightAlign {

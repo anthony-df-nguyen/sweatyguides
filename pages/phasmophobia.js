@@ -10,7 +10,10 @@ import style from "styles/phasmo/phasmo.module.scss"
 export default function phasmophobia() {
   return (
     <div>
-      <Page title="Phasmophobia">
+      <Page
+        headTitle="Sweaty Guides | Phasmophobia"
+        title="Phasmophobia"
+        background="https://roadtovrlive-5ea0.kxcdn.com/wp-content/uploads/2020/10/plasmophobia-5-1021x580.jpg">
         <Expander title="Objective Tracker">
           <div className="">
             <h3>Click an objective to mark it as active</h3>

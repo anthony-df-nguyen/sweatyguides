@@ -53,10 +53,10 @@ export default function TypeFilters (props) {
   }
 
   return (
-    <div className="flexRow topMargin" style={{justifyContent:'space-evenly'}}>
+    <div className="flexRow topMargin" style={{justifyContent:'flex-start'}}>
       {types.map((row, i) => {
         return (
-          <div key={i} className="typeButton button" style={{flexGrow:'0'}} onClick={() => filterType(row,i)}>
+          <div key={i} className="typeButton card hoverBlue" style={{flexGrow:'0'}} onClick={() => filterType(row,i)}>
             <div style={{ display: 'block', marginTop: '0rem' }}>
               <p style={{fontSize:'12px'}} key={i}>{row.toUpperCase()}</p>
             </div>
