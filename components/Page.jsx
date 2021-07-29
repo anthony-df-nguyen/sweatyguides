@@ -1,6 +1,8 @@
 import React from "react";
 import Head from "next/head";
 import Navbar from "components/Navbar";
+import { GoMarkGithub } from "react-icons/go";
+
 export default function Page(props) {
   return (
     <div style={{ paddingBottom: "4rem" }}>
@@ -30,6 +32,29 @@ export default function Page(props) {
           <div className="pageTitle">{props.title}</div>
         </div>
         <div className="wrapper">{props.children}</div>
+        <footer>
+          <div
+            style={{ margin: "0 auto", display: "block", textAlign: "center" }}>
+            {" "}
+            <a href="https://github.com/skifreetony/sweatyguides">
+              {" "}
+              <div>Want to contribute or report a bug? </div>
+              <div className="centerText smallText">
+                <div
+                  style={{
+                    display: "inline",
+                    position: "relative",
+                    top: "8px",
+                    marginRight: "8px",
+                  }}>
+                  {" "}
+                  <GoMarkGithub size="1.5rem" />
+                </div>
+                skifreetony
+              </div>
+            </a>
+          </div>
+        </footer>
       </div>
     </div>
   );
