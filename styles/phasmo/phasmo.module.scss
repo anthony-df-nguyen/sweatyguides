@@ -2,6 +2,14 @@
 
 .objective {
   padding: $gap;
+  background-color: $black;
+  border-radius: $rad;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.evidence {
+  padding: $gap;
   background-color: $gray;
   border-radius: $rad;
   &:hover {
@@ -16,7 +24,7 @@
     width: 100%;
     padding: 12px;
     border-radius: $rad;
-    background-color: $gray;
+    background-color: $black;
     border:none;
     color:$white;
   }

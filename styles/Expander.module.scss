@@ -11,6 +11,9 @@
     margin:$gap 0;
     padding:$gap;
     border-radius: $rad;
+    .expander {
+        background-color: $black;
+    }
 }
 .title {
     font-size:1.5rem;

@@ -80,25 +80,25 @@ export default function Ghostfinder() {
   return (
     <div>
       <div className="flexRow topMargin">
-        <div className={style.objective} onClick={handleClick} id="EMF">
+        <div className={style.evidence} onClick={handleClick} id="EMF">
           EMF Level 5
         </div>
-        <div className={style.objective} onClick={handleClick} id="Temps">
+        <div className={style.evidence} onClick={handleClick} id="Temps">
           Freezing Temps
         </div>
-        <div className={style.objective} onClick={handleClick} id="Orb">
+        <div className={style.evidence} onClick={handleClick} id="Orb">
           Ghost Orb
         </div>
         <div
-          className={style.objective}
+          className={style.evidence}
           onClick={handleClick}
           id="Ghost Writing">
           Ghost Writing
         </div>
-        <div className={style.objective} onClick={handleClick} id="Prints">
+        <div className={style.evidence} onClick={handleClick} id="Prints">
           Fingerprints
         </div>
-        <div className={style.objective} onClick={handleClick} id="Spirit Box">
+        <div className={style.evidence} onClick={handleClick} id="Spirit Box">
           Spirit Box
         </div>
       </div>
