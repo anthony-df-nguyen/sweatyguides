@@ -72,12 +72,13 @@ export default function Valheim() {
             <li>Upgraded carry weight (from belt): 600 from (450)</li>
             <li>Increased player inventory by 2 more rows</li>
             <li>The Karve boat has increased inventory of 6 instead of 4</li>
+            <li>Longboat inventory increased to 32 slots</li>
             <li>The cart/wagon has 0 extra weight from items</li>
           </ul>
           <div className="listSeparator">Effects/Buffs</div>
           <ul>
-            <li>Jumping takes 50% less stamina</li>
-            <li>Swimming takes 50% less stsamina</li>
+            <li>Jumping takes 100% less stamina</li>
+            <li>Swimming takes 100% less stamina</li>
             <li>
               Increased comfort radius from 10 to 15 (get the comfort buff from
               items in your base without needing items as physically close)
