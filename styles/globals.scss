@@ -81,7 +81,7 @@ a {
 }
 
 .blue {
-  color: $lightblue;
+  color: $lightblue !important;
 }
 .yellowBG {
   background-color: $yellow;
@@ -349,4 +349,21 @@ button {
 
 footer {
   margin-top:4rem;
+}
+
+.twitter {
+  max-height: 50vh;
+  @media (max-height:700px) {
+    max-height: 75vh;
+  }
+  //max-width: 768px;
+  display:block;
+  margin:0 auto;
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
 }

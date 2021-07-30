@@ -144,8 +144,15 @@ export default function phasmophobia() {
             </a>
           </div>
         </Expander>
-        <Expander title="Twitter">
-          <div className="">
+
+        <div className="topMargin4">
+          <h1>Ghost Finder</h1>
+          <p>Pick up to 3 pieces of evidence to identify the ghost</p>
+          <GhostFinder />
+        </div>
+        <div className="card topMargin4">
+          <h1>Twitter</h1>
+          <div className="twitter topMargin">
             <a
               class="twitter-timeline"
               data-lang="en"
@@ -158,11 +165,6 @@ export default function phasmophobia() {
               src="https://platform.twitter.com/widgets.js"
               charset="utf-8"></script>
           </div>
-        </Expander>
-        <div className="topMargin4">
-          <h1>Ghost Finder</h1>
-          <p>Pick up to 3 pieces of evidence to identify the ghost</p>
-          <GhostFinder />
         </div>
       </Page>
     </div>

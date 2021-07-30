@@ -16,7 +16,6 @@ export default function Valheim() {
           <h1>Server Info</h1>
           <h3 style={{ color: "white" }}>IP: 194.156.90.227:27082</h3>
         </div>
-
         <Expander title="Current Server Valheim+ Settings">
           <div className="listSeparator">Building/Workbench</div>
           <ul>
@@ -190,12 +189,15 @@ export default function Valheim() {
             />
           </FullScreen>
         </Expander>
-
         <h1 className="topMargin4">Reference Tables</h1>
-        <p>Click table header names to sort table rows</p>
+        <p>
+          Click table header names to sort table rows. Click blue text to view
+          detailed wiki page.
+        </p>
         <Expander title="Food Stats">
           <ReactTable
             data="/valheim/foods.json"
+            external="https://valheim.fandom.com/wiki/"
             head={[
               {
                 name: "Name",
@@ -224,11 +226,11 @@ export default function Valheim() {
             ]}
           />
         </Expander>
-
         <Expander title="Meads">
           {" "}
           <ReactTable
             data="/valheim/mead.json"
+            external="https://valheim.fandom.com/wiki/"
             head={[
               {
                 name: "Name",
@@ -256,6 +258,7 @@ export default function Valheim() {
         <Expander title="Creatures/Mobs">
           <ReactTable
             data="/valheim/creatures.json"
+            external="https://valheim.fandom.com/wiki/"
             head={[
               {
                 name: "Name",
@@ -295,6 +298,7 @@ export default function Valheim() {
         <Expander title="Weapon Stats">
           <ReactTable
             data="/valheim/weapons.json"
+            external="https://valheim.fandom.com/wiki/"
             head={[
               {
                 name: "Name",
@@ -330,6 +334,7 @@ export default function Valheim() {
         <Expander title="Armor Stats">
           <ReactTable
             data="/valheim/armor.json"
+            external="https://valheim.fandom.com/wiki/"
             head={[
               {
                 name: "Name",
@@ -358,10 +363,10 @@ export default function Valheim() {
             ]}
           />
         </Expander>
-
         <Expander title="Materials | Metals | Food | Misc">
           <ReactTable
             data="/valheim/materials.json"
+            external="https://valheim.fandom.com/wiki/"
             head={[
               {
                 name: "Name",
@@ -381,6 +386,7 @@ export default function Valheim() {
         <Expander title="Effects | Buffs">
           <ReactTable
             data="/valheim/effects.json"
+            external="https://valheim.fandom.com/wiki/"
             head={[
               {
                 name: "Name",
@@ -401,20 +407,23 @@ export default function Valheim() {
             ]}
           />
         </Expander>
-        <h1 className="topMargin4">Other</h1>
-        <Expander title="Twitter">
-          <a
-            class="twitter-timeline"
-            data-lang="en"
-            data-theme="dark"
-            href="https://twitter.com/Valheimgame?ref_src=twsrc%5Etfw">
-            Tweets by Valheimgame
-          </a>{" "}
-          <script
-            async
-            src="https://platform.twitter.com/widgets.js"
-            charset="utf-8"></script>
-        </Expander>
+
+        <div className="card topMargin4" >
+          <h1>Twitter</h1>
+          <div className="twitter topMargin">
+            <a
+              class="twitter-timeline"
+              data-lang="en"
+              data-theme="dark"
+              href="https://twitter.com/Valheimgame?ref_src=twsrc%5Etfw">
+              Tweets by Valheimgame
+            </a>{" "}
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+              charset="utf-8"></script>
+          </div>
+        </div>
       </Page>
     </div>
   );
