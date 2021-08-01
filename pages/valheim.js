@@ -19,9 +19,9 @@ export default function Valheim () {
             IP: 194.156.90.227:27082
             <div>
               <a href='steam://run/892970/+connect194.156.90.227:27082/'>
-                Launch Game | 
+                Launch Game and Join Server
               </a>{' '}
-              <a href='steam://connect/194.156.90.227:27082/'>Rejoin Server</a>
+            
             </div>
           </h3>
         </div>
