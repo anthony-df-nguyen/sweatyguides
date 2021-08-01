@@ -1,0 +1,74 @@
+[
+    {
+      "Name": "Wood shield",
+      "Icon": "",
+      "Type": "Round",
+      "Block Power | Upgraded Max": "20 | 30",
+      "Parry Force | Upgraded Max": "20 | 20",
+      "Parry Bonus": "1.5x"
+    },
+    {
+      "Name": "Wood tower shield",
+      "Icon": "",
+      "Type": "Tower",
+      "Block Power | Upgraded Max": "35 | 45",
+      "Parry Force | Upgraded Max": "-",
+      "Parry Bonus": "-"
+    },
+    {
+      "Name": "Bronze buckler",
+      "Icon": "",
+      "Type": "Round",
+      "Block Power | Upgraded Max": "45 | 55",
+      "Parry Force | Upgraded Max": "30 | 30",
+      "Parry Bonus": "2x"
+    },
+    {
+      "Name": "Banded shield",
+      "Icon": "",
+      "Type": "Round",
+      "Block Power | Upgraded Max": "60 | 70",
+      "Parry Force | Upgraded Max": "40 | 50",
+      "Parry Bonus": "1.5x"
+    },
+    {
+      "Name": "Iron tower shield",
+      "Icon": "",
+      "Type": "Tower",
+      "Block Power | Upgraded Max": "75 | 85",
+      "Parry Force | Upgraded Max": "-",
+      "Parry Bonus": "-"
+    },
+    {
+      "Name": "Silver Shield",
+      "Icon": "",
+      "Type": "Round",
+      "Block Power | Upgraded Max": "75 | 85",
+      "Parry Force | Upgraded Max": "40 | 50",
+      "Parry Bonus": "1.5x"
+    },
+    {
+      "Name": "Serpent scale shield",
+      "Icon": "",
+      "Type": "Tower",
+      "Block Power | Upgraded Max": "90 | 100",
+      "Parry Force | Upgraded Max": "-",
+      "Parry Bonus": "-"
+    },
+    {
+      "Name": "Black metal shield",
+      "Icon": "",
+      "Type": "Round",
+      "Block Power | Upgraded Max": "90 | 100",
+      "Parry Force | Upgraded Max": "50 | 60",
+      "Parry Bonus": "1.5x"
+    },
+    {
+      "Name": "Black metal tower shield",
+      "Icon": "",
+      "Type": "Tower",
+      "Block Power | Upgraded Max": "105 | 120",
+      "Parry Force | Upgraded Max": "-",
+      "Parry Bonus": "-"
+    }
+  ]

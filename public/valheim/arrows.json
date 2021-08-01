@@ -1,0 +1,82 @@
+[
+  {
+    "Name": "Wood arrow",
+    "Type": "Arrow",
+    "Dmg": 22,
+    "Dmg Type": "Pierce",
+    "Backstab": "",
+    "Knockback": 10
+  },
+  {
+    "Name": "Fire arrow",
+    "Type": "Arrow",
+    "Dmg": 33,
+    "Dmg Type":["Pierce: 11","Fire: 22"],
+    "Backstab": "",
+    "Knockback": 10
+  },
+  {
+    "Name": "Flinthead arrow",
+    "Type": "Arrow",
+    "Dmg": 27,
+    "Dmg Type": "Pierce",
+    "Backstab": "",
+    "Knockback": 10
+  },
+  {
+    "Name": "Bronzehead arrow",
+    "Type": "Arrow",
+    "Dmg": 32,
+    "Dmg Type": "Pierce",
+    "Backstab": "",
+    "Knockback": 10
+  },
+  {
+    "Name": "Ironhead arrow",
+    "Type": "Arrow",
+    "Dmg": 42,
+    "Dmg Type": "Pierce",
+    "Backstab": "",
+    "Knockback": 10
+  },
+  {
+    "Name": "Silver arrow",
+    "Type": "Arrow",
+    "Dmg": 72,
+    "Dmg Type": ["Pierce: 52","Spirit: 20"],
+    "Backstab": "",
+    "Knockback": 10
+  },
+  {
+    "Name": "Obsidian arrow",
+    "Type": "Arrow",
+    "Dmg": 52,
+    "Dmg Type": "Pierce",
+    "Backstab": "",
+    "Knockback": 10
+  },
+  {
+    "Name": "Poison Arrow",
+    "Type": "Arrow",
+    "Dmg": 78,
+    "Dmg Type": ["Pierce: 26", "Poison: 52"],
+    "Backstab": "",
+    "Knockback": 10
+  },
+  {
+    "Name": "Frost arrow",
+    "Type": "Arrow",
+    "Dmg": 78,
+    "Dmg Type": ["Pierce: 26","Frost: 52"],
+    "Backstab": "",
+    "Knockback": 10
+  },
+  {
+    "Name": "Needle arrow",
+    "Type": "Arrow",
+    "Dmg": 62,
+    "Dmg Type": "Pierce",
+    "Backstab": "",
+    "Knockback": 15
+  }
+]

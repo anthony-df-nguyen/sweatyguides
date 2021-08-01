@@ -1,23 +1,32 @@
-import React, { useEffect, useState } from "react";
-import Page from "components/Page.jsx";
-import Expander from "components/Expander.jsx";
-import Image from "next/image";
-import FullScreen from "components/FullScreen.jsx";
-import ReactTable from "components/ReactTable";
+import React, { useEffect, useState } from 'react'
+import Page from 'components/Page.jsx'
+import Expander from 'components/Expander.jsx'
+import Image from 'next/image'
+import FullScreen from 'components/FullScreen.jsx'
+import ReactTable from 'components/ReactTable'
 
-export default function Valheim() {
+export default function Valheim () {
   return (
     <div>
       <Page
-        headTitle="Sweaty Guides | Valheim"
-        title="Valheim"
-        background="https://images3.alphacoders.com/113/thumb-1920-1131606.png">
-        <div className="card">
+        headTitle='Sweaty Guides | Valheim'
+        title='Valheim'
+        background='https://images3.alphacoders.com/113/thumb-1920-1131606.png'
+      >
+        <div className='card'>
           <h1>Server Info</h1>
-          <h3 style={{ color: "white" }}>IP: 194.156.90.227:27082</h3>
+          <h3 style={{ color: 'white' }}>
+            IP: 194.156.90.227:27082
+            <div>
+              <a href='steam://run/892970/+connect194.156.90.227:27082/'>
+                Launch Game | 
+              </a>{' '}
+              <a href='steam://connect/194.156.90.227:27082/'>Rejoin Server</a>
+            </div>
+          </h3>
         </div>
-        <Expander title="Current Server Valheim+ Settings">
-          <div className="listSeparator">Building/Workbench</div>
+        <Expander title='Current Server Valheim+ Settings'>
+          <div className='listSeparator'>Building/Workbench</div>
           <ul>
             <li>Wokbench radius increased to 30m from 20m</li>
             <li>Workbenches require no roof</li>
@@ -36,14 +45,14 @@ export default function Valheim() {
             </li>
             <li>
               Remove 'Invalid Placement' error when building to allow more
-              building freedom/flexibility{" "}
+              building freedom/flexibility{' '}
             </li>
             <li>
               Increase object placement range from 8 to 16 (place items in build
               mode further without needing to walk)
             </li>
           </ul>
-          <div className="listSeparator">Smelting</div>
+          <div className='listSeparator'>Smelting</div>
           <ul>
             <li>Smelter can take 25 ore and 50 coal</li>
             <li>Smelter produces ingots in 10 seconds instead of 15</li>
@@ -54,7 +63,7 @@ export default function Valheim() {
             <li>Iron obtained from mining doubled (1 to 2)</li>
           </ul>
 
-          <div className="listSeparator">Gathering/Farming</div>
+          <div className='listSeparator'>Gathering/Farming</div>
           <ul>
             <li>
               Wood and core wood drop rate increased by 100%. Fine wood by 150%
@@ -65,7 +74,7 @@ export default function Valheim() {
             <li>Using the hoe no longer uses stamina</li>
           </ul>
 
-          <div className="listSeparator">Inventory/Weight</div>
+          <div className='listSeparator'>Inventory/Weight</div>
           <ul>
             <li>Base carry weight: 400 (from 300)</li>
             <li>Upgraded carry weight (from belt): 600 from (450)</li>
@@ -74,7 +83,7 @@ export default function Valheim() {
             <li>Longboat inventory increased to 32 slots</li>
             <li>The cart/wagon has 0 extra weight from items</li>
           </ul>
-          <div className="listSeparator">Effects/Buffs</div>
+          <div className='listSeparator'>Effects/Buffs</div>
           <ul>
             <li>Jumping takes 100% less stamina</li>
             <li>Swimming takes 100% less stamina</li>
@@ -92,11 +101,11 @@ export default function Valheim() {
             </li>
             <li>
               Food will last 25% longer - Share map progression (our map
-              exploration progress syncs){" "}
+              exploration progress syncs){' '}
             </li>
 
             <li>
-              {" "}
+              {' '}
               Disabled the animation when activating a guardian/boss ability
             </li>
             <li>
@@ -106,7 +115,7 @@ export default function Valheim() {
             <li>Can't kill other peoples tamed pets</li>
           </ul>
 
-          <div className="listSeparator">Map/Exploration</div>
+          <div className='listSeparator'>Map/Exploration</div>
           <ul>
             <li>Option to share your markers</li>
             <li>View boats/carts on the map</li>
@@ -114,7 +123,7 @@ export default function Valheim() {
             <li>Increased map discovery radius to 250 from 100</li>
             <li>Added current in-game time</li>
           </ul>
-          <div className="listSeparator">Camera</div>
+          <div className='listSeparator'>Camera</div>
           <ul>
             <li>
               Enabled 1st Person PoV (activate with F10). Use PageUp or PageDown
@@ -122,11 +131,11 @@ export default function Valheim() {
             </li>
           </ul>
         </Expander>
-        <Expander title="How to Install Valheim+">
+        <Expander title='How to Install Valheim+'>
           <div>
             <b>
-              Full guide is available{" "}
-              <a href="https://valheim.plus/installation" className="blue">
+              Full guide is available{' '}
+              <a href='https://valheim.plus/installation' className='blue'>
                 here
               </a>
             </b>
@@ -134,17 +143,18 @@ export default function Valheim() {
           <br></br>
           <ol>
             <li>
-              Down the latest Valheim+ file{" "}
+              Down the latest Valheim+ file{' '}
               <a
-                href="https://valheim.plus/cdn/0.9.8.2/WindowsClient.tar.gz"
-                className="blue">
+                href='https://valheim.plus/cdn/0.9.8.2/WindowsClient.tar.gz'
+                className='blue'
+              >
                 here
               </a>
             </li>
             <li>
               If you don't have an unzipping program that can handle .tar/.gz
-              files, download 7-zip{" "}
-              <a href="https://www.7-zip.org/download.html" className="blue">
+              files, download 7-zip{' '}
+              <a href='https://www.7-zip.org/download.html' className='blue'>
                 here
               </a>
             </li>
@@ -169,262 +179,353 @@ export default function Valheim() {
             </li>
           </ol>
         </Expander>
-        <h1 className="topMargin4">Map</h1>
+        <h1 className='topMargin4'>Map</h1>
         <p>
-          {" "}
-          Access the editable/collaborative map{" "}
+          {' '}
+          Access the editable/collaborative map{' '}
           <a
-            className="blue"
-            href="https://valheim-map.world/?seed=H24gw74acK&ver=0.150.3&lob=g6AW5g&ekey=7fdfm8xB&offset=0%2C0&zoom=0.614&view=0">
+            className='blue'
+            href='https://valheim-map.world/?seed=H24gw74acK&ver=0.150.3&lob=g6AW5g&ekey=7fdfm8xB&offset=0%2C0&zoom=0.614&view=0'
+          >
             here
           </a>
         </p>
-        <Expander title="Server Map">
+        <Expander title='Server Map'>
           <FullScreen>
             <Image
-              src="/images/valheim/map.png"
-              layout="responsive"
-              width="5"
-              height="5"
+              src='/images/valheim/map.png'
+              layout='responsive'
+              width='5'
+              height='5'
             />
           </FullScreen>
         </Expander>
-        <h1 className="topMargin4">Reference Tables</h1>
+        <h1 className='topMargin4'>Reference Tables</h1>
         <p>
           Click table header names to sort table rows. Click blue text to view
           detailed wiki page.
         </p>
-        <Expander title="Food Stats">
+        <Expander title='Food Stats'>
           <ReactTable
-            data="/valheim/foods.json"
-            external="https://valheim.fandom.com/wiki/"
+            data='/valheim/foods.json'
+            external='https://valheim.fandom.com/wiki/'
             head={[
               {
-                name: "Name",
-                width: "300",
+                name: 'Name',
+                width: '300'
               },
               {
-                name: "Health",
-                width: "100",
+                name: 'Health',
+                width: '100'
               },
               {
-                name: "Healing",
-                width: "100",
+                name: 'Healing',
+                width: '100'
               },
               {
-                name: "Stamina",
-                width: "100",
+                name: 'Stamina',
+                width: '100'
               },
               {
-                name: "Duration",
-                width: "100",
+                name: 'Duration',
+                width: '100'
               },
               {
-                name: "Stack Size",
-                width: "100",
-              },
+                name: 'Stack Size',
+                width: '100'
+              }
             ]}
           />
         </Expander>
-        <Expander title="Meads">
-          {" "}
+        <Expander title='Meads'>
+          {' '}
           <ReactTable
-            data="/valheim/mead.json"
-            external="https://valheim.fandom.com/wiki/"
+            data='/valheim/mead.json'
+            external='https://valheim.fandom.com/wiki/'
             head={[
               {
-                name: "Name",
-                width: "200",
+                name: 'Name',
+                width: '200'
               },
               {
-                name: "Type",
-                width: "100",
+                name: 'Type',
+                width: '100'
               },
               {
-                name: "Detail",
-                width: "400",
+                name: 'Detail',
+                width: '400'
               },
               {
-                name: "Base Ingredients",
-                width: "200",
+                name: 'Base Ingredients',
+                width: '200'
               },
               {
-                name: "Duration",
-                width: "75",
-              },
+                name: 'Duration',
+                width: '75'
+              }
             ]}
           />
         </Expander>
-        <Expander title="Creatures/Mobs">
+        <Expander title='Creatures/Mobs'>
           <ReactTable
-            data="/valheim/creatures.json"
-            external="https://valheim.fandom.com/wiki/"
+            data='/valheim/creatures.json'
+            external='https://valheim.fandom.com/wiki/'
             head={[
               {
-                name: "Name",
-                width: "150",
+                name: 'Name',
+                width: '150'
               },
               {
-                name: "Spawn",
-                width: "100",
+                name: 'Spawn',
+                width: '100'
               },
               {
-                name: "HP",
-                width: "70",
+                name: 'HP',
+                width: '70'
               },
               {
-                name: "Max Dmg",
-                width: "100",
+                name: 'Max Dmg',
+                width: '100'
               },
               {
-                name: "Notes",
-                width: "200",
+                name: 'Notes',
+                width: '200'
               },
               {
-                name: "Weakness",
-                width: "100",
+                name: 'Weakness',
+                width: '100'
               },
               {
-                name: "Resistance",
-                width: "100",
+                name: 'Resistance',
+                width: '100'
               },
               {
-                name: "Immune",
-                width: "100",
-              },
+                name: 'Immune',
+                width: '100'
+              }
             ]}
           />
         </Expander>
-        <Expander title="Weapon Stats">
+        <Expander title='Weapon Stats'>
           <ReactTable
-            data="/valheim/weapons.json"
-            external="https://valheim.fandom.com/wiki/"
+            data='/valheim/weapons.json'
+            external='https://valheim.fandom.com/wiki/'
             head={[
               {
-                name: "Name",
-                width: "175",
+                name: 'Name',
+                width: '175'
               },
               {
-                name: "Type",
-                width: "100",
+                name: 'Type',
+                width: '100'
               },
               {
-                name: "Dmg",
-                width: "70",
+                name: 'Dmg',
+                width: '70'
               },
               {
-                name: "Max Upgraded Dmg",
-                width: "120",
+                name: 'Max Upgraded Dmg',
+                width: '120'
               },
               {
-                name: "Dmg Type",
-                width: "170",
+                name: 'Dmg Type',
+                width: '170'
               },
               {
-                name: "Backstab",
-                width: "70",
+                name: 'Backstab',
+                width: '70'
               },
               {
-                name: "Knockback",
-                width: "70",
-              },
+                name: 'Knockback',
+                width: '70'
+              }
             ]}
           />
         </Expander>
-        <Expander title="Armor Stats">
+        <Expander title='Bows/Arrows'>
+          <h2 style={{textAlign:'left'}}>Bows</h2>
           <ReactTable
-            data="/valheim/armor.json"
-            external="https://valheim.fandom.com/wiki/"
+            data='/valheim/bows.json'
+            external='https://valheim.fandom.com/wiki/'
             head={[
               {
-                name: "Name",
-                width: "175",
+                name: 'Name',
+                width: '200'
               },
               {
-                name: "Type",
-                width: "75",
+                name: 'Type',
+                width: '100'
               },
               {
-                name: "Quality Level 1 | 2 | 3 | 4",
-                width: "200",
+                name: 'Dmg',
+                width: '100'
               },
               {
-                name: "Crafting Materials Level 1 | 2 | 3 | 4",
-                width: "275",
+                name: 'Dmg Type',
+                width: '150'
               },
               {
-                name: "Movement",
-                width: "100",
+                name: 'Backstab',
+                width: '100'
               },
               {
-                name: "Weight",
-                width: "50",
+                name: 'Knockback',
+                width: '100'
+              }
+            ]}
+          />
+          <h2 className="topMargin" style={{textAlign:'left'}}>Arrows</h2>
+           <ReactTable
+            data='/valheim/arrows.json'
+            external='https://valheim.fandom.com/wiki/'
+            head={[
+              {
+                name: 'Name',
+                width: '200'
               },
+              {
+                name: 'Type',
+                width: '100'
+              },
+              {
+                name: 'Dmg',
+                width: '100'
+              },
+              {
+                name: 'Dmg Type',
+                width: '150'
+              },
+              {
+                name: 'Knockback',
+                width: '100'
+              }
             ]}
           />
         </Expander>
-        <Expander title="Materials | Metals | Food | Misc">
+        <Expander title='Shields'>
           <ReactTable
-            data="/valheim/materials.json"
-            external="https://valheim.fandom.com/wiki/"
+            data='/valheim/shields.json'
+            external='https://valheim.fandom.com/wiki/'
             head={[
               {
-                name: "Name",
-                width: "175",
+                name: 'Name',
+                width: '200'
               },
               {
-                name: "Type",
-                width: "100",
+                name: 'Type',
+                width: '100'
               },
               {
-                name: "Source",
-                width: "600",
+                name: 'Block Power | Upgraded Max',
+                width: '150'
               },
+              {
+                name: 'Parry Force | Upgraded Max',
+                width: '150'
+              },
+              {
+                name: 'Parry Bonus',
+                width: '100'
+              }
             ]}
           />
         </Expander>
-        <Expander title="Effects | Buffs">
+        <Expander title='Armor Stats'>
           <ReactTable
-            data="/valheim/effects.json"
-            external="https://valheim.fandom.com/wiki/"
+            data='/valheim/armor.json'
+            external='https://valheim.fandom.com/wiki/'
             head={[
               {
-                name: "Name",
-                width: "150",
+                name: 'Name',
+                width: '175'
               },
               {
-                name: "Source",
-                width: "150",
+                name: 'Type',
+                width: '75'
               },
               {
-                name: "Effects",
-                width: "300",
+                name: 'Quality Level 1 | 2 | 3 | 4',
+                width: '200'
               },
               {
-                name: "Notes",
-                width: "300",
+                name: 'Crafting Materials Level 1 | 2 | 3 | 4',
+                width: '275'
               },
+              {
+                name: 'Movement',
+                width: '100'
+              },
+              {
+                name: 'Weight',
+                width: '50'
+              }
+            ]}
+          />
+        </Expander>
+        <Expander title='Materials | Metals | Food | Misc'>
+          <ReactTable
+            data='/valheim/materials.json'
+            external='https://valheim.fandom.com/wiki/'
+            head={[
+              {
+                name: 'Name',
+                width: '175'
+              },
+              {
+                name: 'Type',
+                width: '100'
+              },
+              {
+                name: 'Source',
+                width: '600'
+              }
+            ]}
+          />
+        </Expander>
+        <Expander title='Effects | Buffs'>
+          <ReactTable
+            data='/valheim/effects.json'
+            external='https://valheim.fandom.com/wiki/'
+            head={[
+              {
+                name: 'Name',
+                width: '150'
+              },
+              {
+                name: 'Source',
+                width: '150'
+              },
+              {
+                name: 'Effects',
+                width: '300'
+              },
+              {
+                name: 'Notes',
+                width: '300'
+              }
             ]}
           />
         </Expander>
 
-        <div className="card topMargin4" >
+        <div className='card topMargin4'>
           <h1>Twitter</h1>
-          <div className="twitter topMargin">
+          <div className='twitter topMargin'>
             <a
-              class="twitter-timeline"
-              data-lang="en"
-              data-theme="dark"
-              href="https://twitter.com/Valheimgame?ref_src=twsrc%5Etfw">
+              class='twitter-timeline'
+              data-lang='en'
+              data-theme='dark'
+              href='https://twitter.com/Valheimgame?ref_src=twsrc%5Etfw'
+            >
               Tweets by Valheimgame
-            </a>{" "}
+            </a>{' '}
             <script
               async
-              src="https://platform.twitter.com/widgets.js"
-              charset="utf-8"></script>
+              src='https://platform.twitter.com/widgets.js'
+              charset='utf-8'
+            ></script>
           </div>
         </div>
       </Page>
     </div>
-  );
+  )
 }

@@ -1,0 +1,36 @@
+[{
+    "Name": "Crude bow",
+    "Type": "Bow",
+    "Dmg": 22,
+    "Max Upgraded Dmg": 31,
+    "Dmg Type": "Pierce",
+    "Backstab": "3x",
+    "Knockback": 0
+  },
+  {
+    "Name": "Finewood bow",
+    "Type": "Bow",
+    "Dmg": 32,
+    "Max Upgraded Dmg": 41,
+    "Dmg Type": "Pierce",
+    "Backstab": "3x",
+    "Knockback": 5
+  },
+  {
+    "Name": "Huntsman bow",
+    "Type": "Bow",
+    "Dmg": 42,
+    "Max Upgraded Dmg": 51,
+    "Dmg Type": "Pierce",
+    "Backstab": "3x",
+    "Knockback": 10
+  },
+  {
+    "Name": "Draugr Fang",
+    "Type": "Bow",
+    "Dmg": 52,
+    "Max Upgraded Dmg": 76,
+    "Dmg Type": ["Pierce: 47 - 56", "Poison: 5 - 20"],
+    "Backstab": "3x",
+    "Knockback": 20
+  }]
