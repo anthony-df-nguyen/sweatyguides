@@ -72,6 +72,10 @@ export default function PokeModal(props) {
             </div>
           </div>
         </div>
+       {/* <br></br>
+        <div className="card">
+          <h3>Evolution Chain</h3>
+        </div> */}
         <br></br>
         <div className="card">
           <MatchupTable types={types} />

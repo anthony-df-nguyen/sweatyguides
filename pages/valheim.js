@@ -54,6 +54,8 @@ export default function Valheim () {
           </ul>
           <div className='listSeparator'>Smelting</div>
           <ul>
+            <li>Smelter will automatically pull ores and coal from nearby chests within range of 5</li>
+            <li>Kiln will automatically pull wood from nearby chests within range of 5. Will only use normal wood to make coal.</li>
             <li>Smelter can take 25 ore and 50 coal</li>
             <li>Smelter produces ingots in 10 seconds instead of 15</li>
             <li>Furnace can take 20 ore and 40 coal</li>
