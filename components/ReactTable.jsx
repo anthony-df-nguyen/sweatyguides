@@ -36,7 +36,7 @@ export default function ReactTable(props) {
               className="tableCell"
               cellRenderer={(props) => {
                 const wiki = url + props.cellData;
-                return <a className="blue" href={wiki} target="_blank" noreferrer="true">{props.cellData}</a>;
+                return <a className="blue" id={i} href={wiki} target="_blank" noreferrer="true">{props.cellData}</a>;
               }}
             />
           );
@@ -52,8 +52,8 @@ export default function ReactTable(props) {
                 return Array.isArray(props.cellData) ? (
                   <>
                     <ul>
-                      {props.cellData.map((line, num) => (
-                        <li className="noMargin" key={num}>
+                      {props.cellData.map((line, z) => (
+                        <li className="noMargin" key={z}>
                           {line}
                         </li>
                       ))}

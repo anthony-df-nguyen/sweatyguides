@@ -3,15 +3,25 @@ import Image from "next/image";
 import GetTypeIcon from "./GetTypeIcon";
 import { Table, Column } from "sticky-react-table";
 import MatchupTable from "components/pokemon/MatchupTable";
+import EvoChain from "./EvoChain";
 
 export default function PokeModal(props) {
   const [types, updateTypes] = useState([]);
+  const [speciesURL,updateURL] = useState("")
   useEffect(() => {
     if (props.array.types) {
-      const foundTypes = props.array.types.map((row) => row.type.name);     
+      const foundTypes = props.array.types.map((row) => row.type.name);
       updateTypes(foundTypes);
     }
   }, [props.array.types]);
+  useEffect(()=>{
+    if (props.array.species) {
+      const url = props.array.species.url;
+      updateURL(url)
+    }
+  },[props.array.species])
+  //console.log(props.array)
+
 
   return (
     <div className="fullPageBG center">
@@ -27,6 +37,7 @@ export default function PokeModal(props) {
           </button>
         </div>
 
+        {/* Name and Type */}
         <div className="flexRow">
           <div className="card ">
             <div>
@@ -60,9 +71,9 @@ export default function PokeModal(props) {
               <div className="flexRow">
                 {types.map((row, i) => {
                   return (
-                    <div>
+                    <div key={i}>
                       <div style={{ display: "block", marginTop: "1rem" }}>
-                        <p key={i}>{row.toUpperCase()}</p>
+                        <p>{row.toUpperCase()}</p>
                       </div>
                       <GetTypeIcon type={row} />
                     </div>
@@ -72,14 +83,21 @@ export default function PokeModal(props) {
             </div>
           </div>
         </div>
-       {/* <br></br>
+        <br></br>
+        {/* Evolution Chain */}
         <div className="card">
           <h3>Evolution Chain</h3>
-        </div> */}
+          {props.array.species && (
+            <EvoChain speciesURL={speciesURL}  />
+          )}
+          
+        </div>
         <br></br>
+        {/* Matchup Table */}
         <div className="card">
           <MatchupTable types={types} />
         </div>
+        {/* Stat Table */}
         <div className="card topMargin">
           <h3>Stats</h3>
           <br></br>

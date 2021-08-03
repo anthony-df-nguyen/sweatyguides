@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 export default function MatchupTable(props) {
-  const [strengths, updateStrengths] = useState([]);
-  const [weakness, updateWeakness] = useState([]);
   const [matchups, updateMatchups] = useState([]);
-  console.log('matchups: ', matchups);
+  //console.log('matchups: ', matchups);
 
   const getTypeData = async () => {
     await fetch("/pokedex/types.json")
@@ -23,7 +21,7 @@ export default function MatchupTable(props) {
   };
 
   useEffect(() => {
-    console.log("Searching from S/W");
+    //console.log("Searching from S/W");
     getTypeData();
   }, [props.types]);
 
@@ -38,8 +36,8 @@ export default function MatchupTable(props) {
     })    
     return (
       <ul className="twoColumnList">
-        {separate.map((row) => (
-          <li className="noMargin">{row}</li>
+        {separate.map((row,i) => (
+          <li className="noMargin" key={i}>{row}</li>
         ))}
       </ul>
     );
