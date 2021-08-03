@@ -4,24 +4,30 @@ import GetTypeIcon from "./GetTypeIcon";
 import { Table, Column } from "sticky-react-table";
 import MatchupTable from "components/pokemon/MatchupTable";
 import EvoChain from "./EvoChain";
+import Expander from "components/Expander.jsx";
 
 export default function PokeModal(props) {
+  const [array,updateArray] = useState(props.array)
   const [types, updateTypes] = useState([]);
-  const [speciesURL,updateURL] = useState("")
+  const [speciesURL, updateURL] = useState("");
+
   useEffect(() => {
-    if (props.array.types) {
-      const foundTypes = props.array.types.map((row) => row.type.name);
+    if (array.types) {
+      const foundTypes = array.types.map((row) => row.type.name);
       updateTypes(foundTypes);
     }
-  }, [props.array.types]);
-  useEffect(()=>{
-    if (props.array.species) {
-      const url = props.array.species.url;
-      updateURL(url)
+  }, [array.types]);
+  useEffect(()=> {
+    const newArray = props.array;
+    updateArray(newArray)
+  },[props.array])
+  useEffect(() => {
+    if (array.species) {
+      const url = array.species.url;
+      updateURL(url);
     }
-  },[props.array.species])
-  //console.log(props.array)
-
+  }, [array.species]);
+  //console.log(array)
 
   return (
     <div className="fullPageBG center">
@@ -43,8 +49,7 @@ export default function PokeModal(props) {
             <div>
               <h3>
                 {" "}
-                {props.array.name &&
-                  `#${props.array.id} ${props.array.name.toUpperCase()}`}
+                {array.name && `#${array.id} ${array.name.toUpperCase()}`}
               </h3>
               <div
                 style={{
@@ -53,9 +58,9 @@ export default function PokeModal(props) {
                   height: "8rem",
                   width: "8rem",
                 }}>
-                {props.array.sprites && (
+                {array.sprites && (
                   <Image
-                    src={props.array.sprites.front_default}
+                    src={array.sprites.front_default}
                     height="1"
                     width="1"
                     layout="responsive"
@@ -83,62 +88,67 @@ export default function PokeModal(props) {
             </div>
           </div>
         </div>
-        <br></br>
+
         {/* Evolution Chain */}
-        <div className="card">
-          <h3>Evolution Chain</h3>
-          {props.array.species && (
-            <EvoChain speciesURL={speciesURL}  />
-          )}
-          
-        </div>
-        <br></br>
+        <Expander title="Evolution Chain">
+          <div className="card">
+            {array.species && (
+              <EvoChain
+                speciesURL={speciesURL}
+                updateEndpoint={props.updateEndpoint}
+              />
+            )}
+          </div>
+        </Expander>
+
         {/* Matchup Table */}
         <div className="card">
           <MatchupTable types={types} />
         </div>
-        {/* Stat Table */}
-        <div className="card topMargin">
-          <h3>Stats</h3>
-          <br></br>
-          <table>
-            <thead>
-              <tr className="tableHead">
-                <th>Height</th>
-                <th>Weight</th>
-              </tr>
-            </thead>
-            <tbody className="blackBG">
-              <tr>
-                <td>{props.array.height}</td>
-                <td>{props.array.weight}</td>
-              </tr>
-            </tbody>
-          </table>
-          <br></br>
-          <div>
-            {props.array.stats && (
-              <Table
-                data={props.array.stats}
-                rowSelection={false}
-                headerClassName="tableHead">
-                <Column
-                  title="Stat"
-                  dataKey="stat.name"
-                  width={150}
-                  className="tableCell"
-                  cellRenderer={(props) => props.cellData.toUpperCase()}
-                />
-                <Column
-                  title="Base Value"
-                  dataKey="base_stat"
-                  width={100}
-                  className="tableCell"
-                />
-              </Table>
-            )}
+
+        {/* Stats */}
+        <Expander title="Stats">
+          {/* Stat Table */}
+          <div className="">
+            <table>
+              <thead>
+                <tr className="tableHead">
+                  <th>Height</th>
+                  <th>Weight</th>
+                </tr>
+              </thead>
+              <tbody className="blackBG">
+                <tr>
+                  <td>{array.height}</td>
+                  <td>{array.weight}</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div>
+              {array.stats && (
+                <Table
+                  data={array.stats}
+                  rowSelection={false}
+                  headerClassName="tableHead">
+                  <Column
+                    title="Stat"
+                    dataKey="stat.name"
+                    width={300}
+                    className="tableCell"
+                    cellRenderer={(props) => props.cellData.toUpperCase()}
+                  />
+                  <Column
+                    title="Base Value"
+                    dataKey="base_stat"
+                    width={300}
+                    className="tableCell"
+                  />
+                </Table>
+              )}
+            </div>
           </div>
-        </div>
+        </Expander>
       </div>
     </div>
   );

@@ -11,6 +11,8 @@ export default function Pokedex () {
   const [allList, updateAllList] = useState([])
   const [filteredList, updateFilteredList] = useState(allList)
   const [selected, updateSelected] = useState([])
+  const [endPoint,updateEndPoint] = useState("")
+  console.log('endPoint: ', endPoint);
   const [modalDisplay, updateModalDisplay] = useState('none')
 
   const [textSearchDisplay, updateTextDisplay] = useState({display:'block',buttonClass: 'activeLight'})
@@ -25,8 +27,13 @@ export default function Pokedex () {
         updateSelected(data)
         updateModalDisplay('block')
         updateBackground(false)
+        updateEndPoint(endpoint)
       })
   }
+
+  useEffect(()=> {
+    getPokemon(endPoint)
+  },[endPoint])
 
   useEffect(() => {
     const bg = document.querySelector(".pageContent");
@@ -123,6 +130,7 @@ export default function Pokedex () {
         <div style={{ display: modalDisplay }}>
           <PokeModal
             array={selected}
+            updateEndpoint={updateEndPoint}
             function={updateModalDisplay}
             backgroundState={updateBackground}
           />

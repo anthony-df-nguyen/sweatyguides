@@ -53,7 +53,7 @@ export default function ReactTable(props) {
                   <>
                     <ul>
                       {props.cellData.map((line, z) => (
-                        <li className="noMargin" key={z}>
+                        <li className="noMargin" key={z} >
                           {line}
                         </li>
                       ))}
