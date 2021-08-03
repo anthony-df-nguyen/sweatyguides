@@ -44,7 +44,7 @@ export default function PokeModal(props) {
         </div>
 
         {/* Name and Type */}
-        <div className="flexRow">
+        <div>
           <div className="card ">
             <div>
               <h3>
@@ -68,43 +68,36 @@ export default function PokeModal(props) {
                 )}
               </div>
             </div>
-          </div>
-          <div className="card">
-            <div>
-              <h3>Type</h3>
-              <br></br>
-              <div className="flexRow">
-                {types.map((row, i) => {
-                  return (
-                    <div key={i}>
-                      <div style={{ display: "block", marginTop: "1rem" }}>
-                        <p>{row.toUpperCase()}</p>
-                      </div>
-                      <GetTypeIcon type={row} />
+            <div className="flexRow ">
+              {types.map((row, i) => {
+                return (
+                  <div key={i} className="card">
+                    <div style={{ display: "block", marginTop: "1rem" }}>
+                      <p>{row.toUpperCase()}</p>
                     </div>
-                  );
-                })}
-              </div>
+                    <GetTypeIcon type={row} />
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
 
         {/* Evolution Chain */}
         <Expander title="Evolution Chain">
-          <div className="card">
-            {array.species && (
-              <EvoChain
-                speciesURL={speciesURL}
-                updateEndpoint={props.updateEndpoint}
-              />
-            )}
-          </div>
+          {array.species && (
+            <EvoChain
+              speciesURL={speciesURL}
+              updateEndpoint={props.updateEndpoint}
+            />
+          )}
         </Expander>
 
         {/* Matchup Table */}
-        <div className="card">
+        <Expander title="Match Ups" default={true}>
+          {" "}
           <MatchupTable types={types} />
-        </div>
+        </Expander>
 
         {/* Stats */}
         <Expander title="Stats">

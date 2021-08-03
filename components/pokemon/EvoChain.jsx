@@ -15,13 +15,15 @@ export default function EvoChain(props) {
             .then((a) => a.json())
             .then((b) => {
               let evoData = [];
-              //console.log(b.chain);
+
               if (b.chain) {
                 //Base Pokemon
                 evoData.push({
                   name: b.chain.species.name,
                   atLevel: null,
                   trigger: null,
+                  stage: 1,
+                  item: null,
                 });
                 //Checks if there is a 2nd evolution
                 if (b.chain.evolves_to.length > 0) {
@@ -29,7 +31,9 @@ export default function EvoChain(props) {
                     evoData.push({
                       name: row.species.name,
                       atLevel: row.evolution_details[0].min_level,
-                      trigger: row.evolution_details[0].trigger,
+                      trigger: row.evolution_details[0].trigger.name,
+                      stage: 2,
+                      item: row.evolution_details[0].item,
                     });
                     //Check if there is 3rd evolution
                     const nextRow = row.evolves_to;
@@ -37,7 +41,9 @@ export default function EvoChain(props) {
                       evoData.push({
                         name: nextRow[0].species.name,
                         atLevel: nextRow[0].evolution_details[0].min_level,
-                        trigger: nextRow[0].evolution_details[0].trigger,
+                        trigger: nextRow[0].evolution_details[0].trigger.name,
+                        stage: 3,
+                        item: row.evolution_details[0].item,
                       });
                     }
                   });
@@ -50,44 +56,97 @@ export default function EvoChain(props) {
     getChain();
   }, [props]);
 
-    const updatePokemon = (name) => {
-      const newEndpoint = `https://pokeapi.co/api/v2/pokemon/${name}/`;
-      props.updateEndpoint(newEndpoint);
-    };
+  const updatePokemon = (name, e) => {
+    e.target.offsetParent.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    const newEndpoint = `https://pokeapi.co/api/v2/pokemon/${name}/`;
+    props.updateEndpoint(newEndpoint);
+  };
+
+  const checkEvoTrigger = (i) => {
+    //console.log('Checking trigger for ',array[i].name)
+    const trigger = array[i].trigger;
+    if (trigger === "level-up" && array[i].atLevel) {
+      return `at level ${array[i].atLevel}`;
+    } else if (trigger === "trade") {
+      return "by trade";
+    } else if (trigger === "use-item") {
+      return `with ${array[i].item.name}`;
+    } else {
+      return "";
+    }
+  };
   return (
     <div>
-      <div className="flexRow">
-        <div
-          className="card blackBG"
-          onClick={() => {
-            updatePokemon(array[0].name);
-          }}>
-          {" "}
-          <div style={{ textAlign: "center" }}>
-            <a> {array[0] && array[0].name.toUpperCase()}</a>
+      {/* If there is evo chain */}
+      {array.length > 1 && (
+        <div className="flexRow" style={{ justifyContent: "center" }}>
+          {/* Base Pokemon */}
+          <div
+            className="card blackBG hover"
+            onClick={(e) => {
+              updatePokemon(array[0].name, e);
+            }}>
+            {" "}
+            <div style={{ textAlign: "center" }}>
+              <h3>1</h3>
+              <a> {array[0] && array[0].name.toUpperCase()}</a>
+            </div>
           </div>
+
+          {/* 2nd Evo */}
+
+          {array.map(
+            (row, i) =>
+              row.stage === 2 && (
+                <div
+                  key={i}
+                  className="card blackBG hover"
+                  onClick={(e) => {
+                    updatePokemon(row.name, e);
+                  }}>
+                  <h3>2</h3>
+                  <a>
+                    <div style={{ textAlign: "center" }}>
+                      {row.name.toUpperCase()}
+                    </div>
+                    <div style={{ textAlign: "center" }}>
+                      {checkEvoTrigger(i)}
+                    </div>
+                  </a>
+                </div>
+              )
+          )}
+
+          {/* 3rd Evo */}
+
+          {array.map(
+            (row, i) =>
+              row.stage === 3 && (
+                <div
+                  key={i}
+                  className="card blackBG hover"
+                  onClick={(e) => {
+                    updatePokemon(row.name, e);
+                  }}>
+                  <h3>3</h3>
+                  <a>
+                    <div style={{ textAlign: "center" }}>
+                      {row.name.toUpperCase()}
+                    </div>
+                    <div style={{ textAlign: "center" }}>
+                      {checkEvoTrigger(i)}
+                    </div>
+                  </a>
+                </div>
+              )
+          )}
         </div>
-        {array.map(
-          (row, i) =>
-            i != 0 && (
-              <div
-                key={i}
-                className="card blackBG"
-                onClick={() => {
-                  updatePokemon(row.name);
-                }}>
-                <a>
-                  <div style={{ textAlign: "center" }}>
-                    {row.name.toUpperCase()}
-                  </div>
-                  {/* <div style={{ textAlign: "center" }}>
-                    at level {row.atLevel}
-                  </div> */}
-                </a>
-              </div>
-            )
-        )}
-      </div>
+      )}
+      {/* If there is no chain */}
+      {array.length === 1 && <div>This Pokemon does not evolve</div>}
     </div>
   );
 }

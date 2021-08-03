@@ -44,37 +44,30 @@ export default function MatchupTable(props) {
   }
 
   return (
-    <div>
-      <h3>Matchup Table</h3>
-      <div>
-        <div className="grid2 topMargin">
-          <div className="card blackBG">
-            <h3>Offensively</h3>
-            <br></br>
-            <div>
-              {" "}
-              <h4>Strong Against:</h4>
-              {getMatchingInfo("Strong against")}
-            </div>
-            <br></br>
-            <div>
-              <h4>Weak Against:</h4>
-              {getMatchingInfo("Weak against")}
-            </div>
-          </div>
-          <div className="card blackBG">
-            <h3>Defensively</h3>
-            <br></br>
-            <div>
-              <h4>Strong Against:</h4>
-              {getMatchingInfo("Resistant to")}
-            </div>
-            <br></br>
-            <div>
-              <h4>Weak Against:</h4>
-              {getMatchingInfo("Weak to")}
-            </div>
-          </div>
+    <div className="grid2">
+      <div className="blackBG card">
+        <h3>Offensively</h3>
+        <div>
+          {" "}
+          <h4 className="">Strong Against:</h4>
+          {getMatchingInfo("Strong against")}
+        </div>
+        <br></br>
+        <div>
+          <h4>Weak Against:</h4>
+          {getMatchingInfo("Weak against")}
+        </div>
+      </div>
+      <div className="blackBG card">
+        <h3>Defensively</h3>
+        <div>
+          <h4>Strong Against:</h4>
+          {getMatchingInfo("Resistant to")}
+        </div>
+        <br></br>
+        <div>
+          <h4>Weak Against:</h4>
+          {getMatchingInfo("Weak to")}
         </div>
       </div>
     </div>

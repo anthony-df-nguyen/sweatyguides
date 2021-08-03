@@ -12,7 +12,7 @@ export default function Pokedex () {
   const [filteredList, updateFilteredList] = useState(allList)
   const [selected, updateSelected] = useState([])
   const [endPoint,updateEndPoint] = useState("")
-  console.log('endPoint: ', endPoint);
+  //console.log('endPoint: ', endPoint);
   const [modalDisplay, updateModalDisplay] = useState('none')
 
   const [textSearchDisplay, updateTextDisplay] = useState({display:'block',buttonClass: 'activeLight'})

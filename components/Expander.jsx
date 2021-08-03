@@ -3,9 +3,19 @@ import style from 'styles/Expander.module.scss'
 import { MdExpandMore, MdChevronRight } from "react-icons/md";
 
 export default function Expander(props) {
-    const [height,updateHeight] = useState('0px')
-    const [openOrClose,updateOpenOrClose] = useState('closed')
-    const [icon, updateIcon] = useState(<MdChevronRight fill="#009ddb" />);
+    const [height, updateHeight] = useState(
+      props.default ? "100%" : "0px"
+    );
+    const [openOrClose, updateOpenOrClose] = useState(
+      props.default ? "opened" : "closed"
+    );
+    const [icon, updateIcon] = useState(
+      props.default ? (
+        <MdExpandMore fill="#f2a365" />
+      ) : (
+        <MdChevronRight fill="#009ddb" />
+      )
+    );
  
     const container = {
       maxHeight: height,
@@ -14,8 +24,9 @@ export default function Expander(props) {
  
     const handleClick = (e) => {
         if (openOrClose === 'closed') {
-            const maxH = e.target.nextSibling.scrollHeight;
-            updateHeight(maxH + "px");
+            //const maxH = e.target.nextSibling.scrollHeight;
+            const maxH = '100%'
+            updateHeight(maxH);
             updateOpenOrClose('opened');
             updateIcon(<MdExpandMore fill="#f2a365" />);
         } else {
@@ -27,7 +38,7 @@ export default function Expander(props) {
 
     return (
       <div className={style.expander}>
-        <div className={style.title} onClick={handleClick}>
+        <div className='title' onClick={handleClick}>
           <div className={style.icon}>{icon}</div>
           {props.title}
         </div>

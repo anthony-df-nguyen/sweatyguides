@@ -79,6 +79,12 @@ a {
     cursor: pointer;
   }
 }
+.hover {
+  cursor: pointer;
+  &:hover {
+    background-color: $blue !important;
+  }
+}
 
 .blue {
   color: $lightblue !important;
@@ -288,7 +294,7 @@ input[type="text"] {
   text-align: center;
   border: none;
   border-radius: $rad;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .fullPageBG {
@@ -334,6 +340,7 @@ button {
   border: none;
   border-radius: $rad;
   margin-bottom: $gap;
+  font-size: 1rem;
   &:hover {
     cursor: pointer;
   }
@@ -371,4 +378,12 @@ footer {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 
+}
+.title {
+    font-size:1.5rem;
+    font-weight: 600;
+    color:$white;
+    &:hover {
+        cursor: pointer;
+    }
 }
