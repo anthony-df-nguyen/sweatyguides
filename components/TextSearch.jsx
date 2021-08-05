@@ -14,20 +14,23 @@ export default function TextSearch(props) {
     const filterArray = (e) => {
         const typed = e.target.value.toLowerCase();
         const resultArray = array.filter(item => item.name.toLowerCase().includes(typed) && 1)
-        props.function(resultArray)  
-    }
+        props.function(resultArray)
 
-    const clearSearch = () => {
-        const search = document.querySelector("#textField")
-        search.value = '';
-        props.function(props.array)
+        //Special Rule to Reset Joint Use of ABC Filters
+        if (props.resetABC) {
+            props.abcStatus ? props.resetABC(false) : props.resetABC(true);
+        }
     }
-
 
     return (
-        <div>
-            <input id="textField" className="topMargin" type="text" placeholder={props.label} style={{width:"80%",}} onChange={(e)=> filterArray(e)}></input>
-            <button onClick={()=> clearSearch()} className="yellowBG" style={{marginLeft:"10px",width:"calc(20% - 10px)",}}  >Clear</button>
-        </div>
-    )
+      <div>
+        <input
+          id="textField"
+          className="topMargin"
+          type="text"
+          placeholder={props.label}
+          style={{ width: "100%" }}
+          onChange={(e) => filterArray(e)}></input>
+      </div>
+    );
 }
