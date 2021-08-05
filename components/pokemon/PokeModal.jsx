@@ -5,9 +5,10 @@ import { Table, Column } from "sticky-react-table";
 import MatchupTable from "components/pokemon/MatchupTable";
 import EvoChain from "./EvoChain";
 import Expander from "components/Expander.jsx";
+import GetPokeImg from "./GetPokeImg";
 
 export default function PokeModal(props) {
-  const [array,updateArray] = useState(props.array)
+  const [array, updateArray] = useState(props.array);
   const [types, updateTypes] = useState([]);
   const [speciesURL, updateURL] = useState("");
 
@@ -17,10 +18,10 @@ export default function PokeModal(props) {
       updateTypes(foundTypes);
     }
   }, [array.types]);
-  useEffect(()=> {
+  useEffect(() => {
     const newArray = props.array;
-    updateArray(newArray)
-  },[props.array])
+    updateArray(newArray);
+  }, [props.array]);
   useEffect(() => {
     if (array.species) {
       const url = array.species.url;
@@ -51,22 +52,7 @@ export default function PokeModal(props) {
                 {" "}
                 {array.name && `#${array.id} ${array.name.toUpperCase()}`}
               </h3>
-              <div
-                style={{
-                  display: "block",
-                  margin: "0 auto",
-                  height: "8rem",
-                  width: "8rem",
-                }}>
-                {array.sprites && (
-                  <Image
-                    src={array.sprites.front_default}
-                    height="1"
-                    width="1"
-                    layout="responsive"
-                  />
-                )}
-              </div>
+              {array.id && <GetPokeImg id={array.id} />}
             </div>
             <div className="flexRow ">
               {types.map((row, i) => {

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
+import GetPokeImg from "./GetPokeImg";
 
 export default function EvoChain(props) {
   const [array, updateArray] = useState([]);
-  //console.log("array: ", array);
   useEffect(() => {
     const speciesURL = props.speciesURL;
     //console.log('speciesURL: ', speciesURL);
@@ -15,7 +15,6 @@ export default function EvoChain(props) {
             .then((a) => a.json())
             .then((b) => {
               let evoData = [];
-
               if (b.chain) {
                 //Base Pokemon
                 evoData.push({
@@ -24,6 +23,9 @@ export default function EvoChain(props) {
                   trigger: null,
                   stage: 1,
                   item: null,
+                  id: b.chain.species.url.replace(
+                    "https://pokeapi.co/api/v2/pokemon-species/",""
+                  ).replace("/",""),
                 });
                 //Checks if there is a 2nd evolution
                 if (b.chain.evolves_to.length > 0) {
@@ -34,6 +36,12 @@ export default function EvoChain(props) {
                       trigger: row.evolution_details[0].trigger.name,
                       stage: 2,
                       item: row.evolution_details[0].item,
+                      id: row.species.url
+                        .replace(
+                          "https://pokeapi.co/api/v2/pokemon-species/",
+                          ""
+                        )
+                        .replace("/", ""),
                     });
                     //Check if there is 3rd evolution
                     const nextRow = row.evolves_to;
@@ -44,6 +52,12 @@ export default function EvoChain(props) {
                         trigger: nextRow[0].evolution_details[0].trigger.name,
                         stage: 3,
                         item: row.evolution_details[0].item,
+                        id: nextRow[0].species.url
+                          .replace(
+                            "https://pokeapi.co/api/v2/pokemon-species/",
+                            ""
+                          )
+                          .replace("/", ""),
                       });
                     }
                   });
@@ -94,6 +108,7 @@ export default function EvoChain(props) {
               <h3>1</h3>
               <a> {array[0] && array[0].name.toUpperCase()}</a>
             </div>
+            {array[0] && <GetPokeImg id={array[0].id} />}
           </div>
 
           {/* 2nd Evo */}
@@ -112,6 +127,7 @@ export default function EvoChain(props) {
                     <div style={{ textAlign: "center" }}>
                       {row.name.toUpperCase()}
                     </div>
+                    {row.id && <GetPokeImg id={row.id} />}
                     <div style={{ textAlign: "center" }}>
                       {checkEvoTrigger(i)}
                     </div>
@@ -136,6 +152,7 @@ export default function EvoChain(props) {
                     <div style={{ textAlign: "center" }}>
                       {row.name.toUpperCase()}
                     </div>
+                    {row.id && <GetPokeImg id={row.id} />}
                     <div style={{ textAlign: "center" }}>
                       {checkEvoTrigger(i)}
                     </div>
