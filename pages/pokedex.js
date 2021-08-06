@@ -7,6 +7,7 @@ import TextSearch from "components/TextSearch";
 import PokeModal from "components/pokemon/PokeModal";
 import ReactTable from "components/ReactTable";
 import ABCFilter from "components/ABCFilter";
+import CleanStrings from "components/CleanStrings";
 
 export default function Pokedex() {
   const [allList, updateAllList] = useState([]);
@@ -147,7 +148,7 @@ export default function Pokedex() {
               className="card hoverBlue"
               key={i}
               onClick={(e) => {updateSelected(row.url);updateModalDisplay('block'),updateBackground(false)}}>
-              {row.name.toUpperCase()}
+              {<CleanStrings string={row.name} replace="-" maxArray="3" parenthesis/>}
             </a>
           ))}
         </div>

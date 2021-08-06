@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import GetPokeImg from "./GetPokeImg";
+import CleanStrings from "components/CleanStrings";
 
 export default function EvoChain(props) {
   const [array, updateArray] = useState([]);
@@ -117,7 +118,17 @@ export default function EvoChain(props) {
             {" "}
             <div style={{ textAlign: "center" }}>
               <h3>1</h3>
-              <a> {array[0] && array[0].name.toUpperCase()}</a>
+              <a>
+                {" "}
+                {array[0] && (
+                  <CleanStrings
+                    string={array[0].name}
+                    replace="-"
+                    maxArray="3"
+                    parenthesis
+                  />
+                )}
+              </a>
             </div>
             {array[0] && <GetPokeImg id={array[0].id} />}
           </div>
@@ -136,7 +147,12 @@ export default function EvoChain(props) {
                   <h3>2</h3>
                   <a>
                     <div style={{ textAlign: "center" }}>
-                      {row.name.toUpperCase()}
+                      <CleanStrings
+                        string={row.name}
+                        replace="-"
+                        maxArray="3"
+                        parenthesis
+                      />
                     </div>
                     {row.id && <GetPokeImg id={row.id} />}
                     <div style={{ textAlign: "center" }}>
@@ -161,7 +177,12 @@ export default function EvoChain(props) {
                   <h3>3</h3>
                   <a>
                     <div style={{ textAlign: "center" }}>
-                      {row.name.toUpperCase()}
+                      <CleanStrings
+                        string={row.name}
+                        replace="-"
+                        maxArray="3"
+                        parenthesis
+                      />
                     </div>
                     {row.id && <GetPokeImg id={row.id} />}
                     <div style={{ textAlign: "center" }}>

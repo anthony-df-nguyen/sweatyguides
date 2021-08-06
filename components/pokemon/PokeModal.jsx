@@ -6,6 +6,7 @@ import MatchupTable from "components/pokemon/MatchupTable";
 import EvoChain from "./EvoChain";
 import Expander from "components/Expander.jsx";
 import GetPokeImg from "./GetPokeImg";
+import CleanStrings from "components/CleanStrings";
 
 export default function PokeModal(props) {
   const [primaryData, updatePrimaryData] = useState();
@@ -59,7 +60,7 @@ export default function PokeModal(props) {
         <div>
           <div className="card ">
             <div>
-              <h3>{fetchState && primaryData.name.toUpperCase()}</h3>
+              <h3>{fetchState && <CleanStrings string={primaryData.name} replace="-" maxArray="3" parenthesis />}</h3>
               {fetchState && <GetPokeImg id={primaryData.id} />}
             </div>
           </div>
@@ -68,8 +69,15 @@ export default function PokeModal(props) {
             {types.map((row, i) => {
               return (
                 <div key={i} className="card">
-                  <div style={{ display: "block"}}>
-                    <p>{row.toUpperCase()}</p>
+                  <div style={{ display: "block" }}>
+                    <p>
+                      <CleanStrings
+                        string={row}
+                        replace="-"
+                        maxArray="3"
+                        parenthesis
+                      />
+                    </p>
                   </div>
                   <GetTypeIcon type={row} />
                 </div>
