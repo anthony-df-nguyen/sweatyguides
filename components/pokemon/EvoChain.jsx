@@ -99,7 +99,12 @@ export default function EvoChain(props) {
     } else if (trigger === "trade") {
       return "by trade";
     } else if (trigger === "use-item") {
-      return `with ${array[i].item.name}`;
+      return (
+        <>
+          <span style={{display:'inline'}}>with </span>
+          <CleanStrings string={array[i].item.name} replace="-" maxArray="2" />
+        </>
+      );
     } else {
       return "";
     }
