@@ -3,6 +3,7 @@ import GetPokeImg from "./GetPokeImg";
 
 export default function EvoChain(props) {
   const [array, updateArray] = useState([]);
+  console.log('array: ', array);
   useEffect(() => {
     const speciesURL = props.speciesURL;
     //console.log('speciesURL: ', speciesURL);
@@ -51,7 +52,7 @@ export default function EvoChain(props) {
                         atLevel: nextRow[0].evolution_details[0].min_level,
                         trigger: nextRow[0].evolution_details[0].trigger.name,
                         stage: 3,
-                        item: row.evolution_details[0].item,
+                        item: nextRow[0].evolution_details[0].item,
                         id: nextRow[0].species.url
                           .replace(
                             "https://pokeapi.co/api/v2/pokemon-species/",
@@ -80,8 +81,9 @@ export default function EvoChain(props) {
   };
 
   const checkEvoTrigger = (i) => {
-    //console.log('Checking trigger for ',array[i].name)
+    console.log('Checking trigger for ',array[i].name)
     const trigger = array[i].trigger;
+    console.log('trigger: ', trigger);
     if (trigger === "level-up" && array[i].atLevel) {
       return `at level ${array[i].atLevel}`;
     } else if (trigger === "trade") {

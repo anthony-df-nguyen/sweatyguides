@@ -92,6 +92,9 @@ a {
 .yellow {
   color: $yellow !important;
 }
+.red {
+  color: $red !important;
+}
 .yellowBG {
   background-color: $yellow;
   color: $black;
@@ -359,6 +362,10 @@ button {
 
 .rightAlign {
   float: right;
+}
+
+.leftText {
+  text-align: left !important;
 }
 .centerText {
   text-align: center !important;
