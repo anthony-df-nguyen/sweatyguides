@@ -109,7 +109,7 @@ export default function MatchupTable(props) {
           </ul>
         </div>
       </div>
-      <Expander title="Full Detail">
+      <Expander title="Full Detail" bg="blackBG">
         <div className="grid2">
           <div className="">
             <h3>Offensively</h3>

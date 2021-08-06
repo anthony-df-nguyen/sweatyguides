@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import style from 'styles/pokemon/pokemon.module.scss'
 
 export default function TypeFilters (props) {
   const types = [
@@ -53,31 +54,31 @@ export default function TypeFilters (props) {
   }
 
   return (
-    <div className="flexRow topMargin" style={{justifyContent:'flex-start'}}>
+    <div className="flexRow" style={{justifyContent:'stretch'}}>
       {types.map((row, i) => {
         return (
-          <div key={i} className="typeButton card hoverBlue" style={{flexGrow:'0'}} onClick={() => filterType(row,i)}>
-            <div style={{ display: 'block', marginTop: '0rem' }}>
-              <p style={{fontSize:'12px'}} key={i}>{row.toUpperCase()}</p>
+          <div
+            key={i}
+            className={style.typeButton + " card hoverBlue blackBG"}
+            style={{ flexGrow: "1" }}
+            onClick={() => filterType(row, i)}>
+            <div style={{ display: "block", marginTop: "0rem" }}>
+              <p className={style.typeName} key={i}>
+                {row.toUpperCase()}
+              </p>
             </div>
 
             <div
-              style={{
-                display: 'block',
-                margin:'1rem auto',
-                width: '32px',
-                height: '32px'
-              }}
-            >
+              className={style.typeIcon}>
               <Image
                 src={findIcon(row)}
-                height='1'
-                width='1'
-                layout='responsive'
+                height="1"
+                width="1"
+                layout="responsive"
               />
             </div>
           </div>
-        )
+        );
       })}
     </div>
   )

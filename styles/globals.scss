@@ -106,6 +106,9 @@ a {
 .blackBG {
   background-color: $black !important;
 }
+.grayBG {
+  background-color: $gray !important;
+}
 
 .center {
   position: absolute;
@@ -251,7 +254,7 @@ ol {
   border-radius: $rad;
 }
 .smallCard {
-  background-color: $gray;
+  background-color: $black;
   border-radius: $rad;
   padding: 4px 10px;
 }
@@ -344,7 +347,7 @@ input[type="text"] {
 }
 
 button {
-  background-color: $gray;
+  background-color: $black;
   color: $white;
   padding: $gap/2 $gap;
   border: none;
@@ -355,10 +358,7 @@ button {
     cursor: pointer;
   }
 }
-.typeButton {
-  width: 6rem;
-  margin: $gap;
-}
+
 
 .rightAlign {
   float: right;

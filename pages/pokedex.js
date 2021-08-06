@@ -67,91 +67,126 @@ export default function Pokedex() {
         headTitle="Sweaty Guides | Pokedex"
         title="PokéDex"
         background="https://images6.alphacoders.com/328/thumb-1920-328013.jpg">
-        <GetAllPokemon function={updateAllList} />
-
-        {/* Mode Toggle */}
-        <div
-          style={{
-            display: "block",
-            margin: "2rem auto 0 auto",
-            textAlign: "center",
-          }}>
-          <button
-            style={{ marginRight: "10px" }}
-            className={textSearchDisplay.buttonClass}
-            onClick={() => toggleNameSearch()}>
-            Search by Name
-          </button>
-          <button
-            onClick={() => toggleTypeSearch()}
-            className={typeSearchDisplay.buttonClass}>
-            Search by Type
-          </button>
-        </div>
-
-        {/* Text Search Bar */}
-        <div style={{ display: textSearchDisplay.display }}>
-          <div>
-            <div style={{ width: "70%", display: "inline-block" }}>
-              <TextSearch
-                label="Search by text match"
-                array={allList}
-                function={updateFilteredList}
-                abcStatus={abcReset}
-                resetABC={updateabcReset}
-              />
-            </div>
+        {/* PokeDex */}
+        <Expander title="PokéDex">
+          {" "}
+          <GetAllPokemon function={updateAllList} />
+          {/* Mode Toggle */}
+          <div
+            style={{
+              display: "block",
+              textAlign: "center",
+            }}>
             <button
-              onClick={() => resetAll()}
-              className="yellowBG centerText"
-              style={{
-                marginLeft: "10px",
-                width: "calc(30% - 10px)",
-                display: "inline-block",
-              }}>
-              Clear
+              style={{ marginRight: "10px" }}
+              className={textSearchDisplay.buttonClass}
+              onClick={() => toggleNameSearch()}>
+              Name Search
+            </button>
+            <button
+              onClick={() => toggleTypeSearch()}
+              className={typeSearchDisplay.buttonClass}>
+              Type Search
             </button>
           </div>
+          {/* Text Search Bar */}
+          <div style={{ display: textSearchDisplay.display }}>
+            <div>
+              <div style={{ width: "70%", display: "inline-block" }}>
+                <TextSearch
+                  label="Search by text match"
+                  array={allList}
+                  function={updateFilteredList}
+                  abcStatus={abcReset}
+                  resetABC={updateabcReset}
+                />
+              </div>
+              <button
+                onClick={() => resetAll()}
+                className="yellowBG centerText"
+                style={{
+                  marginLeft: "10px",
+                  width: "calc(30% - 10px)",
+                  display: "inline-block",
+                }}>
+                Clear
+              </button>
+            </div>
 
-          <ABCFilter
-            array={allList}
-            function={updateFilteredList}
-            reset={abcReset}
-            scrollIntoViewDiv="results"
-          />
-        </div>
+            <ABCFilter
+              array={allList}
+              function={updateFilteredList}
+              reset={abcReset}
+              scrollIntoViewDiv="results"
+            />
+          </div>
+          {/* Type Filters UI */}
+          <div style={{ display: typeSearchDisplay.display }}>
+            <TypeFilters array={filteredList} function={updateFilteredList} />
+          </div>
+          {/* Hidden Modal */}
+          <div style={{ display: modalDisplay }}>
+            <PokeModal
+              selected={selected}
+              updateEndpoint={updateSelected}
+              modalState={updateModalDisplay}
+              backgroundState={updateBackground}
+            />
+          </div>
+          {/* List of Pokemon Results */}
+          <h2 style={{ paddingTop: "2rem" }} id="results">
+            {filteredList.length > 0 && <>{filteredList.length} Pokemon</>}
+          </h2>
+          {filteredList.length > 0 && <p>Click a Pokémon to view details</p>}
+          <div className="grid4lock2 topMargin">
+            {filteredList.map((row, i) => (
+              <a
+                className="card hoverBlue blackBG"
+                key={i}
+                onClick={(e) => {
+                  updateSelected(row.url);
+                  updateModalDisplay("block"), updateBackground(false);
+                }}>
+                {
+                  <CleanStrings
+                    string={row.name}
+                    replace="-"
+                    maxArray="3"
+                    parenthesis
+                  />
+                }
+              </a>
+            ))}
+          </div>
+        </Expander>
 
-        {/* Type Filters UI */}
-        <div style={{ display: typeSearchDisplay.display }}>
-          <TypeFilters array={filteredList} function={updateFilteredList} />
-        </div>
-
-        {/* Hidden Modal */}
-        <div style={{ display: modalDisplay }}>
-          <PokeModal
-            selected={selected}
-            updateEndpoint={updateSelected}
-            modalState={updateModalDisplay}
-            backgroundState={updateBackground}
-          />
-        </div>
-
-        {/* List of Pokemon Results */}
-        <h2 style={{ paddingTop: "2rem" }} id="results">
-          {filteredList.length > 0 && <>{filteredList.length} Pokemon</>}
-        </h2>
-        {filteredList.length > 0 && <p>Click a Pokémon to view details</p>}
-
-        <div className="grid4lock2 topMargin">
-          {filteredList.map((row, i) => (
-            <a
-              className="card hoverBlue"
-              key={i}
-              onClick={(e) => {updateSelected(row.url);updateModalDisplay('block'),updateBackground(false)}}>
-              {<CleanStrings string={row.name} replace="-" maxArray="3" parenthesis/>}
-            </a>
-          ))}
-        </div>
+        {/* Type Matchup */}
+        <Expander title="Type Matchup Table">
+          <ReactTable
+            data="/pokedex/types.json"
+            head={[
+              {
+                name: "Name",
+                width: "100",
+              },
+              {
+                name: "Strong against",
+                width: "175",
+              },
+              {
+                name: "Weak against",
+                width: "175",
+              },
+              {
+                name: "Resistant to",
+                width: "175",
+              },
+              {
+                name: "Weak to",
+                width: "175",
+              },
+            ]}></ReactTable>
+        </Expander>
       </Page>
     </div>
   );

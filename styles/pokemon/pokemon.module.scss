@@ -1,0 +1,17 @@
+@import "styles/variables";
+
+.typeButton {
+  width:5rem;
+}
+
+.typeName {
+    font-size: 12px;
+    margin-bottom: $gap;
+}
+
+.typeIcon {
+    height: 2rem;
+    width: 2rem;
+    display: block;
+    margin: 0 auto;
+}

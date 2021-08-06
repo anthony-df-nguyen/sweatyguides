@@ -37,8 +37,8 @@ export default function Expander(props) {
     }
 
     return (
-      <div className={style.expander}>
-        <div className='title' onClick={handleClick}>
+      <div className={style.expander + ` ${props.bg ? props.bg : ""}`}>
+        <div className="title" onClick={handleClick}>
           <div className={style.icon}>{icon}</div>
           {props.title}
         </div>

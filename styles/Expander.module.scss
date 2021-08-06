@@ -11,10 +11,9 @@
     margin:$gap 0;
     padding:$gap;
     border-radius: $rad;
-    .expander {
-        background-color: $black;
-    }
 }
+
+
 
 .container {
     transition: max-Height .15s ease-in-out;
