@@ -11,9 +11,7 @@ import ABCFilter from "components/ABCFilter";
 export default function Pokedex() {
   const [allList, updateAllList] = useState([]);
   const [filteredList, updateFilteredList] = useState(allList);
-  const [selected, updateSelected] = useState([]);
-  const [endPoint, updateEndPoint] = useState("");
-  //console.log('endPoint: ', endPoint);
+  const [selected, updateSelected] = useState(false);
   const [modalDisplay, updateModalDisplay] = useState("none");
 
   const [textSearchDisplay, updateTextDisplay] = useState({
@@ -26,23 +24,8 @@ export default function Pokedex() {
   });
 
   const [abcReset, updateabcReset] = useState(false);
-
   const [background, updateBackground] = useState(true);
 
-  const getPokemon = async (endpoint) => {
-    await fetch(endpoint)
-      .then((res) => res.json())
-      .then((data) => {
-        updateSelected(data);
-        updateModalDisplay("block");
-        updateBackground(false);
-        updateEndPoint(endpoint);
-      });
-  };
-
-  useEffect(() => {
-    getPokemon(endPoint);
-  }, [endPoint]);
 
   useEffect(() => {
     const bg = document.querySelector(".pageContent");
@@ -64,14 +47,17 @@ export default function Pokedex() {
 
   //After fetching the full list, set filtered list to full list to initialize
   useEffect(() => {
-    allList.length > 0 && updateFilteredList(allList);
+    if (allList.length > 0) {
+      console.log("Setting the filteredList to the allList");
+      updateFilteredList(allList);
+    }
   }, [allList]);
 
   const resetAll = () => {
     const search = document.querySelector("#textField");
     search && (search.value = "");
     updateFilteredList(allList);
-    abcReset ? updateabcReset(false) : updateabcReset(true)
+    abcReset ? updateabcReset(false) : updateabcReset(true);
   };
 
   return (
@@ -142,9 +128,9 @@ export default function Pokedex() {
         {/* Hidden Modal */}
         <div style={{ display: modalDisplay }}>
           <PokeModal
-            array={selected}
-            updateEndpoint={updateEndPoint}
-            function={updateModalDisplay}
+            selected={selected}
+            updateEndpoint={updateSelected}
+            modalState={updateModalDisplay}
             backgroundState={updateBackground}
           />
         </div>
@@ -160,7 +146,7 @@ export default function Pokedex() {
             <a
               className="card hoverBlue"
               key={i}
-              onClick={(e) => getPokemon(row.url)}>
+              onClick={(e) => {updateSelected(row.url);updateModalDisplay('block'),updateBackground(false)}}>
               {row.name.toUpperCase()}
             </a>
           ))}

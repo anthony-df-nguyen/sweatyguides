@@ -86,7 +86,10 @@ export default function MatchupTable(props) {
       <h3 className="leftText">
         Most Optimal Matchup if Fighting this Pokemon
       </h3>
-      <p>Types that are strong against the Pokemon offensively and resistant defensively</p>
+      <p className="leftText">
+        Types that are strong against the Pokemon offensively and resistant
+        defensively
+      </p>
 
       <div className="grid2 topMargin">
         <div className="card blackBG">

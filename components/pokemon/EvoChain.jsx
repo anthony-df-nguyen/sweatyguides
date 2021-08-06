@@ -3,7 +3,7 @@ import GetPokeImg from "./GetPokeImg";
 
 export default function EvoChain(props) {
   const [array, updateArray] = useState([]);
-  console.log('array: ', array);
+
   useEffect(() => {
     const speciesURL = props.speciesURL;
     //console.log('speciesURL: ', speciesURL);
@@ -16,6 +16,7 @@ export default function EvoChain(props) {
             .then((a) => a.json())
             .then((b) => {
               let evoData = [];
+              //console.log(b.chain)
               if (b.chain) {
                 //Base Pokemon
                 evoData.push({
@@ -24,19 +25,22 @@ export default function EvoChain(props) {
                   trigger: null,
                   stage: 1,
                   item: null,
-                  id: b.chain.species.url.replace(
-                    "https://pokeapi.co/api/v2/pokemon-species/",""
-                  ).replace("/",""),
+                  id: b.chain.species.url
+                    .replace("https://pokeapi.co/api/v2/pokemon-species/", "")
+                    .replace("/", ""),
                 });
                 //Checks if there is a 2nd evolution
                 if (b.chain.evolves_to.length > 0) {
-                  b.chain.evolves_to.forEach((row) => {
+                  b.chain.evolves_to.forEach((row, i) => {
+                    const specialItem = row.evolution_details[0].item
+                      ? row.evolution_details[0].item
+                      : { name: "Special Item" };
                     evoData.push({
                       name: row.species.name,
                       atLevel: row.evolution_details[0].min_level,
                       trigger: row.evolution_details[0].trigger.name,
                       stage: 2,
-                      item: row.evolution_details[0].item,
+                      item: specialItem,
                       id: row.species.url
                         .replace(
                           "https://pokeapi.co/api/v2/pokemon-species/",
@@ -44,15 +48,20 @@ export default function EvoChain(props) {
                         )
                         .replace("/", ""),
                     });
+
                     //Check if there is 3rd evolution
-                    const nextRow = row.evolves_to;
-                    if (nextRow.length > 0) {
+                    const nextRow =
+                      row.evolves_to.length > 0 ? row.evolves_to : false;
+                    if (nextRow) {
+                      const specialItem2 = nextRow[0].evolution_details[0].item
+                        ? nextRow[0].evolution_details[0].item
+                        : { name: "Special Item" };
                       evoData.push({
                         name: nextRow[0].species.name,
                         atLevel: nextRow[0].evolution_details[0].min_level,
                         trigger: nextRow[0].evolution_details[0].trigger.name,
                         stage: 3,
-                        item: nextRow[0].evolution_details[0].item,
+                        item: specialItem2,
                         id: nextRow[0].species.url
                           .replace(
                             "https://pokeapi.co/api/v2/pokemon-species/",
@@ -63,13 +72,14 @@ export default function EvoChain(props) {
                     }
                   });
                 }
+                console.log("Done getting evolution chain data");
                 updateArray(evoData);
               }
             });
         });
     };
     getChain();
-  }, [props]);
+  }, [props.speciesURL]);
 
   const updatePokemon = (name, e) => {
     e.target.offsetParent.scrollTo({
@@ -77,13 +87,12 @@ export default function EvoChain(props) {
       behavior: "smooth",
     });
     const newEndpoint = `https://pokeapi.co/api/v2/pokemon/${name}/`;
+    console.log("Setting a new endpoint due to evo chain click")
     props.updateEndpoint(newEndpoint);
   };
 
   const checkEvoTrigger = (i) => {
-    console.log('Checking trigger for ',array[i].name)
     const trigger = array[i].trigger;
-    console.log('trigger: ', trigger);
     if (trigger === "level-up" && array[i].atLevel) {
       return `at level ${array[i].atLevel}`;
     } else if (trigger === "trade") {

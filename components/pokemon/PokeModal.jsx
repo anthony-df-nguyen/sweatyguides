@@ -8,27 +8,39 @@ import Expander from "components/Expander.jsx";
 import GetPokeImg from "./GetPokeImg";
 
 export default function PokeModal(props) {
-  const [array, updateArray] = useState(props.array);
+  const [primaryData, updatePrimaryData] = useState();
+  const [fetchState, updateFetchState] = useState(false);
   const [types, updateTypes] = useState([]);
-  const [speciesURL, updateURL] = useState("");
+  const [speciesURL, updateSpeciesURL] = useState("");
+
+  const getPokemon = async (endpoint) => {
+    console.log("Starting fetch for pokemon specifics at ", endpoint);
+    await fetch(endpoint)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Received data ", data);
+        updatePrimaryData(data);
+        props.modalState("block");
+        const foundTypes = data.types.map((row) => row.type.name);
+        updateTypes(foundTypes);
+        props.backgroundState(false);
+        console.log('Updating species URL to id ',data.species.url)
+        updateSpeciesURL(data.species.url);
+      })
+      .then(() => {
+        console.log('Primary data is done fetching')
+        updateFetchState(true);
+      });
+  };
 
   useEffect(() => {
-    if (array.types) {
-      const foundTypes = array.types.map((row) => row.type.name);
-      updateTypes(foundTypes);
+    if (props.selected) {
+      console.log("Current selected endpoint is now ", props.selected);
+      getPokemon(props.selected);
     }
-  }, [array.types]);
-  useEffect(() => {
-    const newArray = props.array;
-    updateArray(newArray);
-  }, [props.array]);
-  useEffect(() => {
-    if (array.species) {
-      const url = array.species.url;
-      updateURL(url);
-    }
-  }, [array.species]);
-  //console.log(array)
+  }, [props.selected]);
+
+
 
   return (
     <div className="fullPageBG center">
@@ -37,22 +49,18 @@ export default function PokeModal(props) {
           <button
             className="closeButton redBG"
             onClick={() => {
-              props.function("none");
+              props.modalState("none");
               props.backgroundState(true);
             }}>
             Close
           </button>
         </div>
-
         {/* Name and Type */}
         <div>
           <div className="card ">
             <div>
-              <h3>
-                {" "}
-                {array.name && `#${array.id} ${array.name.toUpperCase()}`}
-              </h3>
-              {array.id && <GetPokeImg id={array.id} />}
+              <h3>{fetchState && primaryData.name.toUpperCase()}</h3>
+              {fetchState && <GetPokeImg id={primaryData.id} />}
             </div>
             <div className="flexRow ">
               {types.map((row, i) => {
@@ -68,46 +76,44 @@ export default function PokeModal(props) {
             </div>
           </div>
         </div>
-
         {/* Evolution Chain */}
         <Expander title="Evolution Chain">
-          {array.species && (
+          {fetchState && (
             <EvoChain
               speciesURL={speciesURL}
               updateEndpoint={props.updateEndpoint}
             />
           )}
+          
         </Expander>
-
         {/* Matchup Table */}
         <Expander title="Match Ups" default={true}>
           {" "}
           <MatchupTable types={types} />
         </Expander>
-
         {/* Stats */}
         <Expander title="Stats">
           {/* Stat Table */}
-          <div className="">
-            <table>
-              <thead>
-                <tr className="tableHead">
-                  <th>Height</th>
-                  <th>Weight</th>
-                </tr>
-              </thead>
-              <tbody className="blackBG">
-                <tr>
-                  <td>{array.height}</td>
-                  <td>{array.weight}</td>
-                </tr>
-              </tbody>
-            </table>
+          {fetchState && (
+            <div className="">
+              <table>
+                <thead>
+                  <tr className="tableHead">
+                    <th>Height</th>
+                    <th>Weight</th>
+                  </tr>
+                </thead>
+                <tbody className="blackBG">
+                  <tr>
+                    <td>{primaryData.height}</td>
+                    <td>{primaryData.weight}</td>
+                  </tr>
+                </tbody>
+              </table>
 
-            <div>
-              {array.stats && (
+              <div>
                 <Table
-                  data={array.stats}
+                  data={primaryData.stats}
                   rowSelection={false}
                   headerClassName="tableHead">
                   <Column
@@ -124,9 +130,9 @@ export default function PokeModal(props) {
                     className="tableCell"
                   />
                 </Table>
-              )}
+              </div>
             </div>
-          </div>
+          )}
         </Expander>
       </div>
     </div>
