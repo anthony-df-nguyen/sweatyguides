@@ -62,18 +62,19 @@ export default function PokeModal(props) {
               <h3>{fetchState && primaryData.name.toUpperCase()}</h3>
               {fetchState && <GetPokeImg id={primaryData.id} />}
             </div>
-            <div className="flexRow ">
-              {types.map((row, i) => {
-                return (
-                  <div key={i} className="card">
-                    <div style={{ display: "block", marginTop: "1rem" }}>
-                      <p>{row.toUpperCase()}</p>
-                    </div>
-                    <GetTypeIcon type={row} />
+          </div>
+          <br></br>
+          <div className="flexRow">
+            {types.map((row, i) => {
+              return (
+                <div key={i} className="card">
+                  <div style={{ display: "block"}}>
+                    <p>{row.toUpperCase()}</p>
                   </div>
-                );
-              })}
-            </div>
+                  <GetTypeIcon type={row} />
+                </div>
+              );
+            })}
           </div>
         </div>
         {/* Evolution Chain */}
@@ -84,7 +85,6 @@ export default function PokeModal(props) {
               updateEndpoint={props.updateEndpoint}
             />
           )}
-          
         </Expander>
         {/* Matchup Table */}
         <Expander title="Match Ups" default={true}>
