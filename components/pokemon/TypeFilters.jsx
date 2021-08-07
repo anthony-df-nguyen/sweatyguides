@@ -59,7 +59,7 @@ export default function TypeFilters (props) {
         return (
           <div
             key={i}
-            className={style.typeButton + " card hoverBlue blackBG"}
+            className={style.typeButton + " typeButton card hoverBlue blackBG"}
             style={{ flexGrow: "1" }}
             onClick={() => filterType(row, i)}>
             <div style={{ display: "block", marginTop: "0rem" }}>
