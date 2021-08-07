@@ -70,7 +70,7 @@ export default function Valheim () {
             <li>
               Wood and core wood drop rate increased by 100%. Fine wood by 150%
             </li>
-
+            <li>Windmill will automatically pull barley from nearby chests within range of 5</li>
             <li>Beehive honey production quickened to 800 from 1200 seconds</li>
             <li>Using the cultivator no longer uses stamina</li>
             <li>Using the hoe no longer uses stamina</li>
