@@ -1,63 +1,8 @@
 [
   {
-    "Name": "Master Ball",
-    "Cost": 0,
-    "image":"",
-    "Category": "normal",
-    "Detail": "Catches a wild Pokémon every time."
-  },
-  {
-    "Name": "Ultra Ball",
-    "Cost": 800,
-    "image":"",
-    "Category": "normal",
-    "Detail": "Tries to catch a wild Pokémon.  Success rate is 2×",
-    "Rate": "2x"
-  },
-  {
-    "Name": "Great Ball",
-    "Cost": 600,
-    "image":"",
-    "Category": "normal",
-    "Detail": "Tries to catch a wild Pokémon.  Success rate is 1.5×",
-    "Rate": "1.5x"
-  },
-  {
-    "Name": "Poke Ball",
-    "Cost": 200,
-    "image":"",
-    "Category": "normal",
-    "Detail": "Tries to catch a wild Pokémon.",
-    "Rate": "1x"
-  },
-  {
-    "Name": "Safari Ball",
-    "Cost": 0,
-    "image":"",
-    "Category": "normal",
-    "Detail": "Tries to catch a wild Pokémon in the Great Marsh or Safari Zone.  Success rate is 1.5×",
-    "Rate": "1.5x"
-  },
-  {
-    "Name": "Park Ball",
-    "Cost": 0,
-    "image":"",
-    "Category": "normal",
-    "Detail": "Catches Pokémon in the Pal Park every time.",
-    "Rate": "-"
-  },
-  {
-    "Name": "Sport Ball",
-    "Cost": 300,
-    "image":"",
-    "Category": "normal",
-    "Detail": "Tries to catch a Pokémon in the Bug-Catching contest in National Park. (Gen II: Park Ball)",
-    "Rate": ""
-  },
-  {
     "Name": "Net Ball",
     "Cost": 1000,
-    "image":"",
+    "image": "",
     "Category": "special",
     "Detail": "Tries to catch a wild Pokémon.  Success rate is 3× for water and bug Pokémon.",
     "Rate": "3x*"
@@ -65,7 +10,7 @@
   {
     "Name": "Dive Ball",
     "Cost": 1000,
-    "image":"",
+    "image": "",
     "Category": "special",
     "Detail": "Tries to catch a wild Pokémon. Success rate is 3.5× when underwater, fishing, or surfing",
     "Rate": "3.5x*"
@@ -73,7 +18,7 @@
   {
     "Name": "Nest Ball",
     "Cost": 1000,
-    "image":"",
+    "image": "",
     "Category": "special",
     "Detail": "Tries to catch a wild Pokémon.  Success rate is 3.9× for level 1 Pokémon, and drops steadily to 1× at level 30.",
     "Rate": "3.9x - 1x"
@@ -81,7 +26,7 @@
   {
     "Name": "Repeat Ball",
     "Cost": 1000,
-    "image":"",
+    "image": "",
     "Category": "special",
     "Detail": "Tries to catch a wild Pokémon.  Success rate is 3× for previously-caught Pokémon",
     "Rate": "3x*"
@@ -89,7 +34,7 @@
   {
     "Name": "Timer Ball",
     "Cost": 1000,
-    "image":"",
+    "image": "",
     "Category": "special",
     "Detail": "Tries to catch a wild Pokémon. Success rate increases by 0.1× (Gen V: 0.3×) every turn, to a max of 4×",
     "Rate": "0.1x - 4x"
@@ -97,7 +42,7 @@
   {
     "Name": "Luxury Ball",
     "Cost": 1000,
-    "image":"",
+    "image": "",
     "Category": "special",
     "Detail": "Tries to catch a wild Pokémon.  Caught Pokémon start with 200 happiness",
     "Rate": "-"
@@ -105,7 +50,7 @@
   {
     "Name": "Premier Ball",
     "Cost": 20,
-    "image":"",
+    "image": "",
     "Category": "special",
     "Detail": "Tries to catch a wild Pokémon",
     "Rate": "1x"
@@ -113,7 +58,7 @@
   {
     "Name": "Dusk Ball",
     "Cost": 1000,
-    "image":"",
+    "image": "",
     "Category": "special",
     "Detail": "Tries to catch a wild Pokémon.  Success rate is 3.5× at night and in caves",
     "Rate": "3.5x*"
@@ -121,7 +66,7 @@
   {
     "Name": "Heal Ball",
     "Cost": 300,
-    "image":"",
+    "image": "",
     "Category": "special",
     "Detail": "Tries to catch a wild Pokémon.  Caught Pokémon are immediately healed",
     "Rate": "-"
@@ -129,7 +74,7 @@
   {
     "Name": "Quick Ball",
     "Cost": 1000,
-    "image":"",
+    "image": "",
     "Category": "special",
     "Detail": "Tries to catch a wild Pokémon. Success rate is 4× (Gen V: 5×), but only on the first turn",
     "Rate": "4x - 5x"
@@ -137,7 +82,7 @@
   {
     "Name": "Cherish Ball",
     "Cost": 0,
-    "image":"",
+    "image": "",
     "Category": "special",
     "Detail": "Tries to catch a wild Pokémon",
     "Rate": "-"
@@ -145,7 +90,7 @@
   {
     "Name": "Dream Ball",
     "Cost": 0,
-    "image":"",
+    "image": "",
     "Category": "special",
     "Detail": "Catches Pokémon found in the Dream World.",
     "Rate": "-"
@@ -153,7 +98,7 @@
   {
     "Name": "Beast Ball",
     "Cost": 0,
-    "image":"",
+    "image": "",
     "Category": "special",
     "Detail": "Tries to catch a wild Pokémon.  Success rate is 5× for Ultra Beasts and 0.1× for all other Pokémon",
     "Rate": "0.1x - 5x"

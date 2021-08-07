@@ -68,7 +68,7 @@ export default function Pokedex() {
         title="PokéDex"
         background="https://images6.alphacoders.com/328/thumb-1920-328013.jpg">
         {/* PokeDex */}
-        <Expander title="PokéDex">
+        <Expander title="PokéDex" default>
           {" "}
           <GetAllPokemon function={updateAllList} />
           {/* Mode Toggle */}
@@ -190,8 +190,9 @@ export default function Pokedex() {
 
         {/* Pokeballs */}
         <Expander title="PokeBalls">
+          <h2 className="leftText">Normal PokeBalls</h2>
           <ReactTable
-            data="/pokedex/balls.json"
+            data="/pokedex/normalballs.json"
             head={[
               {
                 name: "Name",
@@ -203,6 +204,31 @@ export default function Pokedex() {
               },
               {
                 name: "Cost",
+                width: "100",
+              },
+              {
+                name: "Rate",
+                width: "100",
+              },
+            ]}></ReactTable>
+          <h2 className="leftText topMargin">Special PokeBalls</h2>
+          <ReactTable
+            data="/pokedex/specialballs.json"
+            head={[
+              {
+                name: "Name",
+                width: "150",
+              },
+              {
+                name: "Detail",
+                width: "400",
+              },
+              {
+                name: "Cost",
+                width: "100",
+              },
+              {
+                name: "Rate",
                 width: "100",
               },
             ]}></ReactTable>

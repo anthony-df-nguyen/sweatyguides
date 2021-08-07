@@ -1,0 +1,58 @@
+[
+  {
+    "Name": "Master Ball",
+    "Cost": 0,
+    "image": "",
+    "Category": "normal",
+    "Detail": "Catches a wild Pokémon every time.",
+    "Rate": "100%"
+  },
+  {
+    "Name": "Ultra Ball",
+    "Cost": 800,
+    "image":"",
+    "Category": "normal",
+    "Detail": "Tries to catch a wild Pokémon.  Success rate is 2×",
+    "Rate": "2x"
+  },
+  {
+    "Name": "Great Ball",
+    "Cost": 600,
+    "image":"",
+    "Category": "normal",
+    "Detail": "Tries to catch a wild Pokémon.  Success rate is 1.5×",
+    "Rate": "1.5x"
+  },
+  {
+    "Name": "Poke Ball",
+    "Cost": 200,
+    "image":"",
+    "Category": "normal",
+    "Detail": "Tries to catch a wild Pokémon.",
+    "Rate": "1x"
+  },
+  {
+    "Name": "Safari Ball",
+    "Cost": 0,
+    "image":"",
+    "Category": "normal",
+    "Detail": "Tries to catch a wild Pokémon in the Great Marsh or Safari Zone.  Success rate is 1.5×",
+    "Rate": "1.5x"
+  },
+  {
+    "Name": "Park Ball",
+    "Cost": 0,
+    "image":"",
+    "Category": "normal",
+    "Detail": "Catches Pokémon in the Pal Park every time.",
+    "Rate": "-"
+  },
+  {
+    "Name": "Sport Ball",
+    "Cost": 300,
+    "image":"",
+    "Category": "normal",
+    "Detail": "Tries to catch a Pokémon in the Bug-Catching contest in National Park. (Gen II: Park Ball)",
+    "Rate": "-"
+  }
+]

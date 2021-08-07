@@ -19,17 +19,65 @@ export default function PokeModal(props) {
     await fetch(endpoint)
       .then((res) => res.json())
       .then((data) => {
+        //Add Pokemon Average Stats to Received Data
+        data.stats.forEach((stat) => {
+          let average;
+          switch (stat.stat.name) {
+            case "hp":
+              average = 70;
+              break;
+            case "attack":
+              average = 81;
+              break;
+            case "defense":
+              average = 75;
+              break;
+            case "special-attack":
+              average = 73;
+              break;
+            case "special-defense":
+              average = 72;
+              break;
+            case "speed":
+              average = 69;
+              break;
+            default:
+              average = "-";
+              break;
+          }
+          stat.average = average;
+
+          let delta =
+            stat.base_stat - average > 0
+              ? `+${stat.base_stat - average}`
+              : stat.base_stat - average;
+          let percentDelta =
+            stat.base_stat - average > 0
+              ? "+" +
+                parseFloat((stat.base_stat / average - 1) * 100).toFixed(1)
+              : parseFloat((stat.base_stat / average - 1) * 100).toFixed(1);
+          stat.statDelta = delta;
+          stat.deltaPercent = percentDelta;
+        });
         console.log("Received data ", data);
         updatePrimaryData(data);
+
+        //Set Modal to Block
         props.modalState("block");
+
+        //Set the Pokemon Type into type State
         const foundTypes = data.types.map((row) => row.type.name);
         updateTypes(foundTypes);
+
+        //Hide the pokedex background
         props.backgroundState(false);
-        console.log('Updating species URL to id ',data.species.url)
+
+        //Update the species URL, used to get evo data
+        console.log("Updating species URL to id ", data.species.url);
         updateSpeciesURL(data.species.url);
       })
       .then(() => {
-        console.log('Primary data is done fetching')
+        console.log("Primary data is done fetching");
         updateFetchState(true);
       });
   };
@@ -40,8 +88,6 @@ export default function PokeModal(props) {
       getPokemon(props.selected);
     }
   }, [props.selected]);
-
-
 
   return (
     <div className="fullPageBG center">
@@ -60,7 +106,16 @@ export default function PokeModal(props) {
         <div>
           <div className="card ">
             <div>
-              <h3>{fetchState && <CleanStrings string={primaryData.name} replace="-" maxArray="3" parenthesis />}</h3>
+              <h3>
+                {fetchState && (
+                  <CleanStrings
+                    string={primaryData.name}
+                    replace="-"
+                    maxArray="3"
+                    parenthesis
+                  />
+                )}
+              </h3>
               {fetchState && <GetPokeImg id={primaryData.id} />}
             </div>
           </div>
@@ -127,14 +182,32 @@ export default function PokeModal(props) {
                   <Column
                     title="Stat"
                     dataKey="stat.name"
-                    width={300}
+                    width={120}
                     className="tableCell"
                     cellRenderer={(props) => props.cellData.toUpperCase()}
                   />
                   <Column
-                    title="Base Value"
+                    title="Base"
                     dataKey="base_stat"
-                    width={300}
+                    width={100}
+                    className="tableCell"
+                  />
+                  <Column
+                    title="Avg Pokemon"
+                    dataKey="average"
+                    width={100}
+                    className="tableCell"
+                  />
+                  <Column
+                    title="Delta"
+                    dataKey="statDelta"
+                    width={100}
+                    className="tableCell"
+                  />
+                  <Column
+                    title="Delta %"
+                    dataKey="deltaPercent"
+                    width={100}
                     className="tableCell"
                   />
                 </Table>
