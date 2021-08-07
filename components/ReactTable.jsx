@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Table, Column } from "sticky-react-table";
+import CleanStrings from "./CleanStrings";
 
 export default function ReactTable(props) {
   const url = props.external;
@@ -36,7 +37,16 @@ export default function ReactTable(props) {
               className="tableCell"
               cellRenderer={(props) => {
                 const wiki = url + props.cellData;
-                return <a className="blue" id={i} href={wiki} target="_blank" noreferrer="true">{props.cellData}</a>;
+                return (
+                  <a
+                    className="blue"
+                    id={i}
+                    href={wiki}
+                    target="_blank"
+                    noreferrer="true">
+                    {props.cellData}
+                  </a>
+                );
               }}
             />
           );
@@ -53,7 +63,7 @@ export default function ReactTable(props) {
                   <>
                     <ul>
                       {props.cellData.map((line, z) => (
-                        <li className="noMargin" key={z} >
+                        <li className="noMargin" key={z}>
                           {line}
                         </li>
                       ))}

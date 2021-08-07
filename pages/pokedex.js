@@ -187,6 +187,26 @@ export default function Pokedex() {
               },
             ]}></ReactTable>
         </Expander>
+
+        {/* Pokeballs */}
+        <Expander title="PokeBalls">
+          <ReactTable
+            data="/pokedex/balls.json"
+            head={[
+              {
+                name: "Name",
+                width: "150",
+              },
+              {
+                name: "Detail",
+                width: "400",
+              },
+              {
+                name: "Cost",
+                width: "100",
+              },
+            ]}></ReactTable>
+        </Expander>
       </Page>
     </div>
   );
