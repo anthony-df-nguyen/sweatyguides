@@ -28,7 +28,7 @@ export default function Valheim () {
         <Expander title='Current Server Valheim+ Settings'>
           <div className='listSeparator'>Building/Workbench</div>
           <ul>
-            <li>Wokbench radius increased to 30m from 20m</li>
+            <li>Workbench radius increased to 30m from 20m</li>
             <li>Workbenches require no roof</li>
             <li>
               CraftFromChest: When crafting something, it can pull from chests
@@ -70,6 +70,7 @@ export default function Valheim () {
             <li>
               Wood and core wood drop rate increased by 100%. Fine wood by 150%
             </li>
+            <li>Spinning Wheel will automatically pull flax from nearby chests within range of 5</li>
             <li>Windmill will automatically pull barley from nearby chests within range of 5</li>
             <li>Beehive honey production quickened to 800 from 1200 seconds</li>
             <li>Using the cultivator no longer uses stamina</li>
@@ -133,52 +134,13 @@ export default function Valheim () {
             </li>
           </ul>
         </Expander>
-        <Expander title='How to Install Valheim+'>
-          <div>
-            <b>
-              Full guide is available{' '}
-              <a href='https://valheim.plus/installation' className='blue'>
-                here
-              </a>
-            </b>
-          </div>
-          <br></br>
+        <Expander title='How to Install Mods to Get Started'>
+          Mods are recommended to be installed using Vortex Mod Manager on Nexus Mods <a className="blue" href="https://www.nexusmods.com/about/vortex/" target="_blank"> here</a>
+          <br></br> <br></br>
+          Install the following mods with Vortex
           <ol>
-            <li>
-              Down the latest Valheim+ file{' '}
-              <a
-                href='https://valheim.plus/cdn/0.9.8.2/WindowsClient.tar.gz'
-                className='blue'
-              >
-                here
-              </a>
-            </li>
-            <li>
-              If you don't have an unzipping program that can handle .tar/.gz
-              files, download 7-zip{' '}
-              <a href='https://www.7-zip.org/download.html' className='blue'>
-                here
-              </a>
-            </li>
-            <li>
-              Unzip the downloaded file (if using 7-Zip, right click the zip
-              file &gt; 7-Zip &gt; Extract Files). After that, if you see a
-              'WindowsClient.tar' file, you need to also un-zip that. The final
-              result of the unzipping should be multiple files/folders, which
-              include: 'BepInEx, doorstop_libs, unstripped_corlib,
-              doorstop_config,winhttp.dll'
-            </li>
-            <li>
-              Locate your Valheim game folder. Shortcut, in Steam, right click
-              Valheim on the game list and click 'Manage &gt; Browse Local Files
-            </li>
-            <li>
-              Copy and paste the downloaded unzipped files from step 3 into the
-              game folder and say 'Yes' to replacing any files. *Note: If you
-              install valheim plus for the first time, you will have to start
-              your game once to have the config file placed in your
-              BepInEx\config directory.
-            </li>
+            <li><a className="blue" href="https://www.nexusmods.com/valheim/mods/4" target="_blank">Valheim Plus</a></li>
+            <li><a className="blue" href="https://www.nexusmods.com/valheim/mods/1420" target="_blank">AutoPicker</a></li>
           </ol>
         </Expander>
         <h1 className='topMargin4'>Map</h1>
