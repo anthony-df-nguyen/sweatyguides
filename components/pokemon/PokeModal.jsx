@@ -3,7 +3,7 @@ import Image from "next/image";
 import GetTypeIcon from "./GetTypeIcon";
 import { Table, Column } from "sticky-react-table";
 import MatchupTable from "components/pokemon/MatchupTable";
-import EvoChain from "./EvoChain";
+import EvoChain from "./SpeciesData";
 import Expander from "components/Expander.jsx";
 import GetPokeImg from "./GetPokeImg";
 import CleanStrings from "components/CleanStrings";
@@ -103,45 +103,49 @@ export default function PokeModal(props) {
           </button>
         </div>
         {/* Name and Type */}
-        <div>
+        <div className="grid2">
           <div className="card ">
-            <div>
-              <h3>
-                {fetchState && (
-                  <CleanStrings
-                    string={primaryData.name}
-                    replace="-"
-                    maxArray="3"
-                    parenthesis
-                  />
-                )}
-              </h3>
-              {fetchState && <GetPokeImg id={primaryData.id} />}
+            <h3>
+              {fetchState && (
+                <CleanStrings
+                  string={primaryData.name}
+                  replace="-"
+                  maxArray="3"
+                  parenthesis
+                />
+              )}
+            </h3>
+            {fetchState && <GetPokeImg id={primaryData.id} />}
+          </div>
+
+          <div className="card" style={{position:'relative',minHeight:'8rem'}}>
+            <div className="center" style={{width:'calc(100% - 2rem'}}>
+              <div className="flexRow">
+                {types.map((row, i) => {
+                  return (
+                    <div key={i}>
+                      <div className="">
+                        <div style={{ display: "block" }}>
+                          <p>
+                            <CleanStrings
+                              string={row}
+                              replace="-"
+                              maxArray="3"
+                              parenthesis
+                            />
+                          </p>
+                        </div>
+                        <GetTypeIcon type={row} />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
-          <br></br>
-          <div className="flexRow">
-            {types.map((row, i) => {
-              return (
-                <div key={i} className="card">
-                  <div style={{ display: "block" }}>
-                    <p>
-                      <CleanStrings
-                        string={row}
-                        replace="-"
-                        maxArray="3"
-                        parenthesis
-                      />
-                    </p>
-                  </div>
-                  <GetTypeIcon type={row} />
-                </div>
-              );
-            })}
-          </div>
         </div>
-        {/* Evolution Chain */}
-        <Expander title="Evolution Chain">
+        {/* Species Chain */}
+        <Expander title="Species Data">
           {fetchState && (
             <EvoChain
               speciesURL={speciesURL}

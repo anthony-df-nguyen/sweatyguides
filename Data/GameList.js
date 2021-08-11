@@ -16,13 +16,13 @@ const GameList = [
   },
   {
     game: "",
-    img: "https://wp.stanforddaily.com/wp-content/uploads/2020/08/image-2.png",
-    href: "/valorant",
+    img: "https://wallpaper.dog/large/10767988.jpg",
+    href: "/pokedex",
   },
   {
     game: "",
-    img: "https://wallpaper.dog/large/10767988.jpg",
-    href: "/pokedex",
+    img: "https://wp.stanforddaily.com/wp-content/uploads/2020/08/image-2.png",
+    href: "/valorant",
   },
 ];
 

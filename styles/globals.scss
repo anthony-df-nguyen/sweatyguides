@@ -116,6 +116,12 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.vertAlign {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+}
 @mixin blockCenter($margin) {
   display: block;
   margin: $margin auto;
@@ -145,6 +151,7 @@ a {
     flex-grow: 1;
     flex-shrink: 1;
     align-content: center;
+
     margin: 1rem 0 0 1rem;
   }
 }
@@ -326,8 +333,10 @@ input[type="text"] {
 
   .modalContent {
     width: 100%;
-    max-width: 700px;
-    max-height: calc(100% - 4rem);
+    max-width: 768px;
+    //max-height: calc(100% - 4rem);
+    max-height: 100vh;
+    padding: 2rem 0;
     overflow-y: scroll;
     display: block;
     margin: 0 auto;
