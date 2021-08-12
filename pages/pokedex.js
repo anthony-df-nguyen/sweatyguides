@@ -3,6 +3,7 @@ import Page from "components/Page.jsx";
 import Expander from "components/Expander.jsx";
 import GetAllPokemon from "components/pokemon/GetAllPokemon";
 import TypeFilters from "components/pokemon/TypeFilters";
+import EggFilters from "components/pokemon/EggFilters";
 import TextSearch from "components/TextSearch";
 import PokeModal from "components/pokemon/PokeModal";
 import ReactTable from "components/ReactTable";
@@ -23,10 +24,13 @@ export default function Pokedex() {
     display: "none",
     buttonClass: "",
   });
+  const [eggSearchDisplay, updateEggSearchDisplay] = useState({
+    display: "none",
+    buttonClass: "",
+  });
 
   const [abcReset, updateabcReset] = useState(false);
   const [background, updateBackground] = useState(true);
-
 
   useEffect(() => {
     const bg = document.querySelector(".pageContent");
@@ -40,10 +44,17 @@ export default function Pokedex() {
   const toggleNameSearch = () => {
     updateTextDisplay({ display: "block", buttonClass: "activeLight" });
     updateTypeSearchDisplay({ display: "none", buttonClass: "" });
+    updateEggSearchDisplay({ display: "none", buttonClass: "" });
   };
   const toggleTypeSearch = () => {
     updateTextDisplay({ display: "none", buttonClass: "" });
     updateTypeSearchDisplay({ display: "block", buttonClass: "activeLight" });
+    updateEggSearchDisplay({ display: "none", buttonClass: "" });
+  };
+  const toggleEggSearch = () => {
+    updateTextDisplay({ display: "none", buttonClass: "" });
+    updateTypeSearchDisplay({ display: "none", buttonClass: "" });
+    updateEggSearchDisplay({ display: "block", buttonClass: "activeLight" });
   };
 
   //After fetching the full list, set filtered list to full list to initialize
@@ -56,6 +67,8 @@ export default function Pokedex() {
 
   const resetAll = () => {
     const search = document.querySelector("#textField");
+    const buttons = document.querySelectorAll(".typeButton");
+    buttons.forEach((row) => row.classList.remove("active"));
     search && (search.value = "");
     updateFilteredList(allList);
     abcReset ? updateabcReset(false) : updateabcReset(true);
@@ -71,24 +84,31 @@ export default function Pokedex() {
         <Expander title="PokéDex" default>
           {" "}
           <GetAllPokemon function={updateAllList} />
+          <h3 className="leftText">Find Pokemon by:</h3>
           {/* Mode Toggle */}
-          <div
-            style={{
-              display: "block",
-              textAlign: "center",
-            }}>
-            <button
-              style={{ marginRight: "10px" }}
-              className={textSearchDisplay.buttonClass}
+          <br></br>
+          <div className="flexRow">
+            <div
+              className={
+                textSearchDisplay.buttonClass + " button centerText"
+              }
               onClick={() => toggleNameSearch()}>
-              Name Search
-            </button>
-            <button
+              Name
+            </div>
+            <div
               onClick={() => toggleTypeSearch()}
-              className={typeSearchDisplay.buttonClass}>
-              Type Search
-            </button>
+              className={
+                typeSearchDisplay.buttonClass + " button centerText"
+              }>
+              Type
+            </div>
+            <div
+              onClick={() => toggleEggSearch()}
+              className={eggSearchDisplay.buttonClass + " button centerText"}>
+              Egg Group
+            </div>
           </div>
+          <br></br>
           {/* Text Search Bar */}
           <div style={{ display: textSearchDisplay.display }}>
             <div>
@@ -122,7 +142,19 @@ export default function Pokedex() {
           </div>
           {/* Type Filters UI */}
           <div style={{ display: typeSearchDisplay.display }}>
-            <TypeFilters array={filteredList} function={updateFilteredList} />
+            <TypeFilters
+              array={filteredList}
+              function={updateFilteredList}
+              display={typeSearchDisplay.display}
+            />
+          </div>
+          {/* Egg Filter UI */}
+          <div style={{ display: eggSearchDisplay.display }}>
+            <EggFilters
+              array={filteredList}
+              function={updateFilteredList}
+              display={eggSearchDisplay.display}
+            />
           </div>
           {/* Hidden Modal */}
           <div style={{ display: modalDisplay }}>

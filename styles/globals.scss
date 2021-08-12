@@ -355,7 +355,7 @@ input[type="text"] {
   overflow: hidden !important;
 }
 
-button {
+button, .button {
   background-color: $black;
   color: $white;
   padding: $gap/2 $gap;

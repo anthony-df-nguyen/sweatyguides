@@ -18,7 +18,13 @@ export default function MatchupTable(props) {
             lowercase === row && matchingData.push(i);
           });
         });
-        //console.log("matchingData: ", matchingData);
+        //Clean Strings with "(No Effect)"
+        matchingData.forEach((line) => {
+          if (line["Weak against"].includes("(no effect)")) {
+            const cleanString = line["Weak against"].replace(" (no effect)","");
+            line["Weak against"] = cleanString;
+          }
+        });
         updateMatchups(matchingData);
       });
   };
@@ -37,13 +43,19 @@ export default function MatchupTable(props) {
       const strongAgainst = row["Strong against"].split(", ");
       const resistantTo = row["Resistant to"].split(", ");
       const whatToAvoidUsingInitial = [...strongAgainst, ...resistantTo];
+
       avoidUsingArray.push(...whatToAvoidUsingInitial);
 
       //Parsing List of Types to Possibly Use
       const weakTo = row["Weak to"].split(", ");
       const weakAgainst = row["Weak against"].split(", ");
       const whatToUseInitial = [...weakTo, ...weakAgainst];
-      useArray.push(...whatToUseInitial);
+
+      //Check if any type is in the avoid array
+      const optimalUse = whatToUseInitial.filter((type) => {
+        return !avoidUsingArray.includes(row) && type;
+      });
+      useArray.push(...optimalUse);
     });
 
     //Remove Duplicates from Both Lists
@@ -84,11 +96,10 @@ export default function MatchupTable(props) {
   return (
     <div>
       <h3 className="leftText">
-        Most Optimal Matchup if Fighting this Pokemon
+        Strategic Match Up
       </h3>
       <p className="leftText">
-        Types that are strong against the Pokemon offensively and resistant
-        defensively
+        Types this Pokemon is weak against either offensively, defensively, or both
       </p>
 
       <div className="grid2 topMargin">

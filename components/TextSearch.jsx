@@ -26,7 +26,6 @@ export default function TextSearch(props) {
       <div>
         <input
           id="textField"
-          className="topMargin"
           type="text"
           placeholder={props.label}
           style={{ width: "100%" }}

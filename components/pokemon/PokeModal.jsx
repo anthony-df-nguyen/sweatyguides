@@ -3,7 +3,7 @@ import Image from "next/image";
 import GetTypeIcon from "./GetTypeIcon";
 import { Table, Column } from "sticky-react-table";
 import MatchupTable from "components/pokemon/MatchupTable";
-import EvoChain from "./SpeciesData";
+import SpeciesData from "./SpeciesData";
 import Expander from "components/Expander.jsx";
 import GetPokeImg from "./GetPokeImg";
 import CleanStrings from "components/CleanStrings";
@@ -118,8 +118,10 @@ export default function PokeModal(props) {
             {fetchState && <GetPokeImg id={primaryData.id} />}
           </div>
 
-          <div className="card" style={{position:'relative',minHeight:'8rem'}}>
-            <div className="center" style={{width:'calc(100% - 2rem'}}>
+          <div
+            className="card"
+            style={{ position: "relative", minHeight: "8rem" }}>
+            <div className="center" style={{ width: "calc(100% - 2rem" }}>
               <div className="flexRow">
                 {types.map((row, i) => {
                   return (
@@ -147,7 +149,7 @@ export default function PokeModal(props) {
         {/* Species Chain */}
         <Expander title="Species Data">
           {fetchState && (
-            <EvoChain
+            <SpeciesData
               speciesURL={speciesURL}
               updateEndpoint={props.updateEndpoint}
             />

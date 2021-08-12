@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import GetPokeImg from "./GetPokeImg";
 import CleanStrings from "components/CleanStrings";
+import Expander from "components/Expander";
 
-export default function EvoChain(props) {
+export default function SpeciesData(props) {
   const [array, updateArray] = useState([]);
   const [baseCapture,updateBaseCapture] = useState("")
+  const [growthRate,updateGrowthRate] = useState("")
+
   const [eggGroup,updateEggGroup] = useState([]);
 
   useEffect(() => {
@@ -14,10 +17,14 @@ export default function EvoChain(props) {
       await fetch(speciesURL)
         .then((res) => res.json())
         .then((data) => {
-          console.log(data)
+        console.log('Species data: ', data);
           //Capture Rate
           const rate = data.capture_rate;
           updateBaseCapture(rate)
+
+          //Growth Rate
+          const growth = data.growth_rate.name;
+          updateGrowthRate(<CleanStrings string={growth} />)
 
           //Find Egg Groups
           let eggs = []
@@ -129,7 +136,11 @@ export default function EvoChain(props) {
       <div className="flexRow">
         <div className="card blackBG">
           <h3 className="">Capture Rate</h3>
-          <div className="centerText">{baseCapture}</div>
+          <div className="centerText">{baseCapture} out of 255</div>
+        </div>
+        <div className="card blackBG">
+          <h3 className="">Growth Rate</h3>
+          <div className="centerText">{growthRate}</div>
         </div>
         <div className="card blackBG">
           <h3 className="">Egg Group</h3>
@@ -139,9 +150,9 @@ export default function EvoChain(props) {
               eggGroup.map((row, i) => {
                 if (i !== 0) {
                   return (
-                    <>
+                    <span>
                       , <CleanStrings key={i} string={row} position="inline" />
-                    </>
+                    </span>
                   );
                 } else {
                   return (
@@ -153,100 +164,100 @@ export default function EvoChain(props) {
         </div>
       </div>
       {/* evolution */}
-      <div className="topMargin">
-        {" "}
-        <h3 className="leftText">Evolution Chain</h3>
-        {/* If there is evo chain */}
-        {array.length > 1 && (
-          <div className="flexRow" style={{ justifyContent: "center" }}>
-            {/* Base Pokemon */}
-            <div
-              className="card blackBG hover"
-              onClick={(e) => {
-                updatePokemon(array[0].name, e);
-              }}>
-              {" "}
-              <div style={{ textAlign: "center" }}>
-                <h3>1</h3>
-                <a>
-                  {" "}
-                  {array[0] && (
-                    <CleanStrings
-                      string={array[0].name}
-                      replace="-"
-                      maxArray="3"
-                      parenthesis
-                    />
-                  )}
-                </a>
+      <Expander title="Evolution Chain" bg="blackBG" >
+        <div className="">       
+          {/* If there is evo chain */}
+          {array.length > 1 && (
+            <div className="flexRow" style={{ justifyContent: "center" }}>
+              {/* Base Pokemon */}
+              <div
+                className="hover"
+                onClick={(e) => {
+                  updatePokemon(array[0].name, e);
+                }}>
+                {" "}
+                <div style={{ textAlign: "center" }}>
+                  <h3>1</h3>
+                  <a>
+                    {" "}
+                    {array[0] && (
+                      <CleanStrings
+                        string={array[0].name}
+                        replace="-"
+                        maxArray="3"
+                        parenthesis
+                      />
+                    )}
+                  </a>
+                </div>
+                {array[0] && <GetPokeImg id={array[0].id} />}
               </div>
-              {array[0] && <GetPokeImg id={array[0].id} />}
+
+              {/* 2nd Evo */}
+
+              {array.map(
+                (row, i) =>
+                  row.stage === 2 && (
+                    <div
+                      key={i}
+                      className="hover"
+                      onClick={(e) => {
+                        updatePokemon(row.name, e);
+                      }}>
+                      <h3>2</h3>
+                      <a>
+                        <div style={{ textAlign: "center" }}>
+                          <CleanStrings
+                            string={row.name}
+                            replace="-"
+                            maxArray="3"
+                            parenthesis
+                          />
+                        </div>
+                        {row.id && <GetPokeImg id={row.id} />}
+                        <div style={{ textAlign: "center" }}>
+                          {checkEvoTrigger(i)}
+                        </div>
+                      </a>
+                    </div>
+                  )
+              )}
+
+              {/* 3rd Evo */}
+
+              {array.map(
+                (row, i) =>
+                  row.stage === 3 && (
+                    <div
+                      key={i}
+                      className="hover"
+                      onClick={(e) => {
+                        updatePokemon(row.name, e);
+                      }}>
+                      <h3>3</h3>
+                      <a>
+                        <div style={{ textAlign: "center" }}>
+                          <CleanStrings
+                            string={row.name}
+                            replace="-"
+                            maxArray="3"
+                            parenthesis
+                          />
+                        </div>
+                        {row.id && <GetPokeImg id={row.id} />}
+                        <div style={{ textAlign: "center" }}>
+                          {checkEvoTrigger(i)}
+                        </div>
+                      </a>
+                    </div>
+                  )
+              )}
             </div>
-
-            {/* 2nd Evo */}
-
-            {array.map(
-              (row, i) =>
-                row.stage === 2 && (
-                  <div
-                    key={i}
-                    className="card blackBG hover"
-                    onClick={(e) => {
-                      updatePokemon(row.name, e);
-                    }}>
-                    <h3>2</h3>
-                    <a>
-                      <div style={{ textAlign: "center" }}>
-                        <CleanStrings
-                          string={row.name}
-                          replace="-"
-                          maxArray="3"
-                          parenthesis
-                        />
-                      </div>
-                      {row.id && <GetPokeImg id={row.id} />}
-                      <div style={{ textAlign: "center" }}>
-                        {checkEvoTrigger(i)}
-                      </div>
-                    </a>
-                  </div>
-                )
-            )}
-
-            {/* 3rd Evo */}
-
-            {array.map(
-              (row, i) =>
-                row.stage === 3 && (
-                  <div
-                    key={i}
-                    className="card blackBG hover"
-                    onClick={(e) => {
-                      updatePokemon(row.name, e);
-                    }}>
-                    <h3>3</h3>
-                    <a>
-                      <div style={{ textAlign: "center" }}>
-                        <CleanStrings
-                          string={row.name}
-                          replace="-"
-                          maxArray="3"
-                          parenthesis
-                        />
-                      </div>
-                      {row.id && <GetPokeImg id={row.id} />}
-                      <div style={{ textAlign: "center" }}>
-                        {checkEvoTrigger(i)}
-                      </div>
-                    </a>
-                  </div>
-                )
-            )}
-          </div>
-        )}
-        {/* If there is no chain */}
-        {array.length === 1 && <div>This Pokemon does not evolve</div>}
-      </div>
+          )}
+          {/* If there is no chain */}
+          {array.length === 1 && <div>This Pokemon does not evolve</div>}
+        </div>
+      </Expander>
     </div>
   );
 }
