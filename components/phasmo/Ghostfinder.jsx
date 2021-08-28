@@ -101,6 +101,9 @@ export default function Ghostfinder() {
         <div className={style.evidence} onClick={handleClick} id="Spirit Box">
           Spirit Box
         </div>
+        <div className={style.evidence} onClick={handleClick} id="DOTS">
+          DOTS Projector
+        </div>
       </div>
       <div className="topMargin" style={{ display: clueLeftDisplay }}>
         <p>

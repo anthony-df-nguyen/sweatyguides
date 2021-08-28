@@ -46,7 +46,7 @@ export default function phasmophobia() {
         </Expander>
         <Expander title="Maps">
           <div className="">
-            <Expander title="Asylum">
+            <Expander title="Asylum" bg="blackBG">
               <FullScreen>
                 <Image
                   src="/images/phasmophobia/asylum.jpg"
@@ -56,7 +56,7 @@ export default function phasmophobia() {
                 />
               </FullScreen>
             </Expander>
-            <Expander title="Bleasdale Farmhouse">
+            <Expander title="Bleasdale Farmhouse" bg="blackBG">
               <FullScreen>
                 <Image
                   src="/images/phasmophobia/bleasdale.jpg"
@@ -66,7 +66,7 @@ export default function phasmophobia() {
                 />
               </FullScreen>
             </Expander>
-            <Expander title="Brownstone Highschool">
+            <Expander title="Brownstone Highschool" bg="blackBG">
               <FullScreen>
                 <Image
                   src="/images/phasmophobia/highschool.jpg"
@@ -76,7 +76,7 @@ export default function phasmophobia() {
                 />
               </FullScreen>
             </Expander>
-            <Expander title="Edgefield Street House">
+            <Expander title="Edgefield Street House" bg="blackBG">
               <FullScreen>
                 <Image
                   src="/images/phasmophobia/edgefield.jpg"
@@ -86,7 +86,7 @@ export default function phasmophobia() {
                 />
               </FullScreen>
             </Expander>
-            <Expander title="Grafton Farmhouse">
+            <Expander title="Grafton Farmhouse" bg="blackBG">
               <FullScreen>
                 <Image
                   src="/images/phasmophobia/grafton.jpg"
@@ -96,7 +96,7 @@ export default function phasmophobia() {
                 />
               </FullScreen>
             </Expander>
-            <Expander title="Prison">
+            <Expander title="Prison" bg="blackBG">
               <FullScreen>
                 <Image
                   src="/images/phasmophobia/prison.jpg"
@@ -106,7 +106,7 @@ export default function phasmophobia() {
                 />
               </FullScreen>
             </Expander>
-            <Expander title="Ridgeview Road House">
+            <Expander title="Ridgeview Road House" bg="blackBG">
               <FullScreen>
                 <Image
                   src="/images/phasmophobia/ridgeview.jpg"
@@ -116,7 +116,7 @@ export default function phasmophobia() {
                 />
               </FullScreen>
             </Expander>
-            <Expander title="Tanglewood">
+            <Expander title="Tanglewood" bg="blackBG">
               <FullScreen>
                 <Image
                   src="/images/phasmophobia/tanglewood.jpg"
@@ -126,7 +126,7 @@ export default function phasmophobia() {
                 />
               </FullScreen>
             </Expander>
-            <Expander title="Willow Street House">
+            <Expander title="Willow Street House" bg="blackBG">
               <FullScreen>
                 <Image
                   src="/images/phasmophobia/willow.jpg"
