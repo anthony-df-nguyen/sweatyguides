@@ -9,7 +9,7 @@ const ghostJson = [
   },
   {
     name: "Demon",
-    clues: ["Temps", "Ghost Writing", "Fingerprints"],
+    clues: ["Temps", "Ghost Writing", "Prints"],
     hints: [
       "Attack more often than any other ghost",
       "Asking a Demon successful Ouija board questions won't lower your sanity",
